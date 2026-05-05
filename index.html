@@ -7,6 +7,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <title>Bibliothèque Ostéopathique — IEOQ · P. César & H. Bouësnard</title>
+<!-- Inline init guard for iOS file:// — runs before body parses -->
+<script>
+/* Stub functions so onclick attributes don't throw before the main script loads */
+function switchArt(a){window._pendingArt=a;}
+function switchSub(s){window._pendingSub=s;}
+function toggleTest(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
+function toggleMobileDrawer(){}
+function toggleMenu(){}
+function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.toggle('open');}
+</script>
 <style>
   :root {
     --teal-900: #0a2e2a;
@@ -463,6 +473,8 @@
   .sub-tabs-group.active {
     display: flex;
   }
+  /* Explicit hidden class — required for iOS Safari */
+  .hidden { display: none !important; }
   .sub-tab {
     padding: 6px 10px;
     background: none;
@@ -516,7 +528,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 300; /* Above nav-sticky-wrapper (50) and everything else */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -524,7 +536,6 @@
     display: flex;
     flex-direction: column;
     border-right: 1px solid rgba(255,255,255,0.07);
-    /* iOS tap fix */
     cursor: pointer;
   }
   .sidebar::-webkit-scrollbar { width: 4px; }
@@ -587,7 +598,7 @@
     height: 32px;
     position: sticky;
     top: 0;
-    z-index: 102;
+    z-index: 40;
     border-bottom: 1px solid rgba(255,255,255,0.06);
     flex-shrink: 0;
   }
@@ -648,14 +659,15 @@
   .art-nav { position: relative; top: auto; }
   .sub-nav  { position: relative; top: auto; }
 
-  /* Le wrapper complet est sticky */
+  /* Le wrapper complet est sticky — DOIT rester dans le main-wrapper uniquement */
   .nav-sticky-wrapper {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 101;
+    z-index: 50; /* Must be BELOW sidebar z-index:100 so sidebar buttons are always tappable */
     background: var(--navy-950, #0a0e1a);
     width: 100%;
+    max-width: 100%; /* never overflow main-wrapper */
   }
   .main-wrapper {
     flex: 1;
@@ -664,11 +676,12 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: relative; /* contain the sticky wrapper */
   }
 
   /* ── RESPONSIVE SIDEBAR ── */
   @media (max-width: 900px) {
-    .sidebar { width: 180px; }
+    .sidebar { width: 180px; z-index: 300; }
     .main-wrapper { width: calc(100% - 180px); }
     .art-tab { font-size: 11.5px; padding: 7px 8px; }
   }
@@ -764,7 +777,7 @@
     background: var(--navy-800);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     max-height: 340px; overflow-y: auto;
-    z-index: 200;
+    z-index: 49;
     scrollbar-width: thin;
     scrollbar-color: rgba(255,255,255,0.15) transparent;
   }
@@ -995,7 +1008,7 @@
     bottom: 0; left: 0; right: 0;
     background: var(--navy-900);
     border-top: 1px solid rgba(255,255,255,0.12);
-    z-index: 200;
+    z-index: 49;
     padding: 0;
     height: 60px;
   }
@@ -1120,7 +1133,7 @@
       left: 0;
       right: 0;
       top: auto;
-      z-index: 200;
+      z-index: 300;
       flex-direction: column;
       border-right: none;
       border-top: 1px solid rgba(255,255,255,0.1);
@@ -1215,7 +1228,7 @@
       position: fixed;
       bottom: 68px;
       right: 14px;
-      z-index: 210;
+      z-index: 310;
       width: 42px; height: 42px;
       border-radius: 50%;
       background: var(--teal-600);
@@ -1301,7 +1314,7 @@
 
   /* iPad landscape (1024px and below) — keep sidebar visible */
   @media (min-width: 769px) and (max-width: 1024px) {
-    .sidebar { width: 190px; }
+    .sidebar { width: 190px; z-index: 300; }
     .main-wrapper { width: calc(100% - 190px); }
   }
 
@@ -1318,6 +1331,51 @@
         padding-bottom: calc(90px + env(safe-area-inset-bottom)) !important;
       }
     }
+  }
+
+  /* ── BOUTONS VIDÉO ── */
+  .video-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--teal-200);
+  }
+  .video-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .15s;
+    border: 1px solid;
+    cursor: pointer;
+  }
+  .video-btn.physiotutors {
+    background: rgba(33,150,243,0.08);
+    color: #1565c0;
+    border-color: rgba(33,150,243,0.3);
+  }
+  .video-btn.physiotutors:hover {
+    background: rgba(33,150,243,0.18);
+    border-color: #1565c0;
+  }
+  .video-btn.fr {
+    background: rgba(26,122,106,0.08);
+    color: var(--teal-700);
+    border-color: rgba(26,122,106,0.3);
+  }
+  .video-btn.fr:hover {
+    background: rgba(26,122,106,0.18);
+    border-color: var(--teal-600);
+  }
+  .video-btn::before {
+    content: '▶';
+    font-size: 10px;
   }
 
   /* Hide drawer toggle on desktop */
@@ -4260,6 +4318,11 @@
           <div class="test-sensitivity"><span style="min-width:80px;">Sensibilité</span><div class="bar-wrap"><div class="bar-fill high" style="width:79%"></div></div><span>79%</span></div>
           <div class="test-sensitivity"><span style="min-width:80px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill mid" style="width:59%"></div></div><span>59%</span></div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=X9YiuvQJVJc" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=jz3jFgtHcM0" target="_blank" rel="noopener">Examen FR</a>
+        </div>
       </div>
     </div>
 
@@ -4298,6 +4361,10 @@
         <div class="test-detail-full"><div class="label">Technique — Neer</div>Clinicien derrière le patient. Stabilise la scapula d'une main (pression sur l'acromion). De l'autre main, élève passivement le membre en rotation interne et légère flexion jusqu'à la douleur ou la butée.</div>
         <div class="test-positive"><div class="label">Test positif</div>Douleur antéro-supérieure reproduite lors de l'élévation → compression du supra-épineux contre le bord antérieur de l'acromion.</div>
         <div class="info-box teal" style="margin-top:8px;font-size:13px;"><strong>Test de Neer infiltration :</strong> Injection de lidocaïne dans la bourse sous-acromiale → disparition de la douleur confirme le diagnostic de conflit.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=bXA8cblZUok" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -4332,6 +4399,14 @@
           <div class="test-detail-full"><div class="label">Avantage vs Empty Can</div>Moins douloureux à réaliser. Préféré quand la RI est trop douloureuse pour isoler la faiblesse musculaire.</div>
           <div class="test-positive"><div class="label">Test positif</div>Douleur et/ou faiblesse → même interprétation que l'Empty Can. Les deux tests sont souvent réalisés en combinaison.</div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=5BjDQ-jcBek" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=NuBOHdm20cc" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -4349,6 +4424,10 @@
         </div>
         <div class="test-detail-full"><div class="label">Technique</div>Clinicien amène le bras en RE maximale passive puis lâche doucement le poignet en maintenant le coude. Demande au patient de tenir la position.</div>
         <div class="test-positive"><div class="label">Test positif — Lag Sign</div>Le bras retombe en RI = rupture complète ou massive de l'infra-épineux ± petit rond. Plus le lag est important (angle de chute), plus la lésion est étendue.</div>
+      
+        <div class="video-links">
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=JccyyfdvdS4" target="_blank" rel="noopener">Test de Patte FR</a>
+        </div>
       </div>
     </div>
     <div class="test-grid-2">
@@ -4425,6 +4504,10 @@
         <div class="test-detail-full"><div class="label">Technique</div>Patient place la main derrière le dos (en RI maximale). On lui demande de décoller la main du dos contre résistance. Si incapable de décoller : lag signe = clinicien décolle la main et la lâche.</div>
         <div class="test-positive"><div class="label">Test positif</div>Incapacité à maintenir la main décollée du dos = rupture complète du sub-scapulaire. Très haute spécificité.</div>
         <div class="info-box amber" style="font-size:13px;margin-top:8px;"><strong>Limite clinique :</strong> Douleur ou restriction en RI peut empêcher la mise en position → recourir au Belly Press Test.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=QubFD2rFlaA" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
     <div class="test-grid-2">
@@ -4448,6 +4531,10 @@
         <div class="test-card-body">
           <div class="test-detail-full"><div class="label">Technique</div>Main ipsilatérale sur l'épaule controlatérale, doigts étendus, coude en avant. Clinicien tente d'arracher la main. Patient résiste en RI.</div>
           <div class="test-positive"><div class="label">Test positif</div>Faiblesse ou douleur = atteinte de la portion supérieure du sub-scapulaire (fibres supérieures, touchées en premier dans les déchirures partielles).</div>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=QubFD2rFlaA" target="_blank" rel="noopener">Physiotutors EN</a>
         </div>
       </div>
     </div>
@@ -4485,6 +4572,10 @@
           </div>
           <div class="test-detail-full"><div class="label">Technique</div>Compression axiale sur l'humérus + rotation interne et externe successives. En décubitus latéral ou assis.</div>
           <div class="test-positive"><div class="label">Test positif</div>Claquement, ressaut ou douleur profonde reproduite → lésion du labrum glénoïdal (antérieur ou postérieur). Peut s'accompagner d'une sensation de blocage.</div>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=jz3jFgtHcM0" target="_blank" rel="noopener">Physiotutors EN</a>
         </div>
       </div>
     </div>
@@ -4995,6 +5086,10 @@
         <div class="test-positive"><div class="label">Test positif</div>Douleur à l'interligne articulaire médial ou latéral + sensation de blocage lors des rotations en charge → lésion méniscale.</div>
         <div class="test-sensitivity"><span style="min-width:80px;">Sensibilité</span><div class="bar-wrap"><div class="bar-fill high" style="width:89%"></div></div><span>89%</span></div>
         <div class="test-sensitivity"><span style="min-width:80px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill high" style="width:97%"></div></div><span>97%</span></div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=ebraZ4jM36A" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -5027,6 +5122,10 @@
           </div>
           <div class="test-positive"><div class="label">Test positif</div>Douleur à la compression avec rotation → ménisque. Douleur à la distraction → ligaments capsulaires.</div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=9obt2afxRPo" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -5047,6 +5146,11 @@
         </div>
         <div class="test-positive"><div class="label">Test positif</div>Claquement palpable/audible + douleur reproduite à l'interligne lors de l'extension → déchirure de la corne postérieure du ménisque correspondant.</div>
         <div class="info-box amber" style="font-size:13px;margin-top:8px;"><strong>Note :</strong> Test le plus spécifique pour les lésions des cornes postérieures.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=lwDFPAyGGgI" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=BhPS5jAUIOg" target="_blank" rel="noopener">Examen FR</a>
+        </div>
       </div>
     </div>
 
@@ -5081,6 +5185,14 @@
           <div class="test-detail-full"><div class="label">Technique</div>Même principe que le valgus mais stress en varus (ouverture latérale). Tester en extension et à 20–30° flexion.</div>
           <div class="test-positive"><div class="label">Interprétation</div>Laxité à 30° → LCL isolé. Laxité à 0° → LCL + structures postéro-latérales (coin postéro-latéral, poplité).</div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=GSFbttpxCuQ" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=GSFbttpxCuQ" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -5101,6 +5213,11 @@
         <div class="test-sensitivity"><span style="min-width:80px;">Sensibilité</span><div class="bar-wrap"><div class="bar-fill high" style="width:87%"></div></div><span>87%</span></div>
         <div class="test-sensitivity"><span style="min-width:80px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill high" style="width:93%"></div></div><span>93%</span></div>
         <div class="info-box teal" style="font-size:13px;margin-top:8px;"><strong>Avantage :</strong> Supérieur au tiroir antérieur (moins de spasme musculaire à 20–30° qu'à 90°). Test de référence en phase aiguë.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=6tManL57SLQ" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=qAstgcNXetA" target="_blank" rel="noopener">Test Lachman FR</a>
+        </div>
       </div>
     </div>
     <div class="test-grid-2">
@@ -5136,6 +5253,10 @@
           </div>
           <div class="test-detail-full"><div class="label">Technique</div>Genou en extension complète. Valgus + RI tibia + flexion progressive. À ~20–30° de flexion, le plateau tibial latéral (subluxé en avant) se réduit brutalement.</div>
           <div class="test-positive"><div class="label">Test positif</div>Ressaut (clunk) à 20–30° de flexion → instabilité rotatoire antéro-latérale = rupture LCA. Très spécifique mais souvent négatif chez le patient conscient (guarding).</div>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=qqy5IfkEvfw" target="_blank" rel="noopener">Physiotutors EN</a>
         </div>
       </div>
     </div>
@@ -5697,6 +5818,14 @@
           <div class="test-positive"><div class="label">Test positif</div>Douleur reproduite en regard de l'épicondyle latéral ou des extenseurs radiaux → épicondylalgie latérale.</div>
           <div class="info-box teal" style="font-size:13px;margin-top:8px;"><strong>Cozen vs Mill :</strong> Le Test de Cozen sollicite les extenseurs en actif (contraction), le Test de Mill les étire passivement. Utiliser les deux en combinaison pour une meilleure évaluation.</div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=8K7jzDIUpLI" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=r_A84ox9JRM" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -5942,6 +6071,10 @@
           <div class="test-sensitivity"><span style="min-width:80px;">Sensibilité</span><div class="bar-wrap"><div class="bar-fill high" style="width:89%"></div></div><span>89%</span></div>
           <div class="test-sensitivity"><span style="min-width:80px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill low" style="width:14%"></div></div><span>14%</span></div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=U8cPjPeZgFw" target="_blank" rel="noopener">Finkelstein EN</a>
+        </div>
       </div>
     </div>
 
@@ -5992,6 +6125,10 @@
         <div style="margin-top:8px;">
           <div class="test-sensitivity"><span style="min-width:80px;">Sensibilité</span><div class="bar-wrap"><div class="bar-fill mid" style="width:68%"></div></div><span>68%</span></div>
           <div class="test-sensitivity"><span style="min-width:80px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill mid" style="width:73%"></div></div><span>73%</span></div>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=rQJNrkq7tIs" target="_blank" rel="noopener">Physiotutors EN</a>
         </div>
       </div>
     </div>
@@ -7067,6 +7204,11 @@
         <div class="test-detail-full"><div class="label">Technique</div>Position en chiffre 4 : cheville ipsilatérale posée sur le genou controlatéral. Le praticien pousse sur la face médiale du genou de façon à majorer l'abduction et stabilise de son autre main l'iliaque opposé. Gravité + poussée vers le bas.</div>
         <div class="test-positive"><div class="label">Test positif</div>Douleur de consultation reproduite OU mouvement impossible. Localisation de la douleur guide le diagnostic : douleur inguinale → coxo-fémorale. Douleur sacro-fessière → sacro-iliaque. ⚠️ Peut être positif dans les lésions de sacro-iliaque.</div>
         <div class="info-box amber" style="font-size:13px;margin-top:8px;"><strong>Spécificité très faible (16%) :</strong> Test utile pour dépister mais ne permet pas de confirmer seul. Toujours corréler avec le Scour, le FADIR et le Fitzgerald.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=89Qiht82zmg" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=o1Rzsjnl3Qs" target="_blank" rel="noopener">FABER FR</a>
+        </div>
       </div>
     </div>
 
@@ -7085,6 +7227,11 @@
         <div class="test-positive"><div class="label">Douleur antérieure (pli de l'aine)</div>→ Conflit fémoro-acétabulaire ou lésion du labrum antérieur. Se: 94% mais Sp très basse → bon test de dépistage, ne confirme pas seul.</div>
         <div class="test-positive"><div class="label">Douleur postérieure (piriforme ± irradiation)</div>→ Syndrome du piriforme ou atteinte du nerf sciatique. Se: 88% · Sp: 83% · RV+: 5.18 (Fishman) — meilleur profil diagnostique pour cette indication.</div>
         <div class="info-box amber" style="font-size:13px;margin-top:8px;"><strong>Faux positifs :</strong> Déficit en flexion de hanche, sport exigeant pour les MI, sexe masculin augmentent le risque de faux positif chez des sujets sains.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=Q_x3Cv4_Q3Y" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=_4Zt1FzhCy8" target="_blank" rel="noopener">FADIR FR</a>
+        </div>
       </div>
     </div>
 
@@ -7157,6 +7304,10 @@
           <div class="test-detail-full"><div class="label">Technique</div>Patient en latérocubitus sur le côté sain. Main crâniale maintient le bassin en position neutre. Main caudale : abduction + extension de hanche, genou à 90°. Bandelette ilio-tibiale se superpose au grand trochanter. Lâcher en adduction tout en gardant la hanche en extension.</div>
           <div class="test-positive"><div class="label">Test positif</div>Le membre inférieur se maintient spontanément en abduction → contracture ou hypoextensibilité du TFL.</div>
           <div class="info-box amber" style="font-size:13px;"><strong>Controverse (Willett 2016) :</strong> L'évaluation sur cadavre après section de la BIT ne montre pas de différence significative. La limitation pourrait être liée aux petit/moyen fessiers et aux éléments capsulo-ligamentaires plutôt qu'au TFL lui-même.</div>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=j91UbeFynSc" target="_blank" rel="noopener">Test Thomas FR</a>
         </div>
       </div>
     </div>
@@ -7878,6 +8029,10 @@
           <div class="test-detail-item"><div class="label">Stats (De César et al.)</div><div class="value">Se: 20% · Sp: 85% · RV+: 1.33</div></div>
           <div class="test-detail-item"><div class="label">Stats (Sman et al.)</div><div class="value">Se: 71% · Sp: 63% · RV+: 1.92</div></div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=XS0HPYu1eXY" target="_blank" rel="noopener">Rotation Latérale FR</a>
+        </div>
       </div>
     </div>
 
@@ -7920,6 +8075,16 @@
             <div class="test-sensitivity"><span style="min-width:90px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill high" style="width:82%"></div></div><span>82%</span></div>
           </div>
         </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=vAcBEYZKcto" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=GDwOJ9OI8g0" target="_blank" rel="noopener">Tiroir Cheville FR</a>
+        </div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=UHNbm6Z3XK4" target="_blank" rel="noopener">Talar Tilt EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=XS0HPYu1eXY" target="_blank" rel="noopener">Varus Forcé FR</a>
+        </div>
       </div>
     </div>
 
@@ -7939,6 +8104,11 @@
         <div class="test-detail-full"><div class="label">Technique</div>Mains de part et d'autre de l'extrémité proximale de la jambe. Compression progressive de la fibula sur le tibia en descendant vers la cheville. Variante : cheville en flexion dorsale pour augmenter la tension sur la syndesmose.</div>
         <div class="test-positive"><div class="label">Test positif</div>Douleur en regard de la syndesmose tibio-fibulaire distale ou de la membrane interosseuse. Plus la douleur se déclenche lors d'une pression proximale, plus l'atteinte de la syndesmose est prononcée.</div>
         <div class="info-box amber" style="font-size:13px;"><strong>Résultats très variables selon les études :</strong> Interpréter avec précaution. À combiner avec le test de rotation latérale pour la syndesmose.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=z-7cJ7LpCqY" target="_blank" rel="noopener">Physiotutors EN</a>
+        <a class="video-btn fr" href="https://www.youtube.com/watch?v=0nSFgkejsSU" target="_blank" rel="noopener">Squeeze Test FR</a>
+        </div>
       </div>
     </div>
 
@@ -7962,6 +8132,10 @@
           <div class="test-sensitivity"><span style="min-width:90px;">Spécificité</span><div class="bar-wrap"><div class="bar-fill high" style="width:93%"></div></div><span>93%</span></div>
         </div>
         <div class="info-box teal" style="font-size:13px;margin-top:8px;"><strong>Attention :</strong> Une flexion plantaire résiduelle peut exister par action des muscles plantaire et fléchisseurs profonds même en cas de rupture complète du tendon d'Achille.</div>
+      
+        <div class="video-links">
+        <a class="video-btn physiotutors" href="https://www.youtube.com/watch?v=z-7cJ7LpCqY" target="_blank" rel="noopener">Physiotutors EN</a>
+        </div>
       </div>
     </div>
 
@@ -10385,6 +10559,14 @@
 <section class="section" id="anatomie-ms-coiffe">
   <div class="section-title">Anatomie — Muscles de la coiffe des rotateurs</div>
   <div class="section-sub">Chapitre 1 · Épaule — Thomas Gautier D.O. · IEOQ Année 1</div>
+  <div style="text-align:center;margin-bottom:20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Shoulderjoint.PNG/320px-Shoulderjoint.PNG" 
+         alt="Rotator cuff overview" 
+         style="max-height:220px;width:auto;border-radius:10px;border:1px solid var(--border);background:#fff;padding:6px;"
+         loading="lazy" onerror="this.parentElement.style.display='none'">
+    <div style="font-size:11px;color:var(--gray-500);margin-top:6px;">Vue d'ensemble de l'articulation gléno-humérale et de la coiffe</div>
+    <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+  </div>
   <div class="info-box teal" style="margin-bottom:20px;">
     Les 4 muscles de la coiffe : <strong>Subscapulaire</strong> · <strong>Supra-épineux</strong> · <strong>Infra-épineux</strong> · <strong>Petit rond</strong>. Tous s'étendent de la scapula à l'humérus.
   </div>
@@ -10408,6 +10590,13 @@
         <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">C5</span> <span class="tag tag-teal">C6</span> (faisceau post.)</td></tr>
         <tr><td class="muscle-name">Artère</td><td>Artère axillaire + branches dorsale scapula et infra-scapulaire</td></tr>
       </tbody></table></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
+    <div style="flex-shrink:0;text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Subscapularis.png/320px-Subscapularis.png" alt="Subscapularis muscle" style="height:160px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle subscapulaire — vue antérieure (en rouge)</div>
+      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Subscapulaire :</strong> Forme le <strong>verrou antérieur</strong> contre les luxations ant. Parfois sectionné + suturé en raccourcissement (<strong>intervention de Bankart</strong>) pour limiter la récidive. Non palpable sauf à son insertion terminale et son bord latéral.</div>
@@ -10434,6 +10623,13 @@
       </tbody></table></div>
     </div>
   </div>
+  <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
+    <div style="flex-shrink:0;text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Supraspinatus.png/320px-Supraspinatus.png" alt="Supraspinatus muscle" style="height:160px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle supra-épineux — vue postérieure (en rouge)</div>
+      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+    </div>
+  </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Supra-épineux :</strong> Recouvert par le trapèze → acromion → deltoïde moyen — palpable seulement indirectement (deltoïde décontracté + élévation du moignon). Renforce le lig. coraco-huméral sup. Sa paralysie → <strong>subluxation inférieure</strong>. Rôle de <strong>centreur permanent</strong> de la tête. Passage sous la voûte acromiale → <strong>muscle le plus touché de la coiffe</strong> (inflammations, usures, ruptures).</div>
 
   <!-- INFRA-ÉPINEUX -->
@@ -10455,6 +10651,13 @@
         <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">C5</span> <span class="tag tag-teal">C6</span></td></tr>
         <tr><td class="muscle-name">Artères</td><td>Artère supra-scapulaire · Artère dorsale de la scapula</td></tr>
       </tbody></table></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
+    <div style="flex-shrink:0;text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Infraspinatus.png/320px-Infraspinatus.png" alt="Infraspinatus muscle" style="height:160px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle infra-épineux — vue postérieure (en rouge)</div>
+      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Infra-épineux :</strong> Corps charnu partiellement sous-cutané → facile à atteindre. Tendon palpé juste en arrière du supra-épineux. Non soumis à la voûte osseuse → <strong>moins souvent atteint</strong> dans les pathologies de la coiffe. Participe légèrement à la fin de l'abduction, mais pas à l'adduction.</div>
@@ -10479,6 +10682,13 @@
         <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">C5</span> <span class="tag tag-teal">C6</span></td></tr>
         <tr><td class="muscle-name">Artère</td><td>Artère circonflexe post.</td></tr>
       </tbody></table></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
+    <div style="flex-shrink:0;text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Teres_minor.png/320px-Teres_minor.png" alt="Teres minor muscle" style="height:160px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle petit rond — vue postérieure (en rouge)</div>
+      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Petit rond :</strong> Palpable en faisant exécuter une <strong>rotation latérale de l'humérus</strong>. N'a rien à voir avec son homonyme « grand rond » — ni muscle de la coiffe, ni rotateur latéral.</div>
@@ -10610,7 +10820,12 @@
 
   <div class="test-section-title">💪 Groupe antérieur — Fléchisseurs</div>
 
-  <!-- BICEPS -->
+  <div style="text-align:center;margin-bottom:10px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Biceps_brachii.png/140px-Biceps_brachii.png" alt="Biceps brachial" style="height:130px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+    <div style="font-size:10px;color:var(--gray-500);margin-top:4px;">Biceps brachial · Vue antérieure</div>
+    <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+  </div>
+    <!-- BICEPS -->
   <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
     <div class="tech-card-name">Biceps brachial <small>2 chefs · Scapula → Radius</small></div><span class="tag tag-teal" style="margin-left:auto;margin-right:8px;">Fléchisseur · Supinateur</span><div class="test-toggle">▾</div>
   </div><div class="tech-card-body">
@@ -10679,7 +10894,12 @@
 
   <div class="test-section-title" style="margin-top:20px;">💪 Groupe postérieur — Extenseur</div>
 
-  <!-- TRICEPS -->
+  <div style="text-align:center;margin-bottom:10px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Triceps_brachii.png/140px-Triceps_brachii.png" alt="Triceps brachial" style="height:130px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+    <div style="font-size:10px;color:var(--gray-500);margin-top:4px;">Triceps brachial · Vue postérieure</div>
+    <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+  </div>
+    <!-- TRICEPS -->
   <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
     <div class="tech-card-name">Triceps brachial <small>3 chefs · Scapula + Humérus → Ulna</small></div><span class="tag tag-coral" style="margin-left:auto;margin-right:8px;">Extenseur coude</span><div class="test-toggle">▾</div>
   </div><div class="tech-card-body">
@@ -10853,7 +11073,17 @@
         </tbody></table></div>
       </div>
     </div>
-    <div class="info-box teal"><strong>🦴 Moyen fessier :</strong> <strong>Hauban actif</strong> garant de l'horizontalité du bassin lors de l'appui monopodal. Sa défaillance → <strong>boiterie de Trendelenburg</strong> (bascule controlatérale du bassin). Remplacée par la boiterie de Duchenne. Lors de l'appui hanché, délègue au fascia lata (haubanage passif + économique). Fonctionne surtout en chaîne fermée, modo stato-dynamique. Semble responsable de l'<strong>endurance</strong> dans le mouvement.</div>
+    <div class="info-box teal"><div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Gluteus_medius.png/160px-Gluteus_medius.png" alt="Moyen fessier" style="height:140px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Moyen fessier (en rouge) · Vue latérale</span>
+      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+    </div>
+    <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Gluteus_medius.png/160px-Gluteus_medius.png" alt="Moyen fessier" style="height:140px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Moyen fessier (en rouge) · Vue latérale</span>
+      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+    </div>
+    <strong>🦴 Moyen fessier :</strong> <strong>Hauban actif</strong> garant de l'horizontalité du bassin lors de l'appui monopodal. Sa défaillance → <strong>boiterie de Trendelenburg</strong> (bascule controlatérale du bassin). Remplacée par la boiterie de Duchenne. Lors de l'appui hanché, délègue au fascia lata (haubanage passif + économique). Fonctionne surtout en chaîne fermée, modo stato-dynamique. Semble responsable de l'<strong>endurance</strong> dans le mouvement.</div>
   </div></div>
 
   <!-- GRAND FESSIER -->
@@ -10887,7 +11117,17 @@
         </tbody></table></div>
       </div>
       <div class="info-box amber" style="align-self:start;">
-        <strong>🦴 Grand fessier :</strong> Galbe losangique (rhomboïdal), aspect réniforme à la contraction. On divise la fesse en <strong>4 quadrants</strong> pour localiser le nerf sciatique → piqûres intra-musculaires dans le <strong>quadrant supéro-latéral</strong>.<br>La rectitude de la hanche humaine explique la fréquence du <strong>flexum réactionnel</strong> dans toutes les pathologies affectant cette zone.
+        <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gluteus_maximus.png/160px-Gluteus_maximus.png" alt="Grand fessier" style="height:140px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Grand fessier (en rouge) · Vue postérieure</span>
+      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+    </div>
+    <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gluteus_maximus.png/160px-Gluteus_maximus.png" alt="Grand fessier" style="height:140px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Grand fessier (en rouge) · Vue postérieure</span>
+      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+    </div>
+    <strong>🦴 Grand fessier :</strong> Galbe losangique (rhomboïdal), aspect réniforme à la contraction. On divise la fesse en <strong>4 quadrants</strong> pour localiser le nerf sciatique → piqûres intra-musculaires dans le <strong>quadrant supéro-latéral</strong>.<br>La rectitude de la hanche humaine explique la fréquence du <strong>flexum réactionnel</strong> dans toutes les pathologies affectant cette zone.
       </div>
     </div>
   </div></div>
@@ -10916,7 +11156,17 @@
         </tbody></table></div>
       </div>
     </div>
-    <div class="info-box teal"><strong>🦴 TFL :</strong> Forme une saillie antéro-latérale à la hanche, sous-cutané, facilement palpable. Sa mise en tension par l'adduction provoque une dépression longitudinale visible sur toute la cuisse. Le terme <strong>deltoïde fessier de Farabeuf</strong> regroupe TFL + fascia lata + grand fessier superficiel. Le fascia lata assure un <strong>haubanage latéral passif</strong> à la hanche et au genou → économie lors de l'appui monopodal. L'<strong>expansion patellaire du TFL</strong> peut être en cause dans certains <strong>syndromes fémoro-patellaires</strong>.</div>
+    <div class="info-box teal"><div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tensor_fasciae_latae.png/160px-Tensor_fasciae_latae.png" alt="Tenseur du fascia lata" style="height:140px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">TFL (en rouge) · Vue antéro-latérale</span>
+      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+    </div>
+    <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tensor_fasciae_latae.png/160px-Tensor_fasciae_latae.png" alt="Tenseur du fascia lata" style="height:140px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px;" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">TFL (en rouge) · Vue antéro-latérale</span>
+      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+    </div>
+    <strong>🦴 TFL :</strong> Forme une saillie antéro-latérale à la hanche, sous-cutané, facilement palpable. Sa mise en tension par l'adduction provoque une dépression longitudinale visible sur toute la cuisse. Le terme <strong>deltoïde fessier de Farabeuf</strong> regroupe TFL + fascia lata + grand fessier superficiel. Le fascia lata assure un <strong>haubanage latéral passif</strong> à la hanche et au genou → économie lors de l'appui monopodal. L'<strong>expansion patellaire du TFL</strong> peut être en cause dans certains <strong>syndromes fémoro-patellaires</strong>.</div>
   </div></div>
 
   <!-- Tableau comparatif MI -->
@@ -11045,15 +11295,30 @@ let currentSub = 'fondements';
 function switchArt(art) {
   currentArt = art;
   const map = ART_MAP[art];
-  // Toggle art-tab active state
-  document.querySelectorAll('.art-tab').forEach(t =>
-    t.classList.toggle('active', t.dataset.art === art));
-  // Toggle sub-tabs accordion: show only the active art's sub-tabs
-  document.querySelectorAll('.sub-tabs-group').forEach(g => {
-    const isActive = g.dataset.art === art;
-    g.classList.toggle('hidden', !isActive);
-    g.classList.toggle('active', isActive);
+  if (!map) return;
+
+  /* Update art-tab active highlight */
+  document.querySelectorAll('.art-tab').forEach(function(t) {
+    if (t.dataset.art === art) {
+      t.classList.add('active');
+    } else {
+      t.classList.remove('active');
+    }
   });
+
+  /* Show only the matching sub-tabs group — direct style for iOS reliability */
+  document.querySelectorAll('.sub-tabs-group').forEach(function(g) {
+    if (g.dataset.art === art) {
+      g.style.display = 'flex';
+      g.classList.add('active');
+      g.classList.remove('hidden');
+    } else {
+      g.style.display = 'none';
+      g.classList.remove('active');
+      g.classList.add('hidden');
+    }
+  });
+
   switchSub(map.default);
 }
 
@@ -11061,37 +11326,49 @@ function switchSub(sub) {
   currentSub = sub;
   closeSearch();
 
-  document.querySelectorAll('.sub-tab').forEach(t =>
-    t.classList.toggle('active', t.dataset.sub === sub));
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  /* Update sub-tab active highlight */
+  document.querySelectorAll('.sub-tab').forEach(function(t) {
+    if (t.dataset.sub === sub) {
+      t.classList.add('active');
+    } else {
+      t.classList.remove('active');
+    }
+  });
+
+  /* Hide all sections then show the target — direct style for iOS reliability */
+  document.querySelectorAll('.section').forEach(function(s) {
+    s.style.display = 'none';
+    s.classList.remove('active');
+  });
 
   const virt = VIRTUAL_SECTIONS[sub];
   const realId = virt ? virt.real : sub;
   const target = document.getElementById(realId);
   if (target) {
+    target.style.display = 'block';
     target.classList.add('active');
 
     /* Inject / refresh the section indicator */
-    let indicator = target.querySelector('.section-indicator');
+    var indicator = target.querySelector('.section-indicator');
     if (!indicator) {
       indicator = document.createElement('div');
       indicator.className = 'section-indicator';
       target.insertBefore(indicator, target.firstChild);
     }
-    const artIcon = { general:'🔬', epaule:'🦴', coude:'🦾', poignet:'✋',
+    var artIcon = { general:'🔬', epaule:'🦴', coude:'🦾', poignet:'✋',
       genou:'🦵', hanche:'🦴', cheville:'🦶', transversal:'📚', neurologie:'🧠' };
     indicator.innerHTML =
-      `<span class="si-icon">${artIcon[currentArt] || '📄'}</span>` +
-      `<span class="si-art">${ART_LABELS[currentArt] || currentArt}</span>` +
-      `<span class="si-sep">›</span>` +
-      `<span class="si-sub">${SUB_LABELS[sub] || sub}</span>`;
+      '<span class="si-icon">' + (artIcon[currentArt] || '📄') + '</span>' +
+      '<span class="si-art">' + (ART_LABELS[currentArt] || currentArt) + '</span>' +
+      '<span class="si-sep">›</span>' +
+      '<span class="si-sub">' + (SUB_LABELS[sub] || sub) + '</span>';
 
     requestAnimationFrame(function() {
       window.scrollTo(0, 0);
     });
     if (virt && virt.anchor) {
-      setTimeout(() => {
-        const el = document.getElementById(virt.anchor);
+      setTimeout(function() {
+        var el = document.getElementById(virt.anchor);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }, 60);
     }
@@ -11268,14 +11545,24 @@ function highlightMatch(text, words) {
 
 function selectResult(e, el) {
   e.preventDefault();
-  const sub = el.dataset.sub;
-  const art = el.dataset.art;
-  /* Switch art first (reveals sub-tabs), then sub */
+  var sub = el.dataset.sub;
+  var art = el.dataset.art;
   currentArt = art;
-  document.querySelectorAll('.art-tab').forEach(t =>
-    t.classList.toggle('active', t.dataset.art === art));
-  document.querySelectorAll('.sub-tabs-group').forEach(g =>
-    g.classList.toggle('hidden', g.dataset.art !== art));
+  document.querySelectorAll('.art-tab').forEach(function(t) {
+    if (t.dataset.art === art) t.classList.add('active');
+    else t.classList.remove('active');
+  });
+  document.querySelectorAll('.sub-tabs-group').forEach(function(g) {
+    if (g.dataset.art === art) {
+      g.style.display = 'flex';
+      g.classList.add('active');
+      g.classList.remove('hidden');
+    } else {
+      g.style.display = 'none';
+      g.classList.remove('active');
+      g.classList.add('hidden');
+    }
+  });
   switchSub(sub);
   document.getElementById('searchInput').value = '';
   document.getElementById('searchClear').classList.remove('visible');
@@ -11335,46 +11622,40 @@ function escRegex(s) {
 }
 
 /* ══ iOS TOUCH DELEGATION ══
-   iOS Safari sometimes doesn't fire 'click' on non-anchor/button elements,
-   and can delay onclick on buttons inside overflow:auto containers.
-   We attach touchend directly on the sidebar to catch all tab taps reliably. */
+   Intercept taps on nav buttons — handles both onclick AND touch events.
+   e.preventDefault() is NOT called here so onclick still fires normally on desktop. */
 document.addEventListener('touchend', function(e) {
-  const artBtn = e.target.closest('.art-tab[data-art]');
-  if (artBtn) { e.preventDefault(); switchArt(artBtn.dataset.art); return; }
-  const subBtn = e.target.closest('.sub-tab[data-sub]');
-  if (subBtn) { e.preventDefault(); switchSub(subBtn.dataset.sub); return; }
-  const testHdr = e.target.closest('.test-card-header[onclick]');
-  if (testHdr) {
-    e.preventDefault();
-    const match = testHdr.getAttribute('onclick').match(/toggleTest\(['"](.+?)['"]\)/);
-    if (match) toggleTest(match[1]);
-    return;
-  }
-  const drawerBtn = e.target.closest('#mobileDrawerBtn');
-  if (drawerBtn) { e.preventDefault(); toggleMobileDrawer(); return; }
-}, { passive: false });
+  var artBtn = e.target.closest && e.target.closest('.art-tab[data-art]');
+  if (artBtn) { switchArt(artBtn.dataset.art); return; }
+  var subBtn = e.target.closest && e.target.closest('.sub-tab[data-sub]');
+  if (subBtn) { switchSub(subBtn.dataset.sub); return; }
+}, { passive: true });
 
-/* ── Init ── */
-document.addEventListener('DOMContentLoaded', function() {
+/* ── Init function — called by both DOMContentLoaded and window.onload ── */
+var _inited = false;
+function initApp() {
+  if (_inited) return;
+  _inited = true;
+
+  /* Explicitly hide every section and sub-tabs-group via inline style */
+  document.querySelectorAll('.section').forEach(function(s) {
+    s.style.display = 'none';
+    s.classList.remove('active');
+  });
+  document.querySelectorAll('.sub-tabs-group').forEach(function(g) {
+    g.style.display = 'none';
+    g.classList.remove('active');
+    g.classList.add('hidden');
+  });
+
   switchArt('general');
   buildSearchIndex();
-
-  /* iOS Safari: add touchstart listeners as fallback for onclick on buttons */
-  function addTouchFallback(selector, handler) {
-    document.querySelectorAll(selector).forEach(function(el) {
-      el.addEventListener('touchstart', function(e) {
-        e.stopPropagation();
-      }, { passive: true });
-    });
-  }
-  addTouchFallback('.art-tab');
-  addTouchFallback('.sub-tab');
 
   /* Close mobile drawer when tapping outside */
   document.addEventListener('click', function(e) {
     if (window.innerWidth > 768) return;
-    const sidebar = document.getElementById('sidebar');
-    const btn = document.getElementById('mobileDrawerBtn');
+    var sidebar = document.getElementById('sidebar');
+    var btn = document.getElementById('mobileDrawerBtn');
     if (sidebar && sidebar.classList.contains('drawer-open')) {
       if (!sidebar.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
         closeMobileDrawer();
@@ -11382,16 +11663,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  /* On resize back to desktop, reset drawer state */
   window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
-      const sidebar = document.getElementById('sidebar');
+      var sidebar = document.getElementById('sidebar');
       if (sidebar) sidebar.classList.remove('drawer-open');
-      const btn = document.getElementById('mobileDrawerBtn');
+      var btn = document.getElementById('mobileDrawerBtn');
       if (btn) { btn.classList.remove('open'); btn.innerHTML = '☰'; }
     }
   });
-});
+}
+
+/* Fire on DOMContentLoaded, window.onload, and after a short delay —
+   triple safety net for file:// in Safari iOS */
+document.addEventListener('DOMContentLoaded', initApp);
+window.addEventListener('load', initApp);
+setTimeout(initApp, 400);
 </script>
 
 <!-- ═══════════════════════ BOTTOM BAR ═══════════════════════ -->
