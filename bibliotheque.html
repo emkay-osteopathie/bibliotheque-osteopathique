@@ -2238,7 +2238,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
         </div>
         <div class="divider"></div>
         <h3 class="sub">Déplacements claviculaires selon les mouvements d'épaule</h3>
-        <div style="overflow-x:auto;">
+        <div style="overflow-x:auto;overflow-y:visible;">
           <table class="rom-table" style="font-size:12.5px;min-width:600px;">
             <tr>
               <th>Mouvement épaule</th>
@@ -9027,8 +9027,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon navy">🔵</div><div class="card-title">Constitution du plexus brachial — Schéma à retenir</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:780px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:780px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Racines -->
           <text x="10" y="30" font-size="13" font-weight="700" fill="#1c3861">RACINES</text>
           <text x="10" y="52" font-size="12" fill="#1c3861">C5</text>
@@ -9167,45 +9167,50 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon amber">🖊️</div><div class="card-title">Trajet du nerf médian — Schéma simplifié (à retenir pour l'examen)</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Bras silhouette -->
-          <rect x="100" y="10" width="60" height="240" rx="30" fill="#f7f9fc" stroke="#d8dde4" stroke-width="1.5"/>
-          <!-- Avant bras -->
-          <rect x="90" y="235" width="50" height="140" rx="22" fill="#f7f9fc" stroke="#d8dde4" stroke-width="1.5" transform="rotate(-8 115 255)"/>
+          <rect x="80" y="15" width="58" height="200" rx="28" fill="#f7f9fc" stroke="#d8dde4" stroke-width="1.5"/>
+          <!-- Avant-bras silhouette -->
+          <rect x="75" y="210" width="52" height="105" rx="22" fill="#f7f9fc" stroke="#d8dde4" stroke-width="1.5" transform="rotate(-5 100 230)"/>
           <!-- Trajet nerf médian -->
-          <path d="M 130 30 C 128 80 132 120 125 160 C 122 190 118 215 115 245 C 112 270 112 295 115 320" stroke="#d4840e" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 108 30 C 107 70 108 110 106 148 C 104 178 102 205 100 232 C 98 255 97 278 96 300" stroke="#d4840e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
           <!-- Points clés -->
-          <circle cx="130" cy="30" r="6" fill="#d4840e"/>
-          <text x="145" y="35" font-size="11" font-weight="700" fill="#4a2e00">① Creux axillaire — naissance (V artère axillaire)</text>
-          <circle cx="127" cy="100" r="6" fill="#d4840e"/>
-          <text x="142" y="104" font-size="11" fill="#4a2e00">② Bras : croise artère brachiale en X (lat→méd)</text>
-          <circle cx="123" cy="160" r="6" fill="#d4840e"/>
-          <text x="138" y="164" font-size="11" fill="#4a2e00">③ Sillon bicipital médial (repère anesthésie)</text>
-          <circle cx="119" cy="210" r="6" fill="#d4840e"/>
-          <text x="134" y="214" font-size="11" fill="#4a2e00">④ Avant-bras : entre chefs rond pronateur</text>
-          <circle cx="115" cy="250" r="6" fill="#c94535"/>
-          <text x="130" y="254" font-size="11" font-weight="700" fill="#5a1a13">⑤ Canal carpien ← Syndrome canal carpien ici !</text>
+          <circle cx="108" cy="30" r="7" fill="#d4840e"/>
+          <text x="125" y="28" font-size="11.5" font-weight="700" fill="#4a2e00">① Creux axillaire — naissance</text>
+          <text x="125" y="44" font-size="11" fill="#5a5f66">V artère axillaire · deux racines lat. + méd.</text>
+          <circle cx="107" cy="95" r="7" fill="#d4840e"/>
+          <text x="125" y="93" font-size="11.5" font-weight="700" fill="#4a2e00">② Bras — croise artère brachiale en X</text>
+          <text x="125" y="108" font-size="11" fill="#5a5f66">Latéral → médial en descendant</text>
+          <circle cx="104" cy="160" r="7" fill="#d4840e"/>
+          <text x="125" y="158" font-size="11.5" font-weight="700" fill="#4a2e00">③ Sillon bicipital médial</text>
+          <text x="125" y="173" font-size="11" fill="#5a5f66">Repère pour l'anesthésie du n. médian</text>
+          <circle cx="101" cy="220" r="7" fill="#d4840e"/>
+          <text x="125" y="218" font-size="11.5" font-weight="700" fill="#4a2e00">④ Avant-bras — entre chefs rond pronateur</text>
+          <text x="125" y="233" font-size="11" fill="#5a5f66">Puis sous m. fléchisseur superficiel des doigts</text>
+          <circle cx="97" cy="285" r="7" fill="#c94535"/>
+          <text x="125" y="281" font-size="11.5" font-weight="700" fill="#5a1a13">⑤ Canal carpien ← Compression ici = SCC</text>
+          <text x="125" y="297" font-size="11" fill="#5a5f66">Tinel : percussion → fourmillements · Phalen : flexion 60 s</text>
           <!-- Zone LOAF -->
-          <rect x="400" y="15" width="340" height="120" rx="8" fill="#fff8e1" stroke="#d4840e" stroke-width="1.5"/>
-          <text x="420" y="36" font-size="13" font-weight="700" fill="#4a2e00">Mnémo LOAF — Muscles thénariens innervés</text>
-          <text x="420" y="56" font-size="12" fill="#4a2e00">L — Lombricaux 1 et 2</text>
-          <text x="420" y="73" font-size="12" fill="#4a2e00">O — Opposant du pouce</text>
-          <text x="420" y="90" font-size="12" fill="#4a2e00">A — Abducteur court du pouce</text>
-          <text x="420" y="107" font-size="12" fill="#4a2e00">F — Fléchisseur court du pouce (chef sup.)</text>
-          <text x="420" y="125" font-size="11" font-style="italic" fill="#5a5f66">→ Atrophie = « main de singe »</text>
+          <rect x="395" y="10" width="352" height="128" rx="8" fill="#fff8e1" stroke="#d4840e" stroke-width="1.5"/>
+          <text x="415" y="32" font-size="13" font-weight="700" fill="#4a2e00">Mnémo LOAF — Muscles thénariens (n. médian)</text>
+          <text x="415" y="55" font-size="12.5" fill="#4a2e00">L — Lombricaux 1 et 2</text>
+          <text x="415" y="74" font-size="12.5" fill="#4a2e00">O — Opposant du pouce</text>
+          <text x="415" y="93" font-size="12.5" fill="#4a2e00">A — Abducteur court du pouce</text>
+          <text x="415" y="112" font-size="12.5" fill="#4a2e00">F — Fléchisseur court du pouce (chef sup.)</text>
+          <text x="415" y="130" font-size="11" font-style="italic" fill="#5a5f66">→ Atrophie éminence thénar = « main de singe »</text>
           <!-- Zone territoire sensitif -->
-          <rect x="400" y="148" width="340" height="110" rx="8" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1.5"/>
-          <text x="420" y="168" font-size="13" font-weight="700" fill="#0a2e2a">Territoire sensitif du nerf médian</text>
-          <text x="420" y="188" font-size="12" fill="#0a2e2a">Palmaire : I, II, III + moitié latérale IV</text>
-          <text x="420" y="207" font-size="12" fill="#0a2e2a">Dorsal : P2–P3 de I, II, III + ½ lat. IV</text>
-          <text x="420" y="226" font-size="12" fill="#0a2e2a">Paume de la main (éminence thénar)</text>
-          <text x="420" y="246" font-size="11" font-style="italic" fill="#5a5f66">→ Hypoesthésie pouce + index = canal carpien</text>
-          <!-- Signe de Tinel -->
-          <rect x="400" y="270" width="340" height="40" rx="8" fill="#fdecea" stroke="#c94535" stroke-width="1.5"/>
-          <text x="420" y="287" font-size="12" font-weight="700" fill="#5a1a13">Signe de Tinel :</text>
-          <text x="510" y="287" font-size="12" fill="#5a1a13"> percussion canal carpien → fourmillements</text>
-          <text x="420" y="303" font-size="11" fill="#5a1a13">Test de Phalen : flexion poignet 60 s → reproduction des symptômes</text>
+          <rect x="395" y="152" width="352" height="110" rx="8" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1.5"/>
+          <text x="415" y="174" font-size="13" font-weight="700" fill="#0a2e2a">Territoire sensitif</text>
+          <text x="415" y="196" font-size="12" fill="#0a2e2a">Palmaire : doigts I, II, III + moitié lat. IV</text>
+          <text x="415" y="215" font-size="12" fill="#0a2e2a">Dorsal : P2–P3 des doigts I, II, III + ½ lat. IV</text>
+          <text x="415" y="234" font-size="12" fill="#0a2e2a">Paume lat. + éminence thénar (rameau palmaire)</text>
+          <text x="415" y="253" font-size="11" font-style="italic" fill="#5a5f66">→ Hypoesthésie pouce + index = canal carpien</text>
+          <!-- Paralysie -->
+          <rect x="395" y="276" width="352" height="52" rx="8" fill="#fdecea" stroke="#c94535" stroke-width="1.5"/>
+          <text x="415" y="298" font-size="12.5" font-weight="700" fill="#5a1a13">Paralysie globale :</text>
+          <text x="520" y="298" font-size="12" fill="#5a1a13">Main de singe · Pince pollicidigitale impossible</text>
+          <text x="415" y="317" font-size="11.5" fill="#5a1a13">Flexion P1 I–II–III conservée · Pronation impossible</text>
         </svg>
       </div>
     </div>
@@ -9215,8 +9220,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon coral">🗺️</div><div class="card-title">Territoires sensitifs tronculaires — MS (schéma)</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Vue palmaire main gauche simplifiée -->
           <text x="10" y="22" font-size="13" font-weight="700" fill="#1a1c1e">Vue palmaire (main gauche)</text>
           <!-- Paume -->
@@ -9307,8 +9312,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon navy">🔢</div><div class="card-title">Plexus lombaire — Constitution &amp; Branches (schéma)</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Racines -->
           <text x="10" y="22" font-size="12" font-weight="700" fill="#1c3861">RACINES</text>
           <text x="10" y="55" font-size="12" fill="#1c3861">L1</text>
@@ -9363,8 +9368,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon teal">🔺</div><div class="card-title">Plexus sacral — N. sciatique &amp; branches à retenir</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Racines plexus sacral -->
           <text x="10" y="22" font-size="12" font-weight="700" fill="#1c3861">RACINES</text>
           <text x="10" y="58" font-size="12" fill="#4d82cc">L4 (partiel)</text>
@@ -9480,8 +9485,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon coral">📍</div><div class="card-title">Trajet du nerf sciatique &amp; points de Valleix — À retenir</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 760 315" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Silhouette cuisse/jambe vue postérieure -->
           <ellipse cx="140" cy="60" rx="55" ry="40" fill="#f4f7fb" stroke="#d8dde4" stroke-width="1.5"/>
           <text x="140" y="63" text-anchor="middle" font-size="10" fill="#5a5f66">Fesse</text>
@@ -9535,8 +9540,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><div class="card-icon navy">🗺️</div><div class="card-title">Territoires sensitifs tronculaires MI — Résumé schématique</div></div>
     <div class="card-body">
-      <div style="overflow-x:auto;">
-        <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+      <div style="overflow-x:auto;overflow-y:visible;">
+        <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;overflow:visible;">
           <!-- Pied vue plantaire -->
           <text x="10" y="18" font-size="12" font-weight="700" fill="#1a1c1e">Pied — Vue plantaire</text>
           <ellipse cx="80" cy="130" rx="55" ry="70" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
