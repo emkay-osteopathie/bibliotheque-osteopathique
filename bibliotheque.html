@@ -1512,6 +1512,8 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       <button type="button" class="sub-tab" data-sub="neuro-triage" onclick="switchSub('neuro-triage')">🚦 Triage clinique</button>
       <button type="button" class="sub-tab" data-sub="neuro-routine-ms" onclick="switchSub('neuro-routine-ms')">💪 Routine MS</button>
       <button type="button" class="sub-tab" data-sub="neuro-routine-mi" onclick="switchSub('neuro-routine-mi')">🦵 Routine MI</button>
+      <button type="button" class="sub-tab" data-sub="neuro-anatomie-ms" onclick="switchSub('neuro-anatomie-ms')">🔵 Anatomie Plexus Brachial</button>
+      <button type="button" class="sub-tab" data-sub="neuro-anatomie-mi" onclick="switchSub('neuro-anatomie-mi')">🟢 Anatomie Plexus Lombaire/Sacral</button>
       <button type="button" class="sub-tab" data-sub="neuro-raisonnement" onclick="switchSub('neuro-raisonnement')">🧩 Raisonnement clinique</button>
     </div>
   </div>
@@ -1549,6 +1551,9 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       <button type="button" class="sub-tab" data-sub="anatomie-ms-bras" onclick="switchSub('anatomie-ms-bras')">💪 MS · Bras (Ch.4)</button>
       <button type="button" class="sub-tab" data-sub="anatomie-ms-avbras" onclick="switchSub('anatomie-ms-avbras')">💪 MS · Avant-bras (Ch.5)</button>
       <button type="button" class="sub-tab" data-sub="anatomie-mi-ceinture" onclick="switchSub('anatomie-mi-ceinture')">🦵 MI · Ceinture (Ch.1)</button>
+      <button type="button" class="sub-tab" data-sub="anatomie-mi-pelvitroch" onclick="switchSub('anatomie-mi-pelvitroch')">🦵 MI · Pelvi-trochantériens (Ch.2)</button>
+      <button type="button" class="sub-tab" data-sub="anatomie-mi-posterieurs" onclick="switchSub('anatomie-mi-posterieurs')">🦵 MI · Muscles postérieurs (Ch.4)</button>
+      <button type="button" class="sub-tab" data-sub="anatomie-mi-adducteurs" onclick="switchSub('anatomie-mi-adducteurs')">🦵 MI · Muscles adducteurs (Ch.5)</button>
       <button type="button" class="sub-tab" data-sub="anatomie-rachis" onclick="switchSub('anatomie-rachis')">🦷 Rachis</button>
       <button type="button" class="sub-tab" data-sub="anatomie-tronc" onclick="switchSub('anatomie-tronc')">🫀 Tronc &amp; viscères</button>
     </div>
@@ -9013,6 +9018,592 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="footnote"><cite>Sources : Bender C, Dove L, Schmid AB. (JOSPT 2023) · Furman MB, Johnson SC. (Spine Journal 2019) — Dynatomes · Nee RJ, Coppieters MW, Boyd BS. (Musculoskelet Sci Pract 2022) — SLR reliability · Schmid AB, Tampin B. (Lumbar Spine Textbook) — Mechanosensitivity</cite></div>
 </section>
 
+<!-- ═══════════════════════ NEUROLOGIE — ANATOMIE PLEXUS BRACHIAL ═══════════════════════ -->
+<section class="section" id="neuro-anatomie-ms">
+  <div class="section-title">Anatomie — Plexus brachial &amp; Nerfs du membre supérieur</div>
+  <div class="section-sub">Trajets, territoires moteurs et sensitifs à retenir pour l'examen · Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <!-- CONSTITUTION DU PLEXUS BRACHIAL -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔵</div><div class="card-title">Constitution du plexus brachial — Schéma à retenir</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:780px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Racines -->
+          <text x="10" y="30" font-size="13" font-weight="700" fill="#1c3861">RACINES</text>
+          <text x="10" y="52" font-size="12" fill="#1c3861">C5</text>
+          <text x="10" y="92" font-size="12" fill="#1c3861">C6</text>
+          <text x="10" y="142" font-size="12" fill="#1c3861">C7</text>
+          <text x="10" y="192" font-size="12" fill="#1c3861">C8</text>
+          <text x="10" y="242" font-size="12" fill="#1c3861">T1</text>
+          <!-- Lines racines → troncs -->
+          <line x1="28" y1="48" x2="130" y2="72" stroke="#4d82cc" stroke-width="2.5"/>
+          <line x1="28" y1="88" x2="130" y2="72" stroke="#4d82cc" stroke-width="2.5"/>
+          <line x1="28" y1="138" x2="130" y2="140" stroke="#7aa8e0" stroke-width="2.5"/>
+          <line x1="28" y1="188" x2="130" y2="208" stroke="#274d86" stroke-width="2.5"/>
+          <line x1="28" y1="238" x2="130" y2="208" stroke="#274d86" stroke-width="2.5"/>
+          <!-- Troncs -->
+          <text x="115" y="40" font-size="11" font-weight="700" fill="#1c3861">TRONCS</text>
+          <rect x="110" y="60" width="90" height="26" rx="5" fill="#dceaf9" stroke="#4d82cc" stroke-width="1.5"/>
+          <text x="155" y="77" text-anchor="middle" font-size="11" fill="#1c3861">Supérieur</text>
+          <rect x="110" y="128" width="90" height="26" rx="5" fill="#dceaf9" stroke="#7aa8e0" stroke-width="1.5"/>
+          <text x="155" y="145" text-anchor="middle" font-size="11" fill="#1c3861">Moyen</text>
+          <rect x="110" y="196" width="90" height="26" rx="5" fill="#dceaf9" stroke="#274d86" stroke-width="1.5"/>
+          <text x="155" y="213" text-anchor="middle" font-size="11" fill="#1c3861">Inférieur</text>
+          <!-- Divisions (Ant/Post) -->
+          <text x="218" y="40" font-size="11" font-weight="700" fill="#155c50">DIVISIONS</text>
+          <line x1="200" y1="73" x2="270" y2="95" stroke="#4d82cc" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="200" y1="73" x2="270" y2="155" stroke="#4d82cc" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="200" y1="141" x2="270" y2="95" stroke="#7aa8e0" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="200" y1="141" x2="270" y2="155" stroke="#7aa8e0" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="200" y1="209" x2="270" y2="225" stroke="#274d86" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="200" y1="209" x2="270" y2="155" stroke="#274d86" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <!-- Faisceaux -->
+          <text x="270" y="40" font-size="11" font-weight="700" fill="#155c50">FAISCEAUX</text>
+          <rect x="265" y="82" width="90" height="26" rx="5" fill="#d4f5ee" stroke="#1a7a6a" stroke-width="1.5"/>
+          <text x="310" y="99" text-anchor="middle" font-size="11" fill="#0a2e2a">Latéral</text>
+          <rect x="265" y="142" width="90" height="26" rx="5" fill="#d4f5ee" stroke="#1a7a6a" stroke-width="1.5"/>
+          <text x="310" y="159" text-anchor="middle" font-size="11" fill="#0a2e2a">Postérieur</text>
+          <rect x="265" y="212" width="90" height="26" rx="5" fill="#d4f5ee" stroke="#1a7a6a" stroke-width="1.5"/>
+          <text x="310" y="229" text-anchor="middle" font-size="11" fill="#0a2e2a">Médial</text>
+          <!-- Nerfs terminaux -->
+          <text x="375" y="40" font-size="11" font-weight="700" fill="#0a2e2a">NERFS TERMINAUX</text>
+          <!-- Faisceau Latéral → Musculo-cutané + racine lat. Médian -->
+          <line x1="355" y1="95" x2="430" y2="80" stroke="#20997f" stroke-width="2"/>
+          <line x1="355" y1="95" x2="430" y2="108" stroke="#20997f" stroke-width="2"/>
+          <!-- Faisceau Postérieur → Radial + Axillaire -->
+          <line x1="355" y1="155" x2="430" y2="138" stroke="#20997f" stroke-width="2"/>
+          <line x1="355" y1="155" x2="430" y2="165" stroke="#20997f" stroke-width="2"/>
+          <!-- Faisceau Médial → Ulnaire + racine méd. Médian + cutanés -->
+          <line x1="355" y1="225" x2="430" y2="195" stroke="#20997f" stroke-width="2"/>
+          <line x1="355" y1="225" x2="430" y2="215" stroke="#20997f" stroke-width="2"/>
+          <line x1="355" y1="225" x2="430" y2="240" stroke="#20997f" stroke-width="2"/>
+          <line x1="355" y1="225" x2="430" y2="262" stroke="#20997f" stroke-width="2"/>
+          <!-- Nerf labels -->
+          <rect x="428" y="68" width="140" height="22" rx="4" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1"/>
+          <text x="498" y="83" text-anchor="middle" font-size="11" font-weight="600" fill="#0a2e2a">N. musculo-cutané (C5–C6)</text>
+          <rect x="428" y="96" width="150" height="22" rx="4" fill="#fff8e1" stroke="#d4840e" stroke-width="1.5"/>
+          <text x="503" y="111" text-anchor="middle" font-size="11" font-weight="700" fill="#4a2e00">N. médian (C5–T1)</text>
+          <rect x="428" y="126" width="130" height="22" rx="4" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1"/>
+          <text x="493" y="141" text-anchor="middle" font-size="11" font-weight="600" fill="#0a2e2a">N. axillaire (C5–C6)</text>
+          <rect x="428" y="153" width="130" height="22" rx="4" fill="#fff8e1" stroke="#d4840e" stroke-width="1.5"/>
+          <text x="493" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#4a2e00">N. radial (C5–T1)</text>
+          <rect x="428" y="183" width="130" height="22" rx="4" fill="#fdecea" stroke="#c94535" stroke-width="1.5"/>
+          <text x="493" y="198" text-anchor="middle" font-size="11" font-weight="700" fill="#5a1a13">N. ulnaire (C8–T1)</text>
+          <rect x="428" y="204" width="150" height="22" rx="4" fill="#fdecea" stroke="#c94535" stroke-width="1.5"/>
+          <text x="503" y="219" text-anchor="middle" font-size="11" font-weight="600" fill="#5a1a13">Racine méd. N. médian</text>
+          <rect x="428" y="228" width="175" height="22" rx="4" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1"/>
+          <text x="515" y="243" text-anchor="middle" font-size="11" fill="#0a2e2a">N. cutané méd. avant-bras (C8–T1)</text>
+          <rect x="428" y="250" width="165" height="22" rx="4" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1"/>
+          <text x="510" y="265" text-anchor="middle" font-size="11" fill="#0a2e2a">N. cutané méd. du bras (C8–T1)</text>
+          <!-- Légende mnémotechnique -->
+          <rect x="10" y="285" width="750" height="42" rx="6" fill="#dceaf9" stroke="#4d82cc" stroke-width="1"/>
+          <text x="24" y="301" font-size="11.5" font-weight="700" fill="#1c3861">🧠 Mnémo :</text>
+          <text x="100" y="301" font-size="11" fill="#1c3861">Tronc SUP = C5+C6 · Tronc MOY = C7 · Tronc INF = C8+T1</text>
+          <text x="24" y="318" font-size="11" fill="#1c3861">Faisceau LAT → Musculo-cutané + Racine lat. Médian · Faisceau POST → Radial + Axillaire · Faisceau MED → Ulnaire + Racine méd. Médian + Cutanés</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- NERFS TERMINAUX MS — TABLEAU MÉMO -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">📋</div><div class="card-title">Nerfs terminaux du membre supérieur — Ce qu'il faut retenir</div></div>
+    <div class="card-body" style="padding:0;">
+      <table class="grille-eval-table">
+        <thead><tr><th>Nerf</th><th>Racines</th><th>Faisceau</th><th>Trajet clé</th><th>Moteur (mnémo)</th><th>Sensitif</th><th>Paralysie caractéristique</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--teal-600);">Musculo-cutané</strong></td>
+            <td>C5–C6</td>
+            <td>Latéral</td>
+            <td>Perfore le coraco-brachial → entre biceps et brachial → nerf cutané latéral avant-bras</td>
+            <td>Flexion + Supination avant-bras (biceps, brachial, coraco-brachial)</td>
+            <td>Face antéro-latérale avant-bras</td>
+            <td>Perte flexion coude + supination</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--amber-500);">Médian</strong></td>
+            <td>C5–T1</td>
+            <td>Lat. + Méd.</td>
+            <td>En avant artère axillaire → croise artère brachiale en X → canal carpien. <strong>Syndrome canal carpien = compression ici</strong></td>
+            <td>Flexion + pronation main · Pince pollicidigitale (LOAF : Lombricaux 1&amp;2, Opposant, Abducteur, Fléchisseur court pouce)</td>
+            <td>Face palmaire I–II–III + ½ IV · Face dorsale P2–P3 mêmes doigts</td>
+            <td>« Main de singe » — atrophie éminence thénar</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--coral-500);">Ulnaire</strong></td>
+            <td>C8–T1</td>
+            <td>Médial</td>
+            <td>Sillon épicondyle médial (vulnérable aux fractures) → canal ulnaire poignet. <strong>Zone vulnérable : épicondyle médial</strong></td>
+            <td>Mouvements fins doigts (interosseux, lombricaux 3&amp;4, hypothénar, adducteur pouce)</td>
+            <td>Bord médial main + V + ½ IV palmaire et dorsal</td>
+            <td>« Griffe cubitale » — IV–V · Signe du gril (atrophie interosseux)</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--teal-600);">Radial</strong></td>
+            <td>C5–T1</td>
+            <td>Postérieur</td>
+            <td>Sillon du nerf radial (humérus) → divise en branche superficielle (sensitive) + profonde (motrice) au coude. <strong>Vulnérable aux fractures humérus</strong></td>
+            <td>Extension MS (triceps, extenseurs poignet + doigts, supinateur, abducteur pouce)</td>
+            <td>Face postérieure bras + avant-bras · Moitié dorso-latérale main</td>
+            <td>« Main tombante » (wrist drop) — impossibilité d'étendre le poignet</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--teal-600);">Axillaire</strong></td>
+            <td>C5–C6</td>
+            <td>Postérieur</td>
+            <td>Espace axillaire latéral → contourne col chirurgical humérus → deltoïde. <strong>Vulnérable luxation épaule</strong></td>
+            <td>Abduction bras (deltoïde, petit rond)</td>
+            <td>Face externe épaule</td>
+            <td>Amyotrophie deltoïde + impossibilité ABD bras</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SCHÉMA TRAJET NERF MÉDIAN -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">🖊️</div><div class="card-title">Trajet du nerf médian — Schéma simplifié (à retenir pour l'examen)</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Bras silhouette -->
+          <rect x="100" y="10" width="60" height="240" rx="30" fill="#f7f9fc" stroke="#d8dde4" stroke-width="1.5"/>
+          <!-- Avant bras -->
+          <rect x="90" y="235" width="50" height="140" rx="22" fill="#f7f9fc" stroke="#d8dde4" stroke-width="1.5" transform="rotate(-8 115 255)"/>
+          <!-- Trajet nerf médian -->
+          <path d="M 130 30 C 128 80 132 120 125 160 C 122 190 118 215 115 245 C 112 270 112 295 115 320" stroke="#d4840e" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Points clés -->
+          <circle cx="130" cy="30" r="6" fill="#d4840e"/>
+          <text x="145" y="35" font-size="11" font-weight="700" fill="#4a2e00">① Creux axillaire — naissance (V artère axillaire)</text>
+          <circle cx="127" cy="100" r="6" fill="#d4840e"/>
+          <text x="142" y="104" font-size="11" fill="#4a2e00">② Bras : croise artère brachiale en X (lat→méd)</text>
+          <circle cx="123" cy="160" r="6" fill="#d4840e"/>
+          <text x="138" y="164" font-size="11" fill="#4a2e00">③ Sillon bicipital médial (repère anesthésie)</text>
+          <circle cx="119" cy="210" r="6" fill="#d4840e"/>
+          <text x="134" y="214" font-size="11" fill="#4a2e00">④ Avant-bras : entre chefs rond pronateur</text>
+          <circle cx="115" cy="250" r="6" fill="#c94535"/>
+          <text x="130" y="254" font-size="11" font-weight="700" fill="#5a1a13">⑤ Canal carpien ← Syndrome canal carpien ici !</text>
+          <!-- Zone LOAF -->
+          <rect x="400" y="15" width="340" height="120" rx="8" fill="#fff8e1" stroke="#d4840e" stroke-width="1.5"/>
+          <text x="420" y="36" font-size="13" font-weight="700" fill="#4a2e00">Mnémo LOAF — Muscles thénariens innervés</text>
+          <text x="420" y="56" font-size="12" fill="#4a2e00">L — Lombricaux 1 et 2</text>
+          <text x="420" y="73" font-size="12" fill="#4a2e00">O — Opposant du pouce</text>
+          <text x="420" y="90" font-size="12" fill="#4a2e00">A — Abducteur court du pouce</text>
+          <text x="420" y="107" font-size="12" fill="#4a2e00">F — Fléchisseur court du pouce (chef sup.)</text>
+          <text x="420" y="125" font-size="11" font-style="italic" fill="#5a5f66">→ Atrophie = « main de singe »</text>
+          <!-- Zone territoire sensitif -->
+          <rect x="400" y="148" width="340" height="110" rx="8" fill="#edfaf6" stroke="#2bbf9e" stroke-width="1.5"/>
+          <text x="420" y="168" font-size="13" font-weight="700" fill="#0a2e2a">Territoire sensitif du nerf médian</text>
+          <text x="420" y="188" font-size="12" fill="#0a2e2a">Palmaire : I, II, III + moitié latérale IV</text>
+          <text x="420" y="207" font-size="12" fill="#0a2e2a">Dorsal : P2–P3 de I, II, III + ½ lat. IV</text>
+          <text x="420" y="226" font-size="12" fill="#0a2e2a">Paume de la main (éminence thénar)</text>
+          <text x="420" y="246" font-size="11" font-style="italic" fill="#5a5f66">→ Hypoesthésie pouce + index = canal carpien</text>
+          <!-- Signe de Tinel -->
+          <rect x="400" y="270" width="340" height="40" rx="8" fill="#fdecea" stroke="#c94535" stroke-width="1.5"/>
+          <text x="420" y="287" font-size="12" font-weight="700" fill="#5a1a13">Signe de Tinel :</text>
+          <text x="510" y="287" font-size="12" fill="#5a1a13"> percussion canal carpien → fourmillements</text>
+          <text x="420" y="303" font-size="11" fill="#5a1a13">Test de Phalen : flexion poignet 60 s → reproduction des symptômes</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITOIRES SENSITIFS MS -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon coral">🗺️</div><div class="card-title">Territoires sensitifs tronculaires — MS (schéma)</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Vue palmaire main gauche simplifiée -->
+          <text x="10" y="22" font-size="13" font-weight="700" fill="#1a1c1e">Vue palmaire (main gauche)</text>
+          <!-- Paume -->
+          <ellipse cx="130" cy="180" rx="75" ry="90" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <!-- Doigts -->
+          <rect x="60" y="80" width="22" height="85" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="86" y="60" width="22" height="105" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="112" y="55" width="22" height="110" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="138" y="62" width="22" height="103" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="163" y="90" width="20" height="75" rx="10" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <!-- Médian = jaune/orange : I, II, III, ½IV palmaire -->
+          <rect x="60" y="80" width="22" height="85" rx="11" fill="rgba(212,132,14,0.55)" stroke="#d4840e" stroke-width="1.5"/>
+          <rect x="86" y="60" width="22" height="105" rx="11" fill="rgba(212,132,14,0.55)" stroke="#d4840e" stroke-width="1.5"/>
+          <rect x="112" y="55" width="22" height="110" rx="11" fill="rgba(212,132,14,0.55)" stroke="#d4840e" stroke-width="1.5"/>
+          <rect x="138" y="62" width="11" height="103" rx="11" fill="rgba(212,132,14,0.55)" stroke="#d4840e" stroke-width="0"/>
+          <!-- Ulnaire = bleu : V + ½IV palmaire -->
+          <rect x="163" y="90" width="20" height="75" rx="10" fill="rgba(39,77,134,0.5)" stroke="#274d86" stroke-width="1.5"/>
+          <rect x="149" y="62" width="11" height="103" rx="0" fill="rgba(39,77,134,0.5)" stroke="#274d86" stroke-width="0"/>
+          <!-- Ulnaire paume médiale -->
+          <ellipse cx="165" cy="195" rx="42" ry="65" fill="rgba(39,77,134,0.25)" stroke="#274d86" stroke-width="1" stroke-dasharray="4,2"/>
+          <!-- Médian paume lat -->
+          <ellipse cx="100" cy="185" rx="52" ry="68" fill="rgba(212,132,14,0.2)" stroke="#d4840e" stroke-width="1" stroke-dasharray="4,2"/>
+          <!-- Radial éminence thénar -->
+          <ellipse cx="68" cy="220" rx="20" ry="30" fill="rgba(32,153,127,0.35)" stroke="#20997f" stroke-width="1"/>
+          <!-- Légendes -->
+          <rect x="220" y="55" width="16" height="16" rx="4" fill="rgba(212,132,14,0.6)" stroke="#d4840e" stroke-width="1"/>
+          <text x="242" y="68" font-size="12" font-weight="600" fill="#4a2e00">N. Médian (I–II–III + ½IV)</text>
+          <rect x="220" y="78" width="16" height="16" rx="4" fill="rgba(39,77,134,0.55)" stroke="#274d86" stroke-width="1"/>
+          <text x="242" y="91" font-size="12" font-weight="600" fill="#1c3861">N. Ulnaire (V + ½IV)</text>
+          <rect x="220" y="101" width="16" height="16" rx="4" fill="rgba(32,153,127,0.45)" stroke="#20997f" stroke-width="1"/>
+          <text x="242" y="114" font-size="12" font-weight="600" fill="#0a2e2a">N. Radial (éminence thénar — zone réduite)</text>
+          <!-- Vue dorsale main droite simplifiée -->
+          <text x="390" y="22" font-size="13" font-weight="700" fill="#1a1c1e">Vue dorsale (main droite)</text>
+          <ellipse cx="510" cy="180" rx="75" ry="90" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="440" y="80" width="22" height="85" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="466" y="60" width="22" height="105" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="492" y="55" width="22" height="110" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="518" y="62" width="22" height="103" rx="11" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <rect x="545" y="90" width="20" height="75" rx="10" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <!-- Radial dorsal lat = vert/teal : pouce, index (P1), ½ III (P1) -->
+          <rect x="440" y="80" width="22" height="85" rx="11" fill="rgba(32,153,127,0.5)" stroke="#20997f" stroke-width="1.5"/>
+          <rect x="466" y="60" width="22" height="60" rx="11" fill="rgba(32,153,127,0.5)" stroke="#20997f" stroke-width="1.5"/>
+          <rect x="492" y="55" width="22" height="48" rx="11" fill="rgba(32,153,127,0.35)" stroke="#20997f" stroke-width="1.5"/>
+          <!-- Médian dorsal P2P3 de II III ½IV -->
+          <rect x="466" y="112" width="22" height="53" rx="6" fill="rgba(212,132,14,0.45)" stroke="#d4840e" stroke-width="1.5"/>
+          <rect x="492" y="95" width="22" height="70" rx="6" fill="rgba(212,132,14,0.45)" stroke="#d4840e" stroke-width="1.5"/>
+          <rect x="518" y="62" width="11" height="103" rx="6" fill="rgba(212,132,14,0.35)" stroke="#d4840e" stroke-width="0"/>
+          <!-- Ulnaire dorsal méd : V + ½IV -->
+          <rect x="545" y="90" width="20" height="75" rx="10" fill="rgba(39,77,134,0.5)" stroke="#274d86" stroke-width="1.5"/>
+          <rect x="529" y="62" width="11" height="103" rx="0" fill="rgba(39,77,134,0.45)"/>
+          <ellipse cx="545" cy="195" rx="38" ry="58" fill="rgba(39,77,134,0.2)" stroke="#274d86" stroke-width="1" stroke-dasharray="4,2"/>
+          <!-- Légende note -->
+          <rect x="390" y="270" width="290" height="44" rx="6" fill="#fef0d0" stroke="#d4840e" stroke-width="1"/>
+          <text x="402" y="287" font-size="11.5" font-weight="700" fill="#4a2e00">À retenir : </text>
+          <text x="460" y="287" font-size="11" fill="#4a2e00">Médian = face palmaire des « doigts utiles »</text>
+          <text x="402" y="305" font-size="11" fill="#4a2e00">(I–II–III). Ulnaire = bord médial. Radial = face dorsale lat.</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLEAU PARALYSIES MS -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon coral">⚠️</div><div class="card-title">Paralysies tronculaires — Signes clés à reconnaître</div></div>
+    <div class="card-body" style="padding:0;">
+      <table class="grille-eval-table">
+        <thead><tr><th>Nerf lésé</th><th>Signe caractéristique</th><th>Déficit moteur principal</th><th>Zone hypoesthésie nette</th><th>Cause fréquente</th></tr></thead>
+        <tbody>
+          <tr><td><strong style="color:var(--amber-500);">Médian</strong></td><td>« Main de singe » (atrophie thénar)</td><td>Opposition + abduction pouce impossible · Pince impossible</td><td>Pulpe pouce + index</td><td>Syndrome canal carpien · traumatisme poignet</td></tr>
+          <tr><td><strong style="color:var(--coral-500);">Ulnaire</strong></td><td>« Griffe cubitale » IV–V · Signe du gril</td><td>Mouvements latéraux doigts · Serrage poignée</td><td>Doigt V (tout) · bord médial main</td><td>Fracture épicondyle médial · compression sillon ulnaire</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">Radial</strong></td><td>« Main tombante » (wrist drop)</td><td>Extension poignet impossible · Chute de la main</td><td>Moitié dorso-latérale main (zone réduite)</td><td>Fracture humérus · compression sillon radial (sommeil, béquilles)</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">Axillaire</strong></td><td>Amyotrophie deltoïde</td><td>ABD bras 0–90° impossible</td><td>Face externe épaule (zone réduite)</td><td>Luxation épaule · fracture col chirurgical humérus</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">Musculo-cutané</strong></td><td>Perte flexion coude</td><td>Flexion coude + supination avant-bras</td><td>Face antéro-latérale avant-bras</td><td>Rare isolé · fracture coracoïde</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Sources : Thomas Gautier D.O. — Neurologie membre supérieur, IEOQ Année 1 · Kamina P. — Anatomie clinique (Maloine) · Rouvière H. — Anatomie humaine</cite></div>
+</section>
+
+<!-- ═══════════════════════ NEUROLOGIE — ANATOMIE PLEXUS LOMBAIRE/SACRAL ═══════════════════════ -->
+<section class="section" id="neuro-anatomie-mi">
+  <div class="section-title">Anatomie — Plexus lombaire, sacral &amp; Nerfs du membre inférieur</div>
+  <div class="section-sub">Trajets, territoires moteurs et sensitifs à retenir pour l'examen · Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <!-- PLEXUS LOMBAIRE SCHÉMA -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔢</div><div class="card-title">Plexus lombaire — Constitution &amp; Branches (schéma)</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Racines -->
+          <text x="10" y="22" font-size="12" font-weight="700" fill="#1c3861">RACINES</text>
+          <text x="10" y="55" font-size="12" fill="#1c3861">L1</text>
+          <text x="10" y="100" font-size="12" fill="#1c3861">L2</text>
+          <text x="10" y="150" font-size="12" fill="#1c3861">L3</text>
+          <text x="10" y="200" font-size="12" fill="#1c3861">L4</text>
+          <text x="10" y="245" font-size="12" fill="#4d82cc">L5*</text>
+          <!-- Jonction -->
+          <line x1="28" y1="52" x2="90" y2="68" stroke="#c94535" stroke-width="2"/>
+          <text x="92" y="65" font-size="10.5" fill="#c94535" font-weight="600">Ilio-hypogastrique (L1)</text>
+          <line x1="28" y1="52" x2="90" y2="88" stroke="#c94535" stroke-width="2"/>
+          <text x="92" y="87" font-size="10.5" fill="#c94535" font-weight="600">Ilio-inguinal (L1)</text>
+          <line x1="28" y1="52" x2="90" y2="110" stroke="#d4840e" stroke-width="2"/>
+          <line x1="28" y1="98" x2="90" y2="110" stroke="#d4840e" stroke-width="2"/>
+          <text x="92" y="110" font-size="10.5" fill="#4a2e00" font-weight="600">Génito-fémoral (L1–L2)</text>
+          <line x1="28" y1="98" x2="90" y2="134" stroke="#20997f" stroke-width="2"/>
+          <line x1="28" y1="148" x2="90" y2="134" stroke="#20997f" stroke-width="2"/>
+          <text x="92" y="133" font-size="10.5" fill="#0a2e2a" font-weight="600">N. cutané lat. cuisse (L2–L3)</text>
+          <!-- Fémoral -->
+          <line x1="28" y1="98" x2="90" y2="160" stroke="#274d86" stroke-width="2.5"/>
+          <line x1="28" y1="148" x2="90" y2="160" stroke="#274d86" stroke-width="2.5"/>
+          <line x1="28" y1="198" x2="90" y2="160" stroke="#274d86" stroke-width="2.5"/>
+          <rect x="90" y="150" width="100" height="22" rx="5" fill="#dceaf9" stroke="#274d86" stroke-width="2"/>
+          <text x="140" y="165" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1c3861">N. FÉMORAL (L2–L4)</text>
+          <line x1="190" y1="161" x2="330" y2="140" stroke="#274d86" stroke-width="1.5"/>
+          <text x="335" y="144" font-size="10.5" fill="#1c3861">Quadriceps · Sartorius · Iliaque · N. saphène</text>
+          <!-- Obturateur -->
+          <line x1="28" y1="98" x2="90" y2="198" stroke="#1a7a6a" stroke-width="2.5"/>
+          <line x1="28" y1="148" x2="90" y2="198" stroke="#1a7a6a" stroke-width="2.5"/>
+          <line x1="28" y1="198" x2="90" y2="198" stroke="#1a7a6a" stroke-width="2.5"/>
+          <rect x="90" y="188" width="100" height="22" rx="5" fill="#d4f5ee" stroke="#1a7a6a" stroke-width="2"/>
+          <text x="140" y="203" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0a2e2a">N. OBTURATEUR (L2–L4)</text>
+          <line x1="190" y1="199" x2="330" y2="188" stroke="#1a7a6a" stroke-width="1.5"/>
+          <text x="335" y="192" font-size="10.5" fill="#0a2e2a">Adducteurs · Obturateur ext. · Face méd. cuisse</text>
+          <!-- Tronc lombo-sacral -->
+          <line x1="28" y1="198" x2="90" y2="243" stroke="#4d82cc" stroke-width="2.5"/>
+          <line x1="28" y1="243" x2="90" y2="243" stroke="#4d82cc" stroke-width="2.5"/>
+          <rect x="90" y="233" width="130" height="22" rx="5" fill="#dceaf9" stroke="#4d82cc" stroke-width="1.5" stroke-dasharray="5,2"/>
+          <text x="155" y="248" text-anchor="middle" font-size="11" fill="#1c3861">Tronc lombo-sacral (L4–L5)</text>
+          <line x1="220" y1="244" x2="260" y2="260" stroke="#4d82cc" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="262" y="264" font-size="10" font-style="italic" fill="#4d82cc">→ rejoint plexus sacral</text>
+          <!-- Note -->
+          <rect x="10" y="270" width="740" height="24" rx="5" fill="#fef0d0" stroke="#d4840e" stroke-width="1"/>
+          <text x="22" y="286" font-size="11" font-weight="700" fill="#4a2e00">💡 Mnémo plexus lombaire :</text>
+          <text x="180" y="286" font-size="11" fill="#4a2e00">L1 → ilio-hypogastrique + ilio-inguinal · L1+L2 → génito-fémoral · L2+L3 → cutané lat. cuisse · L2–L4 → fémoral + obturateur · L4–L5 → tronc lombo-sacral</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLEXUS SACRAL SCHÉMA -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🔺</div><div class="card-title">Plexus sacral — N. sciatique &amp; branches à retenir</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Racines plexus sacral -->
+          <text x="10" y="22" font-size="12" font-weight="700" fill="#1c3861">RACINES</text>
+          <text x="10" y="58" font-size="12" fill="#4d82cc">L4 (partiel)</text>
+          <text x="10" y="95" font-size="12" fill="#4d82cc">L5</text>
+          <text x="10" y="135" font-size="12" fill="#1c3861">S1</text>
+          <text x="10" y="172" font-size="12" fill="#1c3861">S2</text>
+          <text x="10" y="210" font-size="12" fill="#1c3861">S3</text>
+          <!-- Tronc lombo-sacral -->
+          <line x1="80" y1="55" x2="140" y2="100" stroke="#4d82cc" stroke-width="2" stroke-dasharray="5,2"/>
+          <line x1="80" y1="92" x2="140" y2="100" stroke="#4d82cc" stroke-width="2" stroke-dasharray="5,2"/>
+          <!-- Lignes S -->
+          <line x1="60" y1="132" x2="140" y2="100" stroke="#1a7a6a" stroke-width="2"/>
+          <line x1="60" y1="169" x2="140" y2="100" stroke="#1a7a6a" stroke-width="2"/>
+          <line x1="60" y1="207" x2="140" y2="100" stroke="#1a7a6a" stroke-width="2.5"/>
+          <!-- Nerf sciatique -->
+          <rect x="138" y="88" width="100" height="26" rx="6" fill="#fdecea" stroke="#c94535" stroke-width="2.5"/>
+          <text x="188" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#5a1a13">N. SCIATIQUE</text>
+          <text x="188" y="112" text-anchor="middle" font-size="10" fill="#5a1a13">(L4–S3) — plus gros nerf du corps</text>
+          <!-- Flèche vers les 2 branches -->
+          <line x1="238" y1="101" x2="290" y2="75" stroke="#c94535" stroke-width="2"/>
+          <line x1="238" y1="101" x2="290" y2="128" stroke="#c94535" stroke-width="2"/>
+          <!-- N. tibial -->
+          <rect x="290" y="62" width="115" height="24" rx="5" fill="#dceaf9" stroke="#274d86" stroke-width="1.5"/>
+          <text x="347" y="78" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1c3861">N. Tibial (L4–S3)</text>
+          <line x1="405" y1="74" x2="450" y2="55" stroke="#274d86" stroke-width="1"/>
+          <line x1="405" y1="74" x2="450" y2="75" stroke="#274d86" stroke-width="1"/>
+          <line x1="405" y1="74" x2="450" y2="95" stroke="#274d86" stroke-width="1"/>
+          <text x="452" y="58" font-size="10" fill="#1c3861">Loge post. jambe (triceps sural)</text>
+          <text x="452" y="78" font-size="10" fill="#1c3861">N. plantaires méd. + lat.</text>
+          <text x="452" y="97" font-size="10" fill="#1c3861">Réflexe achilléen (S1)</text>
+          <!-- N. fibulaire commun -->
+          <rect x="290" y="117" width="135" height="24" rx="5" fill="#d4f5ee" stroke="#1a7a6a" stroke-width="1.5"/>
+          <text x="357" y="133" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0a2e2a">N. Fibulaire commun (L4–S2)</text>
+          <line x1="425" y1="129" x2="450" y2="118" stroke="#1a7a6a" stroke-width="1"/>
+          <line x1="425" y1="129" x2="450" y2="138" stroke="#1a7a6a" stroke-width="1"/>
+          <text x="452" y="120" font-size="10" fill="#0a2e2a">Fibulaire superficiel → Loges lat. jambe (péroniers)</text>
+          <text x="452" y="140" font-size="10" fill="#0a2e2a">Fibulaire profond → Loge ant. jambe (tibial ant.)</text>
+          <!-- Autres branches plexus sacral -->
+          <text x="138" y="165" font-size="11" font-weight="700" fill="#5a5f66">Autres branches :</text>
+          <text x="138" y="183" font-size="10.5" fill="#5a5f66">• N. glutéal sup. (L4–S1) → moyen + petit fessier + TFL</text>
+          <text x="138" y="200" font-size="10.5" fill="#5a5f66">• N. glutéal inf. (L5–S2) → grand fessier</text>
+          <text x="138" y="217" font-size="10.5" fill="#5a5f66">• N. cutané post. cuisse (S1–S3) → face post. cuisse</text>
+          <!-- Zone injection IM -->
+          <rect x="10" y="230" width="740" height="26" rx="5" fill="#fdecea" stroke="#c94535" stroke-width="1"/>
+          <text x="22" y="248" font-size="11.5" font-weight="700" fill="#5a1a13">⚠️ Injection IM :</text>
+          <text x="120" y="248" font-size="11" fill="#5a1a13">Toujours dans le quadrant supéro-latéral de la fesse pour éviter le nerf sciatique (origine = tiers supérieur ligne EIPS–tubérosité ischiatique)</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLEAU NERFS TERMINAUX MI -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">📋</div><div class="card-title">Nerfs terminaux MI — Ce qu'il faut retenir pour l'examen</div></div>
+    <div class="card-body" style="padding:0;">
+      <table class="grille-eval-table">
+        <thead><tr><th>Nerf</th><th>Racines</th><th>Trajet clé à retenir</th><th>Moteur</th><th>Sensitif</th><th>Paralysie / Test</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--navy-600);">Fémoral</strong></td>
+            <td>L2–L4</td>
+            <td>Entre iliaque et psoas → sous lig. inguinal (lacune musculaire) → triangle fémoral → branches (dont n. saphène)</td>
+            <td>Quadriceps (extension genou) · Flexion cuisse · Sartorius</td>
+            <td>Face ant. cuisse + face antéro-médiale genou/jambe/cheville (n. saphène)</td>
+            <td>Paralysie : impossible d'étendre le genou · Abolition réflexe patellaire · Pseudo-steppage. Test : Léri (PKB) — cruralgie</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--teal-600);">Obturateur</strong></td>
+            <td>L2–L4</td>
+            <td>Bord médial psoas → foramen obturé → 2 branches ant/post</td>
+            <td>Adduction + rotation latérale cuisse (long adducteur, court, grand, gracile)</td>
+            <td>Face médiale cuisse (tiers inférieur)</td>
+            <td>Difficulté à croiser les jambes · Hernie obturatrice → syndrome Howship-Romberg</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--coral-500);">Sciatique</strong></td>
+            <td>L4–S3</td>
+            <td>Foramen infra-piriforme → région glutéale → région fémorale post. → fosse poplitée → N. tibial + N. fibulaire commun</td>
+            <td>Flexion jambe · Flexion + extension pied (via tibial et fibulaire)</td>
+            <td>Face postéro-latérale jambe + ensemble du pied</td>
+            <td>Signe de Lasègue (SLR) · Points de Valleix · Abolition réflexes achilléen + cutané plantaire</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--teal-600);">Tibial</strong></td>
+            <td>L4–S3</td>
+            <td>Axe médian fosse poplitée → région post. jambe → sillon malléolaire médial → N. plantaires méd. + lat.</td>
+            <td>Loge post. jambe (triceps sural, tibial post., fléchisseurs orteils) + plante pied</td>
+            <td>Face post. jambe inf. · Plante pied · Face plantaire orteils · Talon</td>
+            <td>Lésion → hypoesthésie plantaire · Marche sur pointe impossible (S1)</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--teal-600);">Fibulaire commun</strong></td>
+            <td>L4–S2</td>
+            <td>Bord lat. fosse poplitée → contourne col fibula ← <strong>zone vulnérable !</strong> → N. fibulaire superficiel + profond</td>
+            <td>Loge ant. jambe (tibial ant.) + loge lat. (péroniers/fibulaires)</td>
+            <td>Face antéro-latérale jambe inf. + dos du pied</td>
+            <td>Lésion col fibula → « steppage » (pied tombant) · Marche sur talons impossible</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--navy-600);">Glutéaux sup./inf.</strong></td>
+            <td>L4–S2</td>
+            <td>Sup. : foramen supra-piriforme · Inf. : foramen infra-piriforme</td>
+            <td>Sup. : moyen + petit fessier + TFL (ABD hanche) · Inf. : grand fessier (extension hanche)</td>
+            <td>—</td>
+            <td>Sup. : signe de Trendelenburg · Inf. : impossibilité d'étendre la hanche</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SCHÉMA TRAJET SCIATIQUE + POINTS DE VALLEIX -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon coral">📍</div><div class="card-title">Trajet du nerf sciatique &amp; points de Valleix — À retenir</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Silhouette cuisse/jambe vue postérieure -->
+          <ellipse cx="140" cy="60" rx="55" ry="40" fill="#f4f7fb" stroke="#d8dde4" stroke-width="1.5"/>
+          <text x="140" y="63" text-anchor="middle" font-size="10" fill="#5a5f66">Fesse</text>
+          <rect x="100" y="95" width="80" height="130" rx="38" fill="#f4f7fb" stroke="#d8dde4" stroke-width="1.5"/>
+          <text x="140" y="165" text-anchor="middle" font-size="10" fill="#5a5f66">Cuisse post.</text>
+          <rect x="105" y="220" width="70" height="100" rx="30" fill="#f4f7fb" stroke="#d8dde4" stroke-width="1.5"/>
+          <text x="140" y="275" text-anchor="middle" font-size="10" fill="#5a5f66">Jambe post.</text>
+          <!-- Trajet sciatique -->
+          <path d="M 140 28 C 140 50 138 70 136 95 C 134 130 133 160 133 200 C 133 230 130 255 128 280" stroke="#c94535" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Points de Valleix -->
+          <circle cx="140" cy="42" r="8" fill="#c94535" opacity="0.85"/>
+          <text x="155" y="45" font-size="11" font-weight="700" fill="#5a1a13">① Tiers sup. ligne EIPS—tubérosité ischiatique</text>
+          <text x="155" y="57" font-size="10" font-style="italic" fill="#5a5f66">Origine du nerf sciatique (repère injection IM)</text>
+          <circle cx="137" cy="100" r="8" fill="#c94535" opacity="0.85"/>
+          <text x="155" y="103" font-size="11" font-weight="700" fill="#5a1a13">② Foramen infra-piriforme</text>
+          <text x="155" y="115" font-size="10" font-style="italic" fill="#5a5f66">Entre muscle piriforme (haut) et jumeau sup. (bas)</text>
+          <circle cx="135" cy="155" r="8" fill="#c94535" opacity="0.85"/>
+          <text x="155" y="158" font-size="11" font-weight="700" fill="#5a1a13">③ Mi-cuisse postérieure (axe médian)</text>
+          <circle cx="132" cy="210" r="8" fill="#c94535" opacity="0.85"/>
+          <text x="155" y="213" font-size="11" font-weight="700" fill="#5a1a13">④ Fosse poplitée → bifurcation</text>
+          <text x="155" y="225" font-size="10" font-style="italic" fill="#5a5f66">N. tibial (médial) + N. fibulaire commun (latéral)</text>
+          <circle cx="130" cy="265" r="8" fill="#274d86" opacity="0.85"/>
+          <text x="155" y="268" font-size="11" font-weight="700" fill="#1c3861">⑤ Col fibula ← Vulnérable (n. fibulaire commun)</text>
+          <text x="155" y="280" font-size="10" font-style="italic" fill="#5a5f66">Fracture, plâtre trop serré, position jambe croisée</text>
+          <!-- Légende Lasègue -->
+          <rect x="390" y="15" width="355" height="130" rx="8" fill="#fdecea" stroke="#c94535" stroke-width="1.5"/>
+          <text x="410" y="36" font-size="13" font-weight="700" fill="#5a1a13">Test de Lasègue (SLR) — Nerf sciatique</text>
+          <text x="410" y="56" font-size="11.5" fill="#5a1a13">Position : décubitus dorsal</text>
+          <text x="410" y="73" font-size="11.5" fill="#5a1a13">Mouvement : flexion hanche + extension genou</text>
+          <text x="410" y="90" font-size="11.5" fill="#5a1a13">Ajouter : flexion dorsale cheville (augmente tension)</text>
+          <text x="410" y="107" font-size="11.5" fill="#5a1a13">Positif : douleur sur trajet sciatique &lt; 60–70°</text>
+          <text x="410" y="124" font-size="11" font-weight="700" fill="#c94535">Lasègue croisé = haute spécificité hernie discale</text>
+          <text x="410" y="138" font-size="10.5" font-style="italic" fill="#5a5f66">(Douleur côté symptomatique lors de SLR côté sain)</text>
+          <!-- Léri / PKB -->
+          <rect x="390" y="158" width="355" height="110" rx="8" fill="#dceaf9" stroke="#274d86" stroke-width="1.5"/>
+          <text x="410" y="178" font-size="13" font-weight="700" fill="#1c3861">Test de Léri/PKB — Nerf fémoral (cruralgie)</text>
+          <text x="410" y="198" font-size="11.5" fill="#1c3861">Position : latérocubitus controlatéral</text>
+          <text x="410" y="215" font-size="11.5" fill="#1c3861">Mouvement : extension + ABD hanche + flexion genou</text>
+          <text x="410" y="232" font-size="11.5" fill="#1c3861">Positif : douleur irradiée face ant. cuisse</text>
+          <text x="410" y="249" font-size="11" font-weight="700" fill="#274d86">Cible : racines L2–L3–L4 (nerf fémoral)</text>
+          <text x="410" y="263" font-size="10.5" font-style="italic" fill="#5a5f66">Ajouter flexion/extension lombaire pour différenciation structurelle</text>
+          <!-- Dermatomes MI -->
+          <rect x="390" y="280" width="355" height="15" rx="4" fill="#d4f5ee" stroke="#2bbf9e" stroke-width="1"/>
+          <text x="404" y="291" font-size="10.5" font-weight="600" fill="#0a2e2a">L4 = face int. jambe · L5 = dos pied + gros orteil · S1 = bord ext. pied + talon</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITOIRES SENSITIFS MI -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🗺️</div><div class="card-title">Territoires sensitifs tronculaires MI — Résumé schématique</div></div>
+    <div class="card-body">
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;font-family:sans-serif;display:block;margin:0 auto;">
+          <!-- Pied vue plantaire -->
+          <text x="10" y="18" font-size="12" font-weight="700" fill="#1a1c1e">Pied — Vue plantaire</text>
+          <ellipse cx="80" cy="130" rx="55" ry="70" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <ellipse cx="80" cy="70" rx="35" ry="30" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <!-- Tibial plantaire médial = orange -->
+          <ellipse cx="68" cy="105" rx="30" ry="55" fill="rgba(212,132,14,0.45)" stroke="#d4840e" stroke-width="1.5"/>
+          <ellipse cx="65" cy="65" rx="20" ry="25" fill="rgba(212,132,14,0.45)" stroke="#d4840e" stroke-width="1.5"/>
+          <!-- Tibial plantaire latéral = bleu -->
+          <ellipse cx="98" cy="140" rx="32" ry="40" fill="rgba(39,77,134,0.4)" stroke="#274d86" stroke-width="1.5"/>
+          <!-- Légendes pied -->
+          <rect x="155" y="55" width="15" height="15" rx="3" fill="rgba(212,132,14,0.55)" stroke="#d4840e"/>
+          <text x="175" y="67" font-size="11.5" font-weight="600" fill="#4a2e00">N. plantaire médial (tibial) — Orteils I–IV</text>
+          <rect x="155" y="78" width="15" height="15" rx="3" fill="rgba(39,77,134,0.5)" stroke="#274d86"/>
+          <text x="175" y="90" font-size="11.5" font-weight="600" fill="#1c3861">N. plantaire latéral (tibial) — Bord lat. + V</text>
+          <!-- Dos pied vue dorsale -->
+          <text x="310" y="18" font-size="12" font-weight="700" fill="#1a1c1e">Pied — Vue dorsale</text>
+          <ellipse cx="400" cy="130" rx="55" ry="70" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <ellipse cx="400" cy="70" rx="35" ry="30" fill="#f4f7fb" stroke="#b8bec7" stroke-width="1.5"/>
+          <!-- Fibulaire superficiel = vert la majorité -->
+          <ellipse cx="400" cy="115" rx="52" ry="82" fill="rgba(32,153,127,0.35)" stroke="#20997f" stroke-width="1.5"/>
+          <!-- Fibulaire profond = zone restreinte 1er espace -->
+          <ellipse cx="373" cy="60" rx="14" ry="18" fill="rgba(26,122,106,0.6)" stroke="#155c50" stroke-width="1.5"/>
+          <!-- Saphène médial -->
+          <ellipse cx="355" cy="135" rx="15" ry="35" fill="rgba(212,132,14,0.4)" stroke="#d4840e" stroke-width="1"/>
+          <!-- Légendes dos pied -->
+          <rect x="465" y="40" width="15" height="15" rx="3" fill="rgba(32,153,127,0.45)" stroke="#20997f"/>
+          <text x="485" y="52" font-size="11.5" font-weight="600" fill="#0a2e2a">N. fibulaire superficiel — Dos pied</text>
+          <rect x="465" y="63" width="15" height="15" rx="3" fill="rgba(26,122,106,0.65)" stroke="#155c50"/>
+          <text x="485" y="75" font-size="11.5" font-weight="600" fill="#0a2e2a">N. fibulaire profond — 1er espace interdigital</text>
+          <rect x="465" y="86" width="15" height="15" rx="3" fill="rgba(212,132,14,0.45)" stroke="#d4840e"/>
+          <text x="485" y="98" font-size="11.5" font-weight="600" fill="#4a2e00">N. saphène — Bord médial pied</text>
+          <!-- Résumé jambe -->
+          <rect x="10" y="195" width="740" height="22" rx="5" fill="#d4f5ee" stroke="#2bbf9e" stroke-width="1"/>
+          <text x="22" y="210" font-size="11" font-weight="700" fill="#0a2e2a">Résumé jambe :</text>
+          <text x="116" y="210" font-size="11" fill="#0a2e2a">N. saphène (fémoral) = face int. jambe jusqu'au dos pied bord méd. · N. fibulaire sup. = face antéro-latérale jambe inf. + dos pied · N. sural = face postéro-latérale jambe + bord lat. pied · N. tibial = face post. jambe inf. + plante</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLEAU SYNTH MI -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">📊</div><div class="card-title">Synthèse radiculaire MI — Ce qui tombe à l'examen</div></div>
+    <div class="card-body" style="padding:0;">
+      <table class="grille-eval-table">
+        <thead><tr><th>Racine</th><th>Muscle clé (myotome)</th><th>Réflexe</th><th>Sensitif (zone prioritaire)</th><th>Nerf tronculaire impliqué</th></tr></thead>
+        <tbody>
+          <tr><td><strong style="color:var(--teal-600);">L2–L3</strong></td><td>Psoas-iliaque · Adducteurs · Quadriceps (partiel)</td><td>—</td><td>Face antérieure + interne cuisse</td><td>N. fémoral + N. obturateur</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">L4</strong></td><td>Quadriceps · Tibial antérieur</td><td>Rotulien ⬇️ ou aboli</td><td>Face interne jambe + malléole médiale</td><td>N. fémoral (n. saphène) + N. obturateur</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">L5</strong></td><td>Moyen fessier · Ext. hallux · Tibial ant. (partiel)</td><td>Pédieux (inconstant)</td><td>1er espace interdigital dorsal · Dos du pied · Gros orteil</td><td>N. fibulaire profond + N. glutéal supérieur</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">S1</strong></td><td>Triceps sural · Grand fessier · Ischio-jambiers</td><td>Achilléen ⬇️ ou aboli</td><td>Bord latéral pied + 5e orteil · Talon · Plante</td><td>N. tibial + N. sural + N. glutéal inférieur</td></tr>
+          <tr><td><strong style="color:var(--teal-600);">S2</strong></td><td>Ischio-jambiers · Muscles intrinsèques pied</td><td>—</td><td>Face postérieure cuisse + jambe proximale</td><td>N. sciatique (tibial) + N. cutané post. cuisse</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box teal" style="margin:12px;font-size:13px;">
+        <strong>Points clés à l'examen :</strong><br>
+        • Hernie discale <strong>L4–L5</strong> → atteinte <strong>L5</strong> → déficit extension hallux + marche sur talons difficile · Réflexe achilléen souvent conservé (S1 intact)<br>
+        • Hernie discale <strong>L5–S1</strong> → atteinte <strong>S1</strong> → marche sur pointe impossible · Abolition réflexe achilléen<br>
+        • Hernie discale <strong>L3–L4</strong> → atteinte <strong>L4</strong> → abolition réflexe rotulien · Cruralgie (face ant. cuisse)<br>
+        • N. fibulaire commun au col fibula → « pied tombant » (steppage) · Marche sur talons impossible · Hypoesthésie dos pied
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Sources : Thomas Gautier D.O. — Neurologie membre inférieur, IEOQ Année 1 · Kamina P. — Anatomie clinique (Maloine) · Rouvière H. — Anatomie humaine · Bender C, Dove L, Schmid AB. (JOSPT 2023)</cite></div>
+</section>
+
 <!-- ═══════════════════════ NEUROLOGIE — RAISONNEMENT CLINIQUE ═══════════════════════ -->
 <section class="section" id="neuro-raisonnement">
   <div class="section-title">Raisonnement clinique — Douleurs irradiantes</div>
@@ -11653,6 +12244,523 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   </div></div>
 </section>
 
+<!-- ═══════════ ANATOMIE MI — PELVI-TROCHANTÉRIENS (Ch.2) ═══════════ -->
+<section class="section" id="anatomie-mi-pelvitroch">
+  <div class="section-title">Anatomie — Muscles pelvi-trochantériens</div>
+  <div class="section-sub">Chapitre 2 · Myologie membre inférieur — Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    Le terme <strong>pelvi-trochantériens</strong> regroupe les muscles du bassin s'insérant en dessous du détroit supérieur et se terminant sur le <strong>grand trochanter</strong>. Tous appartiennent au <strong>plan profond</strong> de la région fessière. Ils sont rotateurs latéraux et stabilisateurs de la hanche.<br>
+    <strong>Muscles du groupe :</strong> Piriforme · Obturateur interne + jumeaux · Obturateur externe · Carré fémoral.
+  </div>
+
+  <!-- ══ PIRIFORME ══ -->
+  <div class="test-section-title">🔴 Le piriforme</div>
+  <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Piriforme <small>Triangulaire · Sacrum → Grand trochanter</small></div>
+    <span class="tag tag-coral" style="margin-left:auto;margin-right:8px;">Rotateur latéral · Abducteur</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Pelvi-trochantériens · Hanche (profond) · Sacrum → Fémur</td></tr>
+          <tr><td class="muscle-name">Forme</td><td>Triangulaire</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Sacrum — S2, S3, S4 (corps) — partie lat. des faces ant. + leur réunion en dh. — fibres charnues ± expansion sur le bord sup. de la grande incisure sciatique</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Fémur — extrémité sup./gd trochanter — face supérieure — tendon</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Topographie</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Intra- puis extra-pelvien · Plan profond de la fesse</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>En av./dh./bas</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>1. Intrapelvien : racines du nerf <strong>sciatique</strong> · 2. Sortie du bassin : <strong>gde incisure sciatique</strong> (foramens supra et infra) · 3. Extrapelvien : recouvert par le gd fessier</td></tr>
+          <tr><td class="muscle-name">Rapports clés</td><td>Foramen <strong>suprapiriformien</strong> (PVN glutéal sup.) · Foramen <strong>infrapiriformien</strong> (nerf sciatique, glutéal inf.) · Épine sciatique et LSE</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions (hanche)</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Type</th><th>Actions</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Statique</td><td>Stabilisation · Coaptation de la sacro-iliaque</td></tr>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Rotation latérale</strong> · <strong>Abduction</strong></td></tr>
+          <tr><td class="muscle-name">Fonctionnel</td><td>Équilibreur automatique (<strong>cybernétique</strong>) — ressort de rappel en position neutre anté/rétro-version</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon navy">⚕️</div><div class="card-title">Innervation &amp; Vascularisation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Nerf</td><td><span class="tag tag-navy">Nerf du piriforme</span></td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">S2</span> (parfois S1)</td></tr>
+          <tr><td class="muscle-name">Artères</td><td>Artères glutéales sup. et inf.</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="info-box amber"><strong>🩺 Intérêts ostéopathiques :</strong> Palpable dans les cas favorables entre le bord post. du moyen fessier et le grand trochanter — grand fessier relâché, piriforme contracté. Sa proximité avec les <strong>racines du nerf sciatique</strong> explique le possible retentissement nerveux d'une contracture ou inflammation. Il passe sagittalement en regard de l'axe de flexion-extension coxo-fémoral → ni anté- ni rétro-verseur; agit comme un <strong>ressort de rappel</strong> en position intermédiaire.</div>
+  </div></div>
+
+  <!-- ══ OBTURATEUR INTERNE + JUMEAUX ══ -->
+  <div class="test-section-title" style="margin-top:20px;">🟠 L'obturateur interne et les jumeaux</div>
+  <div class="tech-card open" style="border-left-color:var(--amber-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Obturateur interne + Jumeaux sup. &amp; inf. <small>Triceps pelvien · Os coxal → Grand trochanter</small></div>
+    <span class="tag tag-amber" style="margin-left:auto;margin-right:8px;">Rotateur latéral · Rétroversion</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origines</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Muscle</th><th>Structure / Partie / Secteur</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Obturateur interne</td><td>Os coxal — face interne — pourtour foramen obturé — fibres charnues</td></tr>
+          <tr><td class="muscle-name">Jumeau supérieur</td><td>Os coxal — bord post./petite incisure sciatique — bord sup. de l'incisure — fibres charnues</td></tr>
+          <tr><td class="muscle-name">Jumeau inférieur</td><td>Os coxal — bord post./petite incisure sciatique — bord inf. de l'incisure — fibres charnues</td></tr>
+          <tr><td class="muscle-name">Terminaison commune</td><td>Fémur — extrémité sup./gd trochanter — face méd./en avant de la fosse trochantérique — tendon commun</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Aspect</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Intra- puis extrapelvien · Plan profond de la fesse</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>Intra-pelvien : oblique en arr./dh. · Sortie : réflexion à 90° (bourse synoviale) · Extra-pelvien : oblique en av./dh.</td></tr>
+          <tr><td class="muscle-name">Aspect</td><td>Forme un véritable <strong>triceps pelvien</strong> — le muscle s'engouffre dans la petite incisure sciatique en abandonnant ses fibres bordantes (jumeaux) à l'os coxal</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>1. Intra-pelvien : insertion de l'élévateur de l'anus · 2. Sortie : <strong>petite incisure sciatique</strong> · 3. Extra-pelvien : recouvert par nerf <strong>sciatique</strong> et gd fessier</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Statique</td><td>Stabilisation</td></tr>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Rotation latérale</strong> · Rétroversion</td></tr>
+          <tr><td class="muscle-name">Fonctionnel</td><td>Rôle <strong>cybernétique</strong> — hamac gémello-obturateur (sustentation du bassin sur les têtes fémorales, fémur fixe)</td></tr>
+          <tr><td class="muscle-name">Nerfs</td><td><span class="tag tag-navy">N. obturateur int. et jumeau sup.</span> (L5, S1, S2) · <span class="tag tag-navy">N. jumeau inf. et carré fémoral</span> (L4, L5, S1)</td></tr>
+          <tr><td class="muscle-name">Artères</td><td>Intra-pelvien : artères obturatrice et pudendale int. · Extra-pelvien : artère glutéale inf.</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="info-box teal" style="align-self:start;">
+        <strong>🩺 Intérêts ostéopathiques :</strong> Situé au fond du méplat rétrotrochantérien — palpable (absence de graisse, relâchement du grand fessier, contraction des pelvi-trochantériens) dans une oblique entre le piriforme et l'horizontale du carré fémoral. Lié à l'<strong>équilibre cybernétique du bassin</strong> — <strong>hamac gémello-obturateur</strong> : sustentation du bassin sur les têtes fémorales quand le fémur est fixe.
+      </div>
+    </div>
+  </div></div>
+
+  <!-- ══ OBTURATEUR EXTERNE ══ -->
+  <div class="test-section-title" style="margin-top:20px;">🟡 L'obturateur externe</div>
+  <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Obturateur externe <small>Triangulaire · Os coxal → Grand trochanter</small></div>
+    <span class="tag tag-teal" style="margin-left:auto;margin-right:8px;">Rotateur latéral · Antéverseur</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Pelvi-trochantériens · Hanche (profond) · Os coxal → Fémur</td></tr>
+          <tr><td class="muscle-name">Forme</td><td>Triangulaire</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — pourtour <em>externe</em> du foramen obturé — branche ischio-pubienne, partie sup. — fibres charnues (2 ou 3 faisceaux) + MOE</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Fémur — extrémité sup./gd trochanter — face médiale, fosse trochantérique — tendon</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Topographie</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Hanche, plan profond</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>En arr. et en ht, puis s'enroulant derrière le col (en dh., ht)</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>Longe le plan <strong>ostéo-articulaire</strong> (corne post. puis col) — sillon infra-acétabulaire</td></tr>
+          <tr><td class="muscle-name">Rapports au tendon</td><td>En prof. : plan osseux — col fémoral · En superf. : obturateur interne, puis grand fessier</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Statique</td><td>Stabilisation de la hanche · <strong>Sustentation</strong> du bassin (hamac)</td></tr>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Rotation latérale</strong> · <strong>Antéversion</strong> (ou flexion)</td></tr>
+          <tr><td class="muscle-name">Nerf</td><td><span class="tag tag-navy">Nerf de l'obturateur ext.</span> (collatérale du nerf obturateur)</td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L3</span> <span class="tag tag-teal">L4</span> (L5)</td></tr>
+          <tr><td class="muscle-name">Artères</td><td>Glutéale inf. et circonflexe méd.</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="info-box amber" style="align-self:start;">
+        <strong>🩺 Intérêts ostéopathiques :</strong> Totalement <strong>inaccessible</strong> à la vue et au toucher. Seul pelvi-trochantérien <strong>antéverseur</strong>. Son passage dans le sillon infra-acétabulaire (sous la corne postérieure) lui donne un rôle de premier plan dans le concept de <strong>hamac gémello-obturateur</strong> : prenant la corde lors de sa contraction, il sustente légèrement le pelvis en décomprimant la coxo-fémorale.
+      </div>
+    </div>
+  </div></div>
+
+  <!-- ══ CARRÉ FÉMORAL ══ -->
+  <div class="test-section-title" style="margin-top:20px;">🟣 Le carré fémoral</div>
+  <div class="tech-card open" style="border-left-color:var(--navy-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Carré fémoral <small>Quadrangulaire · Os coxal → Grand trochanter</small></div>
+    <span class="tag tag-navy" style="margin-left:auto;margin-right:8px;">Rotateur latéral · Adducteur</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Pelvi-trochantériens · Hanche (profond) · Os coxal → Fémur</td></tr>
+          <tr><td class="muscle-name">Forme</td><td>Quadrangulaire</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — corps de l'ischion — face latérale (verticalement, le long de la tubérosité) — fibres charnues</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Fémur — extrémité sup./gd trochanter — face postérieure (crête verticale) — fibres charnues</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Rapports</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Hanche, plan profond</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>En dh.</td></tr>
+          <tr><td class="muscle-name">Aspect</td><td>Carré, aplati — fond de la <strong>gouttière ischio-trochantérienne</strong></td></tr>
+          <tr><td class="muscle-name">Rapports</td><td>En prof. : plan osseux · En superf. : nerf <strong>sciatique</strong> et vaisseaux glutéaux inf. / gd fessier · En ht : obturateur int. · En bas : <strong>grand adducteur</strong></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Statique</td><td>Stabilisation</td></tr>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Rotation latérale</strong> · <strong>Adduction</strong></td></tr>
+          <tr><td class="muscle-name">Nerf</td><td><span class="tag tag-navy">Nerf du jumeau inf. et du carré fémoral</span></td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L4</span> <span class="tag tag-teal">L5</span> <span class="tag tag-teal">S1</span></td></tr>
+          <tr><td class="muscle-name">Artères</td><td>Glutéale inf. et circonflexe méd.</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="info-box teal" style="align-self:start;">
+        <strong>🩺 Intérêts ostéopathiques :</strong> Très difficile à palper — étroit, profond, recouvert par le <strong>nerf sciatique</strong> (pour lequel il forme un berceau charnu) et le grand fessier. Il est sur le même plan que le grand adducteur, son voisin inférieur.
+      </div>
+    </div>
+  </div></div>
+
+  <!-- Tableau comparatif pelvi-trochantériens -->
+  <div class="test-section-title" style="margin-top:24px;">📊 Tableau comparatif — Pelvi-trochantériens</div>
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Origine</th><th>Terminaison</th><th>Actions principales</th><th>Nerf / Racines</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Piriforme</td><td>Sacrum (S2-S4)</td><td>Face sup. gd trochanter</td><td><strong>Rot. lat.</strong> · Abduction · Stabilisateur SI</td><td><span class="tag tag-navy">N. piriforme</span> S2</td></tr>
+        <tr><td class="muscle-name">Obturateur int. + jumeaux</td><td>Os coxal (face int. + bords petite incisure)</td><td>Face méd. fosse trochantérique</td><td><strong>Rot. lat.</strong> · Rétroversion · Hamac</td><td><span class="tag tag-navy">N. OI + jumeaux</span> L5-S2</td></tr>
+        <tr><td class="muscle-name">Obturateur externe</td><td>Os coxal (face ext. foramen obturé)</td><td>Fosse trochantérique</td><td><strong>Rot. lat.</strong> · <strong>Antéversion</strong> · Hamac</td><td><span class="tag tag-navy">N. obturateur</span> L3-L4</td></tr>
+        <tr><td class="muscle-name">Carré fémoral</td><td>Ischion (face lat.)</td><td>Crête verticale gd trochanter</td><td><strong>Rot. lat.</strong> · Adduction</td><td><span class="tag tag-navy">N. jumeau inf./carré</span> L4-S1</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ═══════════ ANATOMIE MI — MUSCLES POSTÉRIEURS (Ch.4) ═══════════ -->
+<section class="section" id="anatomie-mi-posterieurs">
+  <div class="section-title">Anatomie — Muscles postérieurs (ischio-jambiers)</div>
+  <div class="section-sub">Chapitre 4 · Myologie membre inférieur — Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    Le groupe des <strong>muscles ischio-jambiers (IJ)</strong> comprend trois muscles : le <strong>biceps fémoral</strong> (long + court chef), le <strong>semi-tendineux</strong> et le <strong>semi-membraneux</strong>. Situés dans la loge postérieure de la cuisse, tous franchissent la hanche et le genou (sauf le court biceps).<br>
+    À forte proportion tendineuse, ils ont une <strong>piètre extensibilité</strong> — cause fréquente de rétraction difficile à vaincre.
+  </div>
+
+  <!-- ══ BICEPS FÉMORAL ══ -->
+  <div class="test-section-title">🔴 Le biceps fémoral</div>
+  <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Biceps fémoral <small>2 chefs : longue + courte portion · Os coxal &amp; Fémur → Fibula</small></div>
+    <span class="tag tag-coral" style="margin-left:auto;margin-right:8px;">Fléchisseur genou · Extenseur hanche</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origines (2 chefs)</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Chef</th><th>Structure / Partie / Secteur / Par</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Longue portion (LP)</td><td>Os coxal — tubérosité ischiatique — face postérieure (entre 1/2 tendineux et 1/2 membraneux) — tendon commun avec les IJ</td></tr>
+          <tr><td class="muscle-name">Courte portion (CP)</td><td>Fémur — 2/3 inf. de la ligne âpre — lèvre latérale (entre VL et gd adducteur) — lame tendineuse</td></tr>
+          <tr><td class="muscle-name">Terminaison commune</td><td>Fibula — extrémité supérieure — versant postéro-latéral de la tête — tendon commun aux 2 portions + capsule tibio-fibulaire, condyle lat. tibia, fascia jambier</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Topographie</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>LP</th><th>CP</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td colspan="2">Postérieure, partie latérale · LP : plan superficiel · CP : plan profond</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td colspan="2">Verticale</td></tr>
+          <tr><td class="muscle-name">Aspect</td><td>Fusiforme</td><td>Semi-penniforme</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td colspan="2">1. Longe latéralement le nerf <strong>sciatique</strong> · 2. Forme la limite supéro-latérale de la <strong>fosse poplitée</strong></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Articulation</th><th>Type</th><th>Actions</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Fémoro-tibiale</td><td>Statique</td><td>Stabilité postéro-latérale · Renfort de la capsule · Tenseur du fascia jambier</td></tr>
+          <tr><td class="muscle-name">Hanche</td><td>Statique</td><td><strong>Maintien</strong> lors de l'inclinaison antérieure du tronc</td></tr>
+          <tr><td class="muscle-name">Hanche (LP)</td><td>Dynamique</td><td><strong>Extension</strong> légère · Rétroversion en force</td></tr>
+          <tr><td class="muscle-name">Genou (ensemble)</td><td>Dynamique</td><td><strong>Flexion</strong> · <strong>Rotation latérale</strong></td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon navy">⚕️</div><div class="card-title">Innervation &amp; Vascularisation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Nerf</td><td><span class="tag tag-navy">Nerf sciatique</span> (1 filet LP + 1 filet CP)</td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L5</span> <span class="tag tag-teal">S1</span> <span class="tag tag-teal">S2</span> (L5 pour LP seulement)</td></tr>
+          <tr><td class="muscle-name">Artères (LP)</td><td>Glutéale inf. · Circonflexe médiale · 1re et 2e perforantes</td></tr>
+          <tr><td class="muscle-name">Artères (CP)</td><td>Poplitée et 3e perforante</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- ══ SEMI-TENDINEUX ══ -->
+  <div class="test-section-title" style="margin-top:20px;">🟠 Le semi-tendineux</div>
+  <div class="tech-card open" style="border-left-color:var(--amber-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Semi-tendineux <small>Fusiforme, fortement tendineux · Os coxal → Tibia · Patte d'oie</small></div>
+    <span class="tag tag-amber" style="margin-left:auto;margin-right:8px;">Fléchisseur genou · Rotation médiale</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Ischio-jambiers · Patte d'oie · Cuisse · Os coxal → Tibia</td></tr>
+          <tr><td class="muscle-name">Forme</td><td>Fusiforme · Fortement tendineux</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — tubérosité ischiatique — face postérieure (en dd. du long biceps) — tendon commun avec les IJ</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Tibia — face médiale du corps — 1/4 supérieur (en arr. du sartorius, en avt du LCT, en dessous du gracile) — tendon élargi et aplati + fascia jambier (tenseur)</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Topographie</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Postérieure, partie médiale · Plan superficiel</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>En bas, en dedans</td></tr>
+          <tr><td class="muscle-name">Aspect</td><td>Fusiforme · Lame tendineuse intermédiaire</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>1. Sous-cutané · 2. Limite supéro-médiale de la <strong>fosse poplitée</strong> · 3. Fait partie de la <strong>patte d'oie</strong></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Articulation</th><th>Type</th><th>Actions</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Genou</td><td>Statique</td><td>Stabilité postéro-médiale (point d'angle) · Tenseur du fascia jambier</td></tr>
+          <tr><td class="muscle-name">Hanche</td><td>Statique</td><td><strong>Maintien</strong> lors de l'inclinaison antérieure du tronc (cf. biceps)</td></tr>
+          <tr><td class="muscle-name">Genou</td><td>Dynamique</td><td><strong>Flexion</strong> · <strong>Rotation médiale</strong></td></tr>
+          <tr><td class="muscle-name">Hanche</td><td>Dynamique</td><td>Extension légère · Rétroversion en force</td></tr>
+          <tr><td class="muscle-name">Nerf</td><td colspan="2"><span class="tag tag-navy">Nerf sciatique</span> (1 nerf sup. + 1 nerf inf.) · Racines L5, S1, S2</td></tr>
+          <tr><td class="muscle-name">Artères</td><td colspan="2">Glutéale inf. et perforantes (réseau cruciforme)</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="info-box teal" style="align-self:start;">
+        <strong>🩺 Palpatoire :</strong> Palpable sur tout son trajet avec la longue portion du biceps. La courte portion du biceps n'est accessible que latéralement. Le <strong>semi-membraneux</strong> est palpable en dedans du semi-tendineux. En rectitude, le tendon du biceps cache le LCF du genou ; en flexion, il lui est perpendiculaire.
+      </div>
+    </div>
+  </div></div>
+
+  <!-- ══ SEMI-MEMBRANEUX ══ -->
+  <div class="test-section-title" style="margin-top:20px;">🟣 Le semi-membraneux</div>
+  <div class="tech-card open" style="border-left-color:var(--navy-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Semi-membraneux <small>Aplati, fortement membraneux · Os coxal → Tibia (3 insertions)</small></div>
+    <span class="tag tag-navy" style="margin-left:auto;margin-right:8px;">Fléchisseur genou · Rotation médiale +++</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison (3 chefs)</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — tubérosité ischiatique — face postérieure (en dh. et en avt de la longue portion du biceps, débordant en dessous) — tendon commun</td></tr>
+          <tr><td class="muscle-name">Terminaison directe</td><td>Tibia — épiphyse sup. — face postérieure — tendon (+ muscle poplité)</td></tr>
+          <tr><td class="muscle-name">Terminaison réfléchie</td><td>Tibia — épiphyse sup. — partie antéro-médiale (sillon infra-condylaire) — tendon aplati</td></tr>
+          <tr><td class="muscle-name">Terminaison récurrente</td><td>Coque condylienne latérale — supérieure — fibres tendineuses (fabella)</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Topographie</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Postérieure, partie médiale · Plan profond</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>En bas, dd.</td></tr>
+          <tr><td class="muscle-name">Aspect</td><td>Large et aplat · Fortement membraneux · Tendon d'origine descend très bas ; tendon de terminaison remonte très haut en dh.</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>1. Limite supéro-médiale de la <strong>fosse poplitée</strong> · 2. Partie du <strong>point d'angle postéro-médial</strong></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Articulation</th><th>Type</th><th>Actions</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Genou</td><td>Statique</td><td>Stabilisation postéro-médiale (<strong>point d'angle</strong>)</td></tr>
+          <tr><td class="muscle-name">Hanche</td><td>Statique</td><td>Maintien lors de l'inclinaison antérieure (cf. biceps)</td></tr>
+          <tr><td class="muscle-name">Genou</td><td>Dynamique</td><td><strong>Flexion</strong> · <strong>Rotation médiale +++</strong> (tendon réfléchi)</td></tr>
+          <tr><td class="muscle-name">Hanche</td><td>Dynamique</td><td>Extension légère · Rétroversion en force</td></tr>
+          <tr><td class="muscle-name">Nerf</td><td colspan="2"><span class="tag tag-navy">Nerf sciatique</span> (ou tibial, si division haute) · Racines L5, S1, S2</td></tr>
+          <tr><td class="muscle-name">Artères</td><td colspan="2">Artères perforantes (réseau cruciforme)</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="info-box amber" style="align-self:start;">
+        <strong>🩺 Intérêts ostéopathiques :</strong> Les IJ sont à <strong>forte proportion tendineuse</strong> → piètre extensibilité. À la hanche, rôle statique principal (tronc incliné vers l'avant). Au genou, ils <strong>protègent le LCA</strong> en empêchant le glissement antérieur du tibia (cocontraction indispensable après ligamentoplastie). En chaîne fermée avec le gastrocnémien, participent à l'extension du genou, économisant les contraintes fémoro-patellaires.
+      </div>
+    </div>
+  </div></div>
+
+  <!-- Tableau comparatif IJ -->
+  <div class="test-section-title" style="margin-top:24px;">📊 Tableau comparatif — Ischio-jambiers</div>
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Origine</th><th>Terminaison</th><th>Actions principales</th><th>Nerf / Racines</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Biceps fémoral (LP)</td><td>Tubérosité ischiatique</td><td>Tête fibula</td><td><strong>Flex. genou</strong> · Rot. lat. · Ext. hanche</td><td><span class="tag tag-navy">Sciatique</span> L5-S2</td></tr>
+        <tr><td class="muscle-name">Biceps fémoral (CP)</td><td>Ligne âpre fémur</td><td>Tête fibula</td><td><strong>Flex. genou</strong> · Rot. lat.</td><td><span class="tag tag-navy">Sciatique</span> L5-S2</td></tr>
+        <tr><td class="muscle-name">Semi-tendineux</td><td>Tubérosité ischiatique</td><td>Tibia (patte d'oie)</td><td><strong>Flex. genou</strong> · Rot. méd. · Ext. hanche</td><td><span class="tag tag-navy">Sciatique</span> L5-S2</td></tr>
+        <tr><td class="muscle-name">Semi-membraneux</td><td>Tubérosité ischiatique</td><td>Tibia (3 chefs)</td><td><strong>Flex. genou</strong> · <strong>Rot. méd. +++</strong> · Ext. hanche</td><td><span class="tag tag-navy">Sciatique</span> L5-S2</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ═══════════ ANATOMIE MI — MUSCLES ADDUCTEURS (Ch.5) ═══════════ -->
+<section class="section" id="anatomie-mi-adducteurs">
+  <div class="section-title">Anatomie — Muscles adducteurs</div>
+  <div class="section-sub">Chapitre 5 · Myologie membre inférieur — Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    Les muscles adducteurs, situés dans la <strong>loge médiale de la cuisse</strong>, sont organisés selon trois plans :<br>
+    • <strong>Plan superficiel</strong> : pectiné, long adducteur, gracile<br>
+    • <strong>Plan moyen</strong> : court adducteur<br>
+    • <strong>Plan profond</strong> : grand adducteur
+  </div>
+
+  <!-- ══ PECTINÉ ══ -->
+  <div class="test-section-title">🔵 Plan superficiel — Le pectiné</div>
+  <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Pectiné <small>Court · Os coxal → Fémur · Trigone fémoral</small></div>
+    <span class="tag tag-teal" style="margin-left:auto;margin-right:8px;">Adducteur · Fléchisseur · Rot. méd.</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Adducteurs · Cuisse · Os coxal → Fémur · Court</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — branche supérieure du pubis — crête pectinéale (bord sup., entre éminence ilio-pectinée et épine du pubis) — fibres charnues + ligament pectiné et aponévrose</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Fémur — face post. de l'épiphyse supérieure — branche moyenne de trifurcation (crête du pectiné) — lame tendineuse</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Adduction</strong> · <strong>Flexion</strong> (donc antéverseur) · Rôle rotatoire controversé</td></tr>
+          <tr><td class="muscle-name">Nerfs</td><td><span class="tag tag-navy">N. musculaire médial</span> (du N. fémoral) · <span class="tag tag-navy">N. obturateur</span> (branche ant.) · 1 branche du N. fémoral née dans le bassin</td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L2</span> <span class="tag tag-teal">L3</span> <span class="tag tag-teal">L4</span></td></tr>
+          <tr><td class="muscle-name">Artère</td><td>Artère circonflexe médiale</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>1. Partie médiale du fond du <strong>trigone fémoral</strong> · 2. En rapport avec le <strong>PVN fémoral</strong></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- ══ LONG ADDUCTEUR ══ -->
+  <div class="test-section-title" style="margin-top:16px;">🔵 Plan superficiel — Le long adducteur</div>
+  <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Long adducteur <small>Triangulaire · Os coxal → Fémur · Le plus superficiel</small></div>
+    <span class="tag tag-teal" style="margin-left:auto;margin-right:8px;">Adducteur · Limite médiale du trigone</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Adducteurs · Cuisse · Os coxal → Fémur · Triangulaire</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — face externe — corps du pubis (partie inférieure) + débordant sur la branche inférieure — tendon + long adducteur controlatéral + droit de l'abdomen</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Fémur — diaphyse — ligne âpre (bord post.) — partie moyenne, entre les 2 lèvres (entre VM et court adducteur) — lame aponévrotique + expansion au tendon du 3e adducteur</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Statique</td><td>Coaptation de la <strong>symphyse pubienne</strong></td></tr>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Adduction</strong> · Ramène en position neutre dans le plan sagittal · Rôle rotatoire médial léger</td></tr>
+          <tr><td class="muscle-name">Nerfs</td><td><span class="tag tag-navy">N. obturateur</span> (branche ant.) · <span class="tag tag-navy">N. musculaire médial</span> (du N. fémoral)</td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L2</span> <span class="tag tag-teal">L3</span> <span class="tag tag-teal">L4</span></td></tr>
+          <tr><td class="muscle-name">Artère</td><td>Artère fémorale profonde</td></tr>
+          <tr><td class="muscle-name">Topographie</td><td>1. Le <strong>plus superficiel</strong> des 3 muscles adducteurs · 2. Forme la limite médiale du <strong>trigone fémoral</strong></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="info-box amber"><strong>🩺 Intérêts ostéopathiques :</strong> Repérage et palpation du tendon d'origine faciles (limite médiale du trigone fémoral). Sa saillie est accentuée par la mise en abduction de la cuisse. Muscle puissant concerné par la pathologie des adducteurs chez le sportif → <strong>pubalgies</strong>, fractures de fatigue et arrachements.</div>
+  </div></div>
+
+  <!-- ══ COURT ADDUCTEUR ══ -->
+  <div class="test-section-title" style="margin-top:16px;">🟡 Plan moyen — Le court adducteur</div>
+  <div class="tech-card open" style="border-left-color:var(--amber-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Court adducteur <small>Aplati, 2 faisceaux · Os coxal → Fémur · Plan moyen</small></div>
+    <span class="tag tag-amber" style="margin-left:auto;margin-right:8px;">Adducteur · Isole 2 espaces intermusculaires</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Adducteurs · Cuisse · Os coxal → Fémur · Aplati, 2 faisceaux</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — face externe du pubis — corps et branche inférieure (colline des adducteurs)</td></tr>
+          <tr><td class="muscle-name">Terminaison sup.</td><td>Fémur — extrémité sup. trifurcation (entre pectiné en dd. et grand add. en dh.)</td></tr>
+          <tr><td class="muscle-name">Terminaison inf.</td><td>Fémur — diaphyse — ligne âpre (bord post.) — partie sup. (entre long et grand adducteur)</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions, Rapports &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Adduction</strong> · Ramène en position neutre · Rôle rotatoire médial léger</td></tr>
+          <tr><td class="muscle-name">Topographie clé</td><td>Isole <strong>2 espaces</strong> : ant. (branche ant. N. obturateur) + post. (branche post. N. obturateur)</td></tr>
+          <tr><td class="muscle-name">Nerf</td><td><span class="tag tag-navy">N. obturateur</span> (2 branches)</td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L2</span> <span class="tag tag-teal">L3</span> <span class="tag tag-teal">L4</span></td></tr>
+          <tr><td class="muscle-name">Artère</td><td>Artère fémorale profonde</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="info-box teal"><strong>🩺 Intérêts ostéopathiques :</strong> Impalpable vu sa profondeur. Participe aux pathologies des adducteurs.</div>
+  </div></div>
+
+  <!-- ══ GRAND ADDUCTEUR ══ -->
+  <div class="test-section-title" style="margin-top:16px;">🔴 Plan profond — Le grand adducteur</div>
+  <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Grand adducteur <small>3 faisceaux enroulés · Os coxal → Fémur · Plan profond</small></div>
+    <span class="tag tag-coral" style="margin-left:auto;margin-right:8px;">Adducteur puissant · Hiatus de l'adducteur</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origines (3 faisceaux)</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Faisceau</th><th>Structure / Partie / Secteur</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Faisceaux sup. et moy. (I et II)</td><td>Os coxal — branche ischio-pubienne — face externe — 2/3 post., près du bord inf. — fibres charnues et aponévrotiques</td></tr>
+          <tr><td class="muscle-name">Faisceau inf. (III)</td><td>Os coxal — tubérosité ischiatique — face postérieure — en dessous et en avt des IJ — tendon</td></tr>
+          <tr><td class="muscle-name">Terminaison (I)</td><td>Fémur — extrémité sup. — trifurcation, branche lat. — lame aponévrotique</td></tr>
+          <tr><td class="muscle-name">Terminaison (II)</td><td>Fémur — corps — ligne âpre — lèvres lat. et versant médial — lame aponévrotique</td></tr>
+          <tr><td class="muscle-name">Terminaison (III)</td><td>Fémur — extrémité inf. — bifurcation, branche médiale sur le tubercule de l'add. — tendon</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon teal">🗺️</div><div class="card-title">Trajet &amp; Topographie</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Loge</td><td>Médiale · Plan profond</td></tr>
+          <tr><td class="muscle-name">Obliquité</td><td>En bas, dh., arr. — fibres les plus méd. et ant. = les plus hautes et transversales · fibres lat. et post. = les plus basses et verticales</td></tr>
+          <tr><td class="muscle-name">Aspect</td><td>Triangulaire à sommet coxal · Épais, formant une portion de cône creux ouvert en dh. et arr.</td></tr>
+          <tr><td class="muscle-name">Topographie clé</td><td>1. Étendu dans le <strong>plan frontal</strong> · 2. Sagittalement entre le gracile (avt) et le semi-membraneux (arr.) · 3. Délimite le <strong>hiatus de l'adducteur</strong> (vaisseaux fémoraux)</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:10px;">
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Dynamique</td><td><strong>Adduction</strong> · Ramène en position neutre dans le plan sagittal · Rôle rotatoire médial léger (ambiguë)</td></tr>
+          <tr><td class="muscle-name">Nerfs</td><td><span class="tag tag-navy">N. obturateur</span> (br. ant. I+II, br. post. faisceau inf.) + <span class="tag tag-navy">N. sciatique</span> (faisceau III)</td></tr>
+          <tr><td class="muscle-name">Racines (I+II)</td><td><span class="tag tag-teal">L2</span> <span class="tag tag-teal">L3</span> <span class="tag tag-teal">L4</span></td></tr>
+          <tr><td class="muscle-name">Racines (III)</td><td><span class="tag tag-teal">L4</span> <span class="tag tag-teal">L5</span> <span class="tag tag-teal">S1</span></td></tr>
+          <tr><td class="muscle-name">Artères</td><td>Fémorale profonde (± artère superficielle) · Artère circonflexe médiale · Artères perforantes (+ glutéale inf.)</td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="info-box amber" style="align-self:start;">
+        <strong>🩺 Intérêts ostéopathiques :</strong> Malgré son gros volume, palpation modeste (étendu frontalement, gracile gênant l'abord médial). Mécaniquement très puissant : assure le <strong>maintien à califourchon</strong> et la protection sexuelle (anciennement surnommés «&nbsp;custodes virginiatis&nbsp;» — gardiens de la virginité). Ses pathologies sont liées à celles des adducteurs.
+      </div>
+    </div>
+  </div></div>
+
+  <!-- ══ GRACILE ══ -->
+  <div class="test-section-title" style="margin-top:16px;">🟢 Plan superficiel — Le gracile</div>
+  <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
+    <div class="tech-card-name">Gracile <small>Rubané · Os coxal → Tibia · Patte d'oie</small></div>
+    <span class="tag tag-teal" style="margin-left:auto;margin-right:8px;">Adducteur hanche · Fléchisseur genou · Anti-valgus</span><div class="test-toggle">▾</div>
+  </div><div class="tech-card-body">
+    <div class="grid-2" style="margin-bottom:12px;">
+      <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine &amp; Terminaison</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Champ</th><th>Détail</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Groupe</td><td>Adducteurs · Patte d'oie · Cuisse · Os coxal → Tibia · Rubané</td></tr>
+          <tr><td class="muscle-name">Origine</td><td>Os coxal — branche inférieure du pubis (déborde s/corps) — face externe/près du bord inf. — lame tendineuse</td></tr>
+          <tr><td class="muscle-name">Terminaison</td><td>Tibia — corps, face médiale — 1/4 sup./en arr. du sartorius et au-dessus du semi-tendineux — tendon aplati (patte d'oie)</td></tr>
+          <tr><td class="muscle-name">Trajet</td><td>Loge médiale, plan sous-cutané · Vertical · Allongé, mince (rubané) · Médialement sur la <strong>couture du pantalon</strong></td></tr>
+        </tbody></table></div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Actions &amp; Innervation</div></div>
+        <div class="card-body" style="padding:0;"><table class="muscle-table"><thead><tr><th>Articulation</th><th>Actions</th></tr></thead><tbody>
+          <tr><td class="muscle-name">Hanche</td><td><strong>Adduction</strong></td></tr>
+          <tr><td class="muscle-name">Genou</td><td><strong>Flexion</strong> · <strong>Rotation médiale</strong> · Rôle <strong>anti-valgus</strong> (frein à la rotation latérale)</td></tr>
+          <tr><td class="muscle-name">Nerf</td><td><span class="tag tag-navy">Branche ant. du N. obturateur</span></td></tr>
+          <tr><td class="muscle-name">Racines</td><td><span class="tag tag-teal">L2</span> <span class="tag tag-teal">L3</span></td></tr>
+          <tr><td class="muscle-name">Artères</td><td>En ht : artère circonflexe méd. · Milieu : artère fémorale prof. · En bas : artère fémorale superf.</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="info-box teal"><strong>🩺 Intérêts ostéopathiques :</strong> Comme son nom l'indique, ce muscle est gracile : rubané et loin d'un plan osseux sous-jacent, il <strong>fuit sous le doigt</strong> lors de la palpation (plus facile à sa partie haute). Son trajet est repéré à la face médiale de la cuisse, à la couture du pantalon. Sa place au sein de la <strong>patte d'oie</strong> en fait un <strong>rempart anti-valgus</strong>. Il combine la flexion du genou à la rotation médiale, mais son rôle principal est de freiner la rotation latérale.</div>
+  </div></div>
+
+  <!-- Tableau comparatif adducteurs -->
+  <div class="test-section-title" style="margin-top:24px;">📊 Tableau comparatif — Muscles adducteurs</div>
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Plan</th><th>Origine</th><th>Terminaison</th><th>Actions principales</th><th>Nerf / Racines</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Pectiné</td><td>Superficiel</td><td>Crête pectinéale</td><td>Crête du pectiné (fémur)</td><td><strong>Add.</strong> · Flex. · Rot. méd.</td><td><span class="tag tag-navy">Fémoral + Obturateur</span> L2-L4</td></tr>
+        <tr><td class="muscle-name">Long adducteur</td><td>Superficiel</td><td>Corps du pubis</td><td>Ligne âpre (milieu)</td><td><strong>Add.</strong> · Rot. méd. légère</td><td><span class="tag tag-navy">Obturateur</span> L2-L4</td></tr>
+        <tr><td class="muscle-name">Court adducteur</td><td>Moyen</td><td>Corps + branche inf. pubis</td><td>Trifurcation + ligne âpre</td><td><strong>Add.</strong> · Rot. méd. légère</td><td><span class="tag tag-navy">Obturateur</span> L2-L4</td></tr>
+        <tr><td class="muscle-name">Grand adducteur</td><td>Profond</td><td>Branche ischio-pub. + ischion</td><td>Ligne âpre + tubercule add.</td><td><strong>Add. puissant</strong> · Rot. méd.</td><td><span class="tag tag-navy">Obturateur + Sciatique</span> L2-S1</td></tr>
+        <tr><td class="muscle-name">Gracile</td><td>Superficiel</td><td>Branche inf. pubis</td><td>Tibia (patte d'oie)</td><td><strong>Add.</strong> · Flex. genou · Anti-valgus</td><td><span class="tag tag-navy">Obturateur ant.</span> L2-L3</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
 <!-- ═══════════════════════ ANATOMIE — RACHIS ═══════════════════════ -->
 <section class="section" id="anatomie-rachis">
   <div class="section-title">Anatomie — Rachis</div>
@@ -12917,10 +14025,10 @@ const ART_MAP = {
   hanche:     { subs: ['biomec-hanche','tests-hanche','tech-osteo-hanche'], default: 'biomec-hanche' },
   cheville:   { subs: ['biomec-cheville','tests-cheville','ottawa-cheville','tech-osteo-cheville'], default: 'biomec-cheville' },
   transversal:{ subs: ['ottawa'], default: 'ottawa' },
-  neurologie: { subs: ['neuro-terminologie','neuro-triage','neuro-routine-ms','neuro-routine-mi','neuro-raisonnement'], default: 'neuro-terminologie' },
+  neurologie: { subs: ['neuro-terminologie','neuro-triage','neuro-routine-ms','neuro-routine-mi','neuro-anatomie-ms','neuro-anatomie-mi','neuro-raisonnement'], default: 'neuro-terminologie' },
   'formation-clinique': { subs: ['fc-epaule','fc-coude','fc-genou','fc-hanche','fc-pied'], default: 'fc-epaule' },
   rachis:     { subs: ['rachis-cervical','rachis-thoracique','rachis-lombaire','rachis-sacrum'], default: 'rachis-cervical' },
-  anatomie:   { subs: ['anatomie-ms-coiffe','anatomie-ms-fascias','anatomie-ms-thorax','anatomie-ms-bras','anatomie-ms-avbras','anatomie-mi-ceinture','anatomie-rachis','anatomie-tronc'], default: 'anatomie-ms-coiffe' },
+  anatomie:   { subs: ['anatomie-ms-coiffe','anatomie-ms-fascias','anatomie-ms-thorax','anatomie-ms-bras','anatomie-ms-avbras','anatomie-mi-ceinture','anatomie-mi-pelvitroch','anatomie-mi-posterieurs','anatomie-mi-adducteurs','anatomie-rachis','anatomie-tronc'], default: 'anatomie-ms-coiffe' },
   palpatoire: { subs: ['palp-post-1','palp-post-2','palp-lateral','palp-cou','palp-rachis','palp-sacrum','palp-rachis-cervical'], default: 'palp-post-1' },
 };
 
@@ -12957,6 +14065,7 @@ const SUB_LABELS = {
   'tech-osteo-cheville': 'Techniques ostéopathiques',
   'neuro-terminologie': 'Terminologie', 'neuro-triage': 'Triage clinique',
   'neuro-routine-ms': 'Routine neurologique MS', 'neuro-routine-mi': 'Routine neurologique MI',
+  'neuro-anatomie-ms': 'Anatomie Plexus Brachial', 'neuro-anatomie-mi': 'Anatomie Plexus Lombaire/Sacral',
   'neuro-raisonnement': 'Raisonnement clinique',
   'fc-epaule': 'Raisonnement clinique — Épaule',
   'fc-coude': 'Raisonnement clinique — Coude',
@@ -12969,6 +14078,9 @@ const SUB_LABELS = {
   'anatomie-ms-thorax': 'MS · Thorax antérieur', 'anatomie-ms-bras': 'MS · Muscles du bras',
   'anatomie-ms-avbras': 'MS · Avant-bras (Ch.5)',
   'anatomie-mi-ceinture': 'MI · Ceinture du membre inférieur',
+  'anatomie-mi-pelvitroch': 'MI · Pelvi-trochantériens (Ch.2)',
+  'anatomie-mi-posterieurs': 'MI · Muscles postérieurs — Ischio-jambiers (Ch.4)',
+  'anatomie-mi-adducteurs': 'MI · Muscles adducteurs (Ch.5)',
   'anatomie-rachis': 'Rachis', 'anatomie-tronc': 'Tronc & viscères',
   'palp-post-1': 'Groupe post. · Chap. 8A', 'palp-post-2': 'Groupe post. · Chap. 8B',
   'palp-lateral': 'Paroi latérale · Chap. 10',
