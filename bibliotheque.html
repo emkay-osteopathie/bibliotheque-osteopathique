@@ -332,6 +332,50 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   .progress-bar { height: 7px; border-radius: 4px; background: var(--gray-200); overflow: hidden; }
   .progress-fill { height: 100%; border-radius: 4px; transition: width .4s ease; }
 
+  /* ── IMAGE GALLERIES ── */
+  .img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .img-gallery-item {
+    text-align: center;
+    max-width: 220px;
+  }
+  .img-gallery-item img {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #fff;
+    padding: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform .2s, box-shadow .2s;
+    cursor: zoom-in;
+    display: block;
+    margin: 0 auto;
+  }
+  .img-gallery-item img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  }
+  .img-gallery-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy-700);
+    margin-top: 8px;
+  }
+  .img-gallery-credit {
+    font-size: 10px;
+    color: var(--gray-400);
+    margin-top: 3px;
+  }
   /* ── FOOTNOTES ── */
   .footnote { font-size: 12px; color: var(--gray-500); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-100); }
   .footnote cite { font-style: italic; }
@@ -9024,6 +9068,28 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="section-title">Anatomie — Plexus brachial &amp; Nerfs du membre supérieur</div>
   <div class="section-sub">Trajets, territoires moteurs et sensitifs à retenir pour l'examen · Thomas Gautier D.O. · IEOQ Année 1</div>
 
+  <!-- GALERIE IMAGES RÉELLES — NEUROLOGIE MS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Gray808.png/280px-Gray808.png"
+           alt="Plexus brachial — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus brachial (Gray808)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Gray817.png/280px-Gray817.png"
+           alt="Dermatomes MS" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs cutanés du bras (Gray817)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Gray816.png/280px-Gray816.png"
+           alt="Nerfs de la main" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs de la main (Gray816)</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Gray's Anatomy · Domaine public</div>
+    </div>
+  </div>
+
   <!-- ══ PLEXUS BRACHIAL — SCHÉMA AÉRÉ ══ -->
   <div class="card" style="margin-bottom:24px;">
     <div class="card-header"><div class="card-icon navy">🔵</div><div class="card-title">Constitution du plexus brachial — Schéma complet</div></div>
@@ -9459,7 +9525,32 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="section-title">Anatomie — Plexus lombaire, sacral &amp; Nerfs du membre inférieur</div>
   <div class="section-sub">Trajets, territoires moteurs et sensitifs à retenir pour l'examen · Thomas Gautier D.O. · IEOQ Année 1</div>
 
-  <!-- ══ PLEXUS LOMBAIRE — SCHÉMA AÉRÉ ══ -->
+  <!-- GALERIE IMAGES RÉELLES — NEUROLOGIE MI -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gray823.png/240px-Gray823.png"
+           alt="Plexus lombaire — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus lombaire (Gray823)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Gray826.png/240px-Gray826.png"
+           alt="Plexus sacral — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus sacral (Gray826)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gray836.png/240px-Gray836.png"
+           alt="Nerfs MI vue antérieure" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue ant. (Gray836)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gray837.png/240px-Gray837.png"
+           alt="Nerfs MI vue postérieure" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue post. (Gray837)</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Gray's Anatomy · Domaine public</div>
+    </div>
+  </div>
   <div class="card" style="margin-bottom:24px;">
     <div class="card-header"><div class="card-icon navy">🔢</div><div class="card-title">Plexus lombaire — Constitution &amp; Branches</div></div>
     <div class="card-body" style="padding:24px 20px;">
@@ -11704,6 +11795,28 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="section-sub">Chapitre 3 · Groupe antérieur · Pectoraux — Thomas Gautier D.O. · IEOQ Année 1</div>
   <div class="info-box teal" style="margin-bottom:16px;">Muscles du thorax se terminant sur la ceinture du MS ou l'humérus : <strong>Grand pectoral</strong> · <strong>Petit pectoral</strong> · <strong>Sous-clavier</strong>.</div>
 
+  <!-- GALERIE IMAGES THORAX -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pectoralis_major.png/280px-Pectoralis_major.png"
+           alt="Grand pectoral" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Grand pectoral</div>
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia · Domaine public</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pectoralis_minor.png/280px-Pectoralis_minor.png"
+           alt="Petit pectoral" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Petit pectoral</div>
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia · Domaine public</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Serratus_anterior.png/280px-Serratus_anterior.png"
+           alt="Dentelé antérieur" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Dentelé antérieur</div>
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia · Domaine public</div>
+    </div>
+  </div>
+
   <div class="test-section-title">💪 Grand pectoral</div>
   <div class="grid-2" style="margin-bottom:12px;">
     <div class="card"><div class="card-header"><div class="card-icon navy">📍</div><div class="card-title">Origine (3 chefs)</div></div>
@@ -11888,6 +12001,38 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 
   <div class="info-box teal" style="margin-bottom:16px;">
     3 groupes enveloppés par le <strong>fascia antébrachial</strong> : <strong>Groupe latéral</strong> (brachio-radial, LERC, CERC, supinateur) · <strong>Groupe antérieur</strong> fléchisseur/pronateur (3 plans) · <strong>Groupe postérieur</strong> extenseur (2 plans). Les loges sont séparées par la <strong>membrane interosseuse</strong> et des septums intermusculaires.
+  </div>
+
+  <!-- GALERIE IMAGES AVANT-BRAS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Brachioradialis.png/200px-Brachioradialis.png"
+           alt="Brachio-radial" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Brachio-radial</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pronator_teres.png/200px-Pronator_teres.png"
+           alt="Rond pronateur" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Rond pronateur</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Flexor_digitorum_superficialis.png/200px-Flexor_digitorum_superficialis.png"
+           alt="Fléchisseur superficiel doigts" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Fléchisseur superficiel</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Extensor_digitorum.png/200px-Extensor_digitorum.png"
+           alt="Extenseur commun doigts" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Extenseur des doigts</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Supinator.png/200px-Supinator.png"
+           alt="Supinateur" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Supinateur</div>
+    </div>
+    <div style="text-align:center;width:100%;margin-top:4px;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
   </div>
 
   <!-- ═══ CHAPITRE 1 : GROUPE LATÉRAL ═══ -->
@@ -12602,7 +12747,32 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <strong>Muscles du groupe :</strong> Piriforme · Obturateur interne + jumeaux · Obturateur externe · Carré fémoral.
   </div>
 
-  <!-- ══ PIRIFORME ══ -->
+  <!-- GALERIE IMAGES PELVI-TROCHANTÉRIENS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Piriformis.png/220px-Piriformis.png"
+           alt="Piriforme" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Piriforme</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Obturator_internus.png/220px-Obturator_internus.png"
+           alt="Obturateur interne" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Obturateur interne</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Obturator_externus.png/220px-Obturator_externus.png"
+           alt="Obturateur externe" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Obturateur externe</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Quadratus_femoris.png/220px-Quadratus_femoris.png"
+           alt="Carré fémoral" style="height:190px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Carré fémoral</div>
+    </div>
+    <div style="text-align:center;width:100%;margin-top:4px;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
   <div class="test-section-title">🔴 Le piriforme</div>
   <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
     <div class="tech-card-name">Piriforme <small>Triangulaire · Sacrum → Grand trochanter</small></div>
@@ -12790,7 +12960,27 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     À forte proportion tendineuse, ils ont une <strong>piètre extensibilité</strong> — cause fréquente de rétraction difficile à vaincre.
   </div>
 
-  <!-- ══ BICEPS FÉMORAL ══ -->
+  <!-- GALERIE ISCHIO-JAMBIERS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Biceps_femoris_long_head.png/200px-Biceps_femoris_long_head.png"
+           alt="Biceps fémoral" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Biceps fémoral (longue portion)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Semitendinosus.png/200px-Semitendinosus.png"
+           alt="Semi-tendineux" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Semi-tendineux</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Semimembranosus.png/200px-Semimembranosus.png"
+           alt="Semi-membraneux" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Semi-membraneux</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
   <div class="test-section-title">🔴 Le biceps fémoral</div>
   <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
     <div class="tech-card-name">Biceps fémoral <small>2 chefs : longue + courte portion · Os coxal &amp; Fémur → Fibula</small></div>
@@ -12942,7 +13132,32 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     • <strong>Plan profond</strong> : grand adducteur
   </div>
 
-  <!-- ══ PECTINÉ ══ -->
+  <!-- GALERIE ADDUCTEURS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adductor_longus.png/200px-Adductor_longus.png"
+           alt="Long adducteur" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Long adducteur</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Adductor_magnus.png/200px-Adductor_magnus.png"
+           alt="Grand adducteur" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Grand adducteur</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gracilis.png/200px-Gracilis.png"
+           alt="Gracile" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Gracile</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pectineus.png/200px-Pectineus.png"
+           alt="Pectiné" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Pectiné</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
   <div class="test-section-title">🔵 Plan superficiel — Le pectiné</div>
   <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
     <div class="tech-card-name">Pectiné <small>Court · Os coxal → Fémur · Trigone fémoral</small></div>
@@ -13111,23 +13326,106 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 
 <!-- ═══════════════════════ ANATOMIE — RACHIS ═══════════════════════ -->
 <section class="section" id="anatomie-rachis">
-  <div class="section-title">Anatomie — Rachis</div>
-  <div class="section-sub">À venir</div>
-  <div class="card"><div class="card-body" style="text-align:center; padding:60px 20px;">
-    <div style="font-size:48px; margin-bottom:16px;">🦷</div>
-    <div style="font-size:18px; font-weight:600; color:var(--navy-800); margin-bottom:8px;">Section en construction</div>
-    <div style="font-size:14px; color:var(--gray-500);">L'anatomie du rachis sera ajoutée prochainement.</div>
+  <div class="section-title">Anatomie — Rachis &amp; Muscles paravertébraux</div>
+  <div class="section-sub">Muscles érecteurs du rachis, profonds et accessoires — Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <!-- GALERIE RACHIS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Iliocostalis.png/220px-Iliocostalis.png"
+           alt="Iliocostal" style="height:210px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Iliocostal</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Longissimus.png/220px-Longissimus.png"
+           alt="Longissimus" style="height:210px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Longissimus (longissimus)</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Multifidus.png/220px-Multifidus.png"
+           alt="Multifides" style="height:210px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Multifides</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Quadratus_lumborum.png/220px-Quadratus_lumborum.png"
+           alt="Carré des lombes" style="height:210px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Carré des lombes</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    <strong>Érecteurs du rachis (spinal erectors) :</strong> 3 colonnes — Iliocostal (lat.) · Longissimus (interméd.) · Épineux (méd.) — formant la masse commune sacro-lombaire. Rôle : <strong>extension</strong> et <strong>stabilisation axiale</strong>.<br>
+    <strong>Plan profond :</strong> Multifides (stabilisation segmentaire +++) · Semi-épineux · Rotateurs. Ces muscles stabilisateurs segmentaires ont un rôle clé dans les dysfonctions rachidiennes.
+  </div>
+
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Plan</th><th>Actions principales</th><th>Innervation</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Iliocostal<small>3 segments : cervical, dorsal, lombal</small></td><td>Superficiel (latéral)</td><td>Extension rachis · Inclinaison homolatérale · Stabilisation</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Longissimus<small>3 segments : capitis, cervicis, thoracis</small></td><td>Superficiel (intermédiaire)</td><td>Extension + inclinaison ipsilatérale · Stabilisation globale</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Épineux<small>Inconstant / Rudimentaire en lombal</small></td><td>Superficiel (médial)</td><td>Extension rachis cervical + thoracique supérieur</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Multifides ⭐</td><td>Profond (segmentaire)</td><td>Stabilisation inter-segmentaire +++ · Extension · Rotation controlatérale · Proprioception</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Carré des lombes</td><td>Profond (latéral)</td><td>Inclinaison homolatérale · Abaissement dernière côte · Stabilise L4–L5</td><td>Rameaux ant. T12–L3</td></tr>
+        <tr><td class="muscle-name">Psoas<small>(partie lombaire)</small></td><td>Ant./Lat. rachis</td><td>Flexion hanche · Stabilisation lombaire · Antéversion</td><td>N. fémoral (L1–L3)</td></tr>
+      </tbody>
+    </table>
   </div></div>
 </section>
 
 <!-- ═══════════════════════ ANATOMIE — TRONC & VISCÈRES ═══════════════════════ -->
 <section class="section" id="anatomie-tronc">
-  <div class="section-title">Anatomie — Tronc &amp; Viscères</div>
-  <div class="section-sub">À venir</div>
-  <div class="card"><div class="card-body" style="text-align:center; padding:60px 20px;">
-    <div style="font-size:48px; margin-bottom:16px;">🫀</div>
-    <div style="font-size:18px; font-weight:600; color:var(--navy-800); margin-bottom:8px;">Section en construction</div>
-    <div style="font-size:14px; color:var(--gray-500);">L'anatomie du tronc et des viscères sera ajoutée prochainement.</div>
+  <div class="section-title">Anatomie — Muscles du tronc &amp; Abdominaux</div>
+  <div class="section-sub">Muscles pariétaux de l'abdomen · Diaphragme · Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <!-- GALERIE TRONC -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Rectus_abdominis.png/200px-Rectus_abdominis.png"
+           alt="Droit de l'abdomen" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Droit de l'abdomen</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/External_oblique.png/200px-External_oblique.png"
+           alt="Oblique externe" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Oblique externe</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Internal_oblique.png/200px-Internal_oblique.png"
+           alt="Oblique interne" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Oblique interne</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Transversus_abdominis.png/200px-Transversus_abdominis.png"
+           alt="Transverse de l'abdomen" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Transverse abdomen</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    <strong>4 muscles pariétaux de l'abdomen</strong> (de superficiel à profond) :<br>
+    <strong>1. Droit de l'abdomen</strong> — flexion thorax · Stabilisation · Compression abdominale<br>
+    <strong>2. Oblique externe</strong> — rotation controlatérale · Inclinaison homolatérale · Compression<br>
+    <strong>3. Oblique interne</strong> — rotation homolatérale · Inclinaison homolatérale · Compression<br>
+    <strong>4. Transverse</strong> — ceinture abdominale · Stabilisation lombaire +++ · Presse abdominale
+  </div>
+
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Origine</th><th>Terminaison</strong></th><th>Actions</th><th>Nerf</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Droit de l'abdomen</td><td>Pubis (crête + symphyse)</td><td>Cartilages costaux 5–7 · Processus xiphoïde</td><td>Flexion tronc · Compression · Expiration forcée</td><td>N. intercostaux T7–T12</td></tr>
+        <tr><td class="muscle-name">Oblique externe</td><td>8 dernières côtes (digitations)</td><td>Ligne blanche · Crête iliaque · Lig. inguinal</td><td>Rotation controlatérale · Inclinaison ipsilat. · Compression</td><td>N. intercostaux T5–T12</td></tr>
+        <tr><td class="muscle-name">Oblique interne</td><td>Fascia thoracolombaire · Crête iliaque · Lig. inguinal</td><td>Ligne blanche · 3 derniers cartilages costaux</td><td>Rotation homolatérale · Inclinaison · Compression</td><td>N. intercostaux T7–L1</td></tr>
+        <tr><td class="muscle-name">Transverse ⭐</td><td>Fascia thoracolombaire · Crête iliaque · 6 dernières côtes</td><td>Ligne blanche · Processus xiphoïde</td><td>Ceinture abdominale · Stabilisation lombaire +++ · Presse</td><td>N. intercostaux T7–L1</td></tr>
+      </tbody>
+    </table>
   </div></div>
 </section>
 
