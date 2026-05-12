@@ -1475,6 +1475,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       <button type="button" class="sub-tab" data-sub="epaule1" onclick="switchSub('epaule1')">📖 Biomécanique (P.1)</button>
       <button type="button" class="sub-tab" data-sub="epaule-rythme" onclick="switchSub('epaule-rythme')">🔄 Rythme scapulo-huméral</button>
       <button type="button" class="sub-tab" data-sub="coiffe" onclick="switchSub('coiffe')">💪 Coiffe des rotateurs</button>
+      <button type="button" class="sub-tab" data-sub="arthro-ceinture" onclick="switchSub('arthro-ceinture')">🦴 Arthrologie ceinture</button>
       <button type="button" class="sub-tab" data-sub="tests-epaule" onclick="switchSub('tests-epaule')">🩺 Tests orthopédiques</button>
       <button type="button" class="sub-tab" data-sub="tech-epaule" onclick="switchSub('tech-epaule')">🔧 Techniques structurelles</button>
     </div>
@@ -1485,6 +1486,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <button type="button" class="art-tab" data-art="coude" onclick="switchArt('coude')"><span class="art-icon">🦾</span><span class="art-label">Coude</span><span class="art-chevron">›</span></button>
     <div class="sub-tabs-group hidden" data-art="coude">
       <button type="button" class="sub-tab" data-sub="coude" onclick="switchSub('coude')">📖 Biomécanique</button>
+      <button type="button" class="sub-tab" data-sub="arthro-coude" onclick="switchSub('arthro-coude')">🦴 Arthrologie coude</button>
       <button type="button" class="sub-tab" data-sub="tests-coude" onclick="switchSub('tests-coude')">🩺 Tests orthopédiques</button>
       <button type="button" class="sub-tab" data-sub="tech-coude" onclick="switchSub('tech-coude')">🔧 Techniques structurelles</button>
     </div>
@@ -1495,6 +1497,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <button type="button" class="art-tab" data-art="poignet" onclick="switchArt('poignet')"><span class="art-icon">✋</span><span class="art-label">Poignet</span><span class="art-chevron">›</span></button>
     <div class="sub-tabs-group hidden" data-art="poignet">
       <button type="button" class="sub-tab" data-sub="poignet" onclick="switchSub('poignet')">📖 Biomécanique</button>
+      <button type="button" class="sub-tab" data-sub="arthro-poignet" onclick="switchSub('arthro-poignet')">🦴 Arthrologie poignet</button>
       <button type="button" class="sub-tab" data-sub="tests-poignet" onclick="switchSub('tests-poignet')">🩺 Tests orthopédiques</button>
       <button type="button" class="sub-tab" data-sub="tech-poignet" onclick="switchSub('tech-poignet')">🔧 Techniques structurelles</button>
     </div>
@@ -1553,8 +1556,6 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       <button type="button" class="sub-tab" data-sub="anatomie-mi-pelvitroch" onclick="switchSub('anatomie-mi-pelvitroch')">🦵 MI · Pelvi-trochantériens (Ch.2)</button>
       <button type="button" class="sub-tab" data-sub="anatomie-mi-posterieurs" onclick="switchSub('anatomie-mi-posterieurs')">🦵 MI · Muscles postérieurs (Ch.4)</button>
       <button type="button" class="sub-tab" data-sub="anatomie-mi-adducteurs" onclick="switchSub('anatomie-mi-adducteurs')">🦵 MI · Muscles adducteurs (Ch.5)</button>
-      <button type="button" class="sub-tab" data-sub="anatomie-rachis" onclick="switchSub('anatomie-rachis')">🦷 Rachis</button>
-      <button type="button" class="sub-tab" data-sub="anatomie-tronc" onclick="switchSub('anatomie-tronc')">🫀 Tronc &amp; viscères</button>
       <button type="button" class="sub-tab" data-sub="neuro-anatomie-ms" onclick="switchSub('neuro-anatomie-ms')">🔵 Plexus Brachial</button>
       <button type="button" class="sub-tab" data-sub="neuro-anatomie-mi" onclick="switchSub('neuro-anatomie-mi')">🟢 Plexus Lombaire/Sacral</button>
     </div>
@@ -2411,7 +2412,6 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       <div class="card-header">
         <div class="card-icon teal">📊</div>
         <div>
-          <div class="card-title">Vue d'ensemble — Abduction 0° à 180°</div>
         </div>
       </div>
       <div class="card-body">
@@ -3522,6 +3522,320 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <div class="footnote"><cite>Source : P. César — Cours structurel périphérique Épaule 1ère année, IEOQ 2021 (Partie 1) · À compléter avec les notes prises pendant la pratique · Usage privé</cite></div>
   </section>
 
+  <!-- ══ SECTION ARTHROLOGIE CEINTURE DU MEMBRE SUPÉRIEUR ══ -->
+  <section class="section" id="arthro-ceinture">
+    <div class="section-title">Arthrologie — Ceinture du membre supérieur</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — Articulations sterno-claviculaire, acromio-claviculaire, scapulo-humérale et sous-deltoïdienne</div>
+
+    <!-- Introduction -->
+    <div class="info-box teal" style="margin-bottom:20px;">
+      <strong>Complexe articulaire de l'épaule :</strong> Les articulations de la ceinture du membre supérieur sont au nombre de deux (sterno-claviculaire et acromio-claviculaire) mais le complexe fonctionnel comprend 5 articulations : sterno-costo-claviculaire, acromio-claviculaire, omo-sérato-thoracique, scapulo-humérale et sous-deltoïdienne.
+    </div>
+
+    <!-- 1. Sterno-costo-claviculaire -->
+    <div class="test-section-title">1 — Articulation sterno-costo-claviculaire</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">🦴</div>
+        <div class="card-title">Éléments en présence (4)</div>
+      </div>
+      <div class="card-body">
+        <p style="font-size:13.5px;color:var(--text2);margin-bottom:12px;">Seul point de contact osseux de la ceinture scapulaire avec le thorax. Articulation en selle avec 3 degrés de liberté grâce au disque.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px 14px;background:var(--teal-50);border-radius:8px;border-left:3px solid var(--teal-400);">
+            <strong style="color:var(--teal-700);">La Clavicule</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Surface subdivisée en 2 versants — versant principal à la face médiale de l'extrémité médiale ; versant secondaire à la face inférieure. Triangulaire à base inférieure.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--navy-100);border-radius:8px;border-left:3px solid var(--navy-400);">
+            <strong style="color:var(--navy-700);">Le Sternum (incisure claviculaire)</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Incisure à la partie latérale du bord supérieur du manubrium. Concave verticalement et convexe sagittalement → articulation en selle. Encroûtée de cartilage hyalin.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--amber-100);border-radius:8px;border-left:3px solid var(--amber-500);">
+            <strong style="color:var(--amber-500);">Le 1er cartilage costal</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Très court, relie la 1ère côte au manubrium sternal. Sa face supérieure est intégrée à l'articulation en raison du débordement inférieur de la surface claviculaire.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--gray-50);border-radius:8px;border-left:3px solid var(--gray-400);">
+            <strong style="color:var(--gray-700);">Le Disque articulaire (ménisque)</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Disque circulaire inséré périphériquement sur la capsule et la partie supérieure de la clavicule. Divise le compartiment articulaire en deux.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon navy">🔗</div>
+        <div class="card-title">Moyens d'unions (6)</div>
+      </div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead>
+            <tr><th>Élément</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="muscle-name">Capsule</div></td><td>S'insère au pourtour des surfaces cartilagineuses (clavicule, manubrium, 1er cartilage costal). Constituée de fibres manubrio-claviculaires et costo-claviculaires. Lâche → autorise glissements et pivotements.</td></tr>
+            <tr><td><div class="muscle-name">Disque / ménisque</div></td><td>À la fois moyen d'union (fibro-) et surface articulaire (-cartilage).</td></tr>
+            <tr><td><div class="muscle-name">Synoviale</div></td><td>Lâche — tapisse la face profonde de la capsule.</td></tr>
+            <tr><td><div class="muscle-name">Ligaments (proches)</div></td><td>Ant. et post. de la surface ; Ligament supérieur (épaississement capsulaire) ; Ligament interclaviculaire ou jugal (au-dessus).</td></tr>
+            <tr><td><div class="muscle-name">Lig. costo-claviculaire (distance)</div></td><td>S'insère sur la base solide de la côte — garantit la partie inférieure de l'articulation avec un bras de levier majoré.</td></tr>
+            <tr><td><div class="muscle-name">Éléments stabilisateurs</div></td><td>Muscle subclavier (renfort actif du lig. costo-claviculaire). Sterno-cléido-mastoïdien (avant), sterno-hyoïdien (arrière), grand pectoral (avant/bas) franchissent l'interligne.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header">
+        <div class="card-icon amber">⚕️</div>
+        <div class="card-title">Intérêts ostéopathiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> L'extrémité claviculaire déborde le plan sternal en avant et en haut — visible et facilement palpable. La mobilité du moignon de l'épaule met en évidence la saillie de cette extrémité.
+          </div>
+          <div class="info-box amber">
+            <strong>Mécanique et pathologique :</strong> L'interposition discale donne 3 degrés de liberté (rotation axiale en plus des 2 classiques de l'articulation en selle). Fonctionne comme un cardan. Moins sujette aux luxations que l'acromio-claviculaire. En cas de luxation, le ménisque suit le déplacement claviculaire.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Acromio-claviculaire -->
+    <div class="test-section-title">2 — Articulation acromio-claviculaire</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">🦴</div>
+        <div class="card-title">Éléments en présence (2)</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px 14px;background:var(--teal-50);border-radius:8px;border-left:3px solid var(--teal-400);">
+            <strong style="color:var(--teal-700);">La Clavicule</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Facette de l'extrémité latérale, taillée en biseau aux dépens de la face inférieure. Plan oblique en bas et en dedans. Surface plane, ovalaire, à grand axe antéropostérieur. Encroûtée de cartilage hyalin.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--navy-100);border-radius:8px;border-left:3px solid var(--navy-400);">
+            <strong style="color:var(--navy-700);">La Scapula</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Inversement conformée à la surface claviculaire.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon navy">🔗</div>
+        <div class="card-title">Moyens d'unions</div>
+      </div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead>
+            <tr><th>Élément</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="muscle-name">Capsule</div></td><td>Fibres acromio-claviculaires. Relativement lâche → autorise les petits mouvements de bâillement-glissement lors des mobilités scapulo-thoraciques.</td></tr>
+            <tr><td><div class="muscle-name">Synoviale</div></td><td>Tapisse la face profonde de la capsule. Inclut parfois un ménisque souvent incomplet.</td></tr>
+            <tr><td><div class="muscle-name">Ligaments capsulaires</div></td><td>Petits épaississements capsulaires (ant., post., sup., inf.). Le ligament supérieur est le plus important, lié aux fibres trapézo-deltoïdiennes (chape fonctionnelle).</td></tr>
+            <tr><td><div class="muscle-name">Ligs. coraco-claviculaires (distance)</div></td><td>Les plus importants pour la stabilité : lig. trapézoïde (le plus latéral), lig. conoïde, lig. coraco-claviculaire médial.</td></tr>
+            <tr><td><div class="muscle-name">Éléments stabilisateurs</div></td><td>Trapèze supérieur (arrière) et deltoïde (avant) — leurs insertions unissent les berges de l'interligne.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header">
+        <div class="card-icon amber">⚕️</div>
+        <div class="card-title">Intérêts ostéopathiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Très superficielle — l'interligne est facile à repérer. La berge claviculaire surplombe le méplat manubrial.
+          </div>
+          <div class="info-box coral">
+            <strong>Mécanique et pathologique :</strong> Très instable sur le plan osseux. Exposée aux chocs indirects (chutes sur le moignon de l'épaule) → risque de disjonction acromio-claviculaire pouvant nécessiter réfection du plan ligamentaire ou pose d'une broche.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Omo-sérato-thoracique -->
+    <div class="test-section-title">3 — Articulation omo-sérato-thoracique (syssarcose)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">🦴</div>
+        <div class="card-title">Éléments en présence (3) — Syssarcose</div>
+      </div>
+      <div class="card-body">
+        <div class="info-box teal" style="margin-bottom:12px;">
+          <strong>Syssarcose</strong> (du grec <em>sun</em> = jonction, <em>sarcos</em> = chair) : articulation à chair interposée. Pas de surface articulaire mais deux plans de glissement séparés par un muscle.
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px 14px;background:var(--teal-50);border-radius:8px;border-left:3px solid var(--teal-400);">
+            <strong style="color:var(--teal-700);">La Scapula</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Face antérieure revêtue de l'insertion musculaire du subscapulaire → forme un « matelas » souple.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--navy-100);border-radius:8px;border-left:3px solid var(--navy-400);">
+            <strong style="color:var(--navy-700);">La Cage thoracique</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Arc postérieur des côtes 1 à 7 et nappe musculaire des intercostaux.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--amber-100);border-radius:8px;border-left:3px solid var(--amber-500);">
+            <strong style="color:var(--amber-500);">Le Muscle dentelé antérieur</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Glisse entre scapula et cage thoracique. Délimite 2 espaces : espace postérieur scapulo-serratique et espace antérieur sérato-thoracique. Nappés d'un tissu graisseux facilitant les déplacements.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon navy">🔗</div>
+        <div class="card-title">Moyens d'unions — Muscles périscapulaires</div>
+      </div>
+      <div class="card-body">
+        <p style="font-size:13.5px;color:var(--text2);margin-bottom:10px;">Moyens d'union exclusivement musculaires :</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="tag tag-teal">Dentelé antérieur</span>
+          <span class="tag tag-navy">Rhomboïde (2 faisceaux)</span>
+          <span class="tag tag-teal">Élévateur de la scapula</span>
+          <span class="tag tag-navy">Trapèze (complet)</span>
+          <span class="tag tag-teal">Petit pectoral</span>
+          <span class="tag tag-gray">Grand dorsal (accessoire)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header">
+        <div class="card-icon amber">⚕️</div>
+        <div class="card-title">Intérêts ostéopathiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Visualiser le bord médial de la scapula, son angle inférieur et l'épine prolongée de l'acromion. La palpation des muscles périscapulaires nécessite de détendre le trapèze (plan superficiel).
+          </div>
+          <div class="info-box teal">
+            <strong>Mécanique et pathologique :</strong> Sans cartilage → jamais d'arthrose. Sans capsule → jamais de luxation. Sans ligaments → jamais d'entorse. Entité particulièrement robuste. En contrepartie, les muscles sont en permanence sollicités → fatigue, contractures et douleurs fréquentes.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Scapulo-humérale -->
+    <div class="test-section-title">4 — Articulation scapulo-humérale</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">🦴</div>
+        <div class="card-title">Éléments en présence (3)</div>
+      </div>
+      <div class="card-body">
+        <p style="font-size:13.5px;color:var(--text2);margin-bottom:12px;">Articulation à synoviale de type <strong>sphéroïde</strong>, non congruente et non concordante. Fait partie du complexe thoraco-scapulo-brachial (TSB).</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px 14px;background:var(--teal-50);border-radius:8px;border-left:3px solid var(--teal-400);">
+            <strong style="color:var(--teal-700);">La Scapula — Glène</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Ovalaire, à grand axe oblique en haut et en avant. Très légèrement concave en tous sens. Regarde en dehors, en avant et très faiblement en haut. Encroûtée de cartilage hyalin.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--navy-100);border-radius:8px;border-left:3px solid var(--navy-400);">
+            <strong style="color:var(--navy-700);">L'Humérus — Tête</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Représente 1/3 de sphère pleine, 5–6 cm de diamètre. Regarde en dedans et en haut (130°) et en arrière (35–40°). Encroûtée de cartilage hyalin.</span>
+          </div>
+          <div style="padding:10px 14px;background:var(--amber-100);border-radius:8px;border-left:3px solid var(--amber-500);">
+            <strong style="color:var(--amber-500);">Le Labrum</strong><br>
+            <span style="font-size:13px;color:var(--text2);">Fibro-cartilage en anneau prismatique triangulaire (triangulaire à la coupe). Face axiale : cartilage hyalin. Face périphérique : adhère à la capsule. Face osseuse : s'insère sur le limbus glénoïdal.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon navy">🔗</div>
+        <div class="card-title">Moyens d'unions (6 types)</div>
+      </div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead>
+            <tr><th>Élément</th><th>Caractéristiques</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Capsule</div></td>
+              <td>Lâche — accepte décoaptations jusqu'à 2 cm. Fibres parallèles scapulo-humérales → tension progressive en mouvements tridimensionnels. Position de serrage max : extension + abduction + rotation latérale (armé handball). Deux points faibles antérieurs (sup. et inf.).</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Synoviale</div></td>
+              <td>Communique parfois avec la bourse du subscapulaire. Se réfléchit en gaine pour le tendon du long biceps (jusqu'à la sortie du sillon bicipital).</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Labrum</div></td>
+              <td>Surface articulaire et moyen d'union — prolonge souplement le limbus glénoïdal.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. coraco-huméral</div></td>
+              <td>Origine : coracoïde. Deux faisceaux (sup. → tubercule majeur, inf. → tubercule mineur). Entre les 2 faisceaux : passage intracapsulaire du long biceps.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. gléno-huméral</div></td>
+              <td>3 faisceaux en double Z (sup., moyen, inf.) zébrant verticalement l'interligne antérieur — protection de la découverture antérieure de la tête.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. coraco-acromial (distance)</div></td>
+              <td>Ligament scapulo-scapulaire formant la partie moyenne de la voûte coraco-acromiale surplombant la tête humérale.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info-box teal" style="margin-top:12px;">
+          <strong>Éléments stabilisateurs (coiffe) :</strong> Long biceps (intracapsulaire, extra-articulaire) · Subscapulaire (renforce LGH moyen) · Supra-épineux (renforce lig. coraco-huméral sup.) · Toute la coiffe · Long triceps (scapula + labrum).
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header">
+        <div class="card-icon amber">⚕️</div>
+        <div class="card-title">Intérêts ostéopathiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Interligne recouvert par la coiffe et la masse deltoïdienne. Cartilage de la tête palpable inférieurement en abduction prononcée (prudence — éléments vasculo-nerveux proches). Amyotrophie du galbe deltoïdien permet de mieux palper les tubercules huméraux.
+          </div>
+          <div class="info-box amber">
+            <strong>Mécanique et pathologique :</strong> Discordance entre glène et tête (surfaces ni congruentes ni concordantes). Contention passive (ligaments) + active (coiffe) → néo-acétabulum semi-rigide avec la voûte coraco-acromiale. Pathologies traumatiques et dégénérescence rhumatismale fréquentes compte tenu des exigences fonctionnelles.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Sous-deltoïdienne -->
+    <div class="test-section-title">5 — Articulation sous-deltoïdienne (fausse articulation)</div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-header">
+        <div class="card-icon teal">💡</div>
+        <div class="card-title">Caractéristiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px 14px;background:var(--teal-50);border-radius:8px;">
+            <strong>Relation anatomique :</strong> Entre la face inférieure du deltoïde et la face supérieure du tendon du supra-épineux.
+          </div>
+          <div style="padding:10px 14px;background:var(--navy-100);border-radius:8px;">
+            <strong>Bourse séreuse :</strong> N'est pas utilisée en position de repos anatomique (PRA) — rôle de protection du tendon lors des mouvements d'abduction du bras.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre supérieur, Année 1, IEOQ · Chapitres 1 à 5 (Ceinture du membre supérieur) · Usage privé</cite></div>
+  </section>
+
   <!-- ══ SECTION TECHNIQUES STRUCTURELLES COUDE ══ -->
   <section class="section" id="coude">
     <div class="section-title">Biomécanique du coude</div>
@@ -4232,6 +4546,190 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     </div>
 
     <div class="footnote"><cite>Source : P. César, Techniques structurelles — Le Coude, 1ère année IEOQ 2024 · Usage privé — Résumé à compléter avec notes de cours</cite></div>
+  </section>
+
+  <!-- ══ SECTION ARTHROLOGIE DU COUDE ══ -->
+  <section class="section" id="arthro-coude">
+    <div class="section-title">Arthrologie — Articulations du coude</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — Complexe articulaire huméro-ulnaire, huméro-radiale et radio-ulnaire proximale</div>
+
+    <!-- Introduction -->
+    <div class="info-box teal" style="margin-bottom:20px;">
+      <strong>3 articulations, 1 cavité :</strong> Huméro-ulnaire (ginglyme) + Huméro-radiale (sphéroïde) + Radio-ulnaire proximale (trochoïde). Même cavité articulaire. Fonctionnellement : seules les 2 premières interviennent dans les mouvements du coude. Les luxations du coude sont les plus fréquentes chez l'adolescent (chute sur la paume en extension).
+    </div>
+
+    <!-- Éléments en présence -->
+    <div class="test-section-title">🦴 Éléments en présence (4)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">🦴</div>
+        <div class="card-title">Surfaces articulaires</div>
+      </div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead>
+            <tr><th>Os / Structure</th><th>Surface</th><th>Type</th><th>Caractéristiques</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Humérus<small>Trochlée</small></div></td>
+              <td>Partie médiale</td>
+              <td><span class="tag tag-teal">Ginglyme</span></td>
+              <td>Poulie pleine à grand axe transversal (légèrement oblique en dedans et en bas). Gorge + 2 joues. Joue médiale plus saillante, plus basse, plus large.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Humérus<small>Capitulum</small></div></td>
+              <td>Partie latérale (inf. et ant. seulement)</td>
+              <td><span class="tag tag-navy">Sphéroïde</span></td>
+              <td>Demi-sphère légèrement aplatie transversalement. Regarde en bas et nettement en avant.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ulna<small>Incisure trochléaire</small></div></td>
+              <td>Face antéro-supérieure</td>
+              <td><span class="tag tag-teal">Ginglyme</span></td>
+              <td>Poulie creuse à grand axe transversal. Crête sagittale + 2 joues. Encroûtée de cartilage hyalin sauf au niveau du sillon transversal coronoïde/olécrâne.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ulna<small>Incisure radiale</small></div></td>
+              <td>Face latérale du coronoïde</td>
+              <td><span class="tag tag-amber">Trochoïde</span></td>
+              <td>Quadrangulaire à grand axe antéro-postérieur. Bords ant. et post. → insertion lig. annulaire ; bord inf. → lig. carré.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Radius<small>Fovéa</small></div></td>
+              <td>Face supérieure de la tête</td>
+              <td><span class="tag tag-navy">Sphéroïde</span></td>
+              <td>Dépression ovalaire, grossièrement transversale. Non congruente. Limite antéro-médiale biseautée → zone capitulo-trochléaire.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Radius<small>Pourtour</small></div></td>
+              <td>Bande sous la fovéa</td>
+              <td><span class="tag tag-amber">Trochoïde</span></td>
+              <td>Répond à l'incisure radiale de l'ulna et au lig. annulaire. Hauteur plus importante à la partie antéro-médiale.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ligament annulaire<small>Fibro-cartilage</small></div></td>
+              <td>Cravate la tête radiale</td>
+              <td><span class="tag tag-amber">Trochoïde congruente</span></td>
+              <td>Plan superficiel ligamentaire + plan profond articulaire (cartilage hyalin). S'insère de part et d'autre de l'incisure radiale de l'ulna.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Moyens d'unions -->
+    <div class="test-section-title">🔗 Moyens d'unions</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon navy">🔗</div>
+        <div class="card-title">Capsule — Particularités</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+          <div style="padding:8px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);">Unique pour les 3 interlignes.</div>
+          <div style="padding:8px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);">Lâche sagittalement et tendue sur les côtés → d'où les ligaments collatéraux.</div>
+          <div style="padding:8px 12px;background:var(--navy-100);border-radius:7px;border-left:2px solid var(--navy-400);">Culs-de-sac ant. (en flexion) et post. (en extension) — tendus par fibres du brachial (av.) et vaste médial triceps (arr.).</div>
+          <div style="padding:8px 12px;background:var(--amber-100);border-radius:7px;border-left:2px solid var(--amber-500);">Repli annulaire autour de la tête radiale + insertion à distance → autorise la prono-supination sans tension prématurée.</div>
+        </div>
+        <p style="font-size:13px;color:var(--text2);margin-top:10px;"><strong>Insertions :</strong> Sur l'humérus → longe les surfaces cartilagineuses + englobe fosses coronoïdienne (av.) et olécrânienne (arr.). Sur l'ulna → longe le pourtour des 2 incisures réunies. Sur le radius → partie moyenne du col (à distance). Sur le lig. annulaire → adhère à sa face périphérique.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">📋</div>
+        <div class="card-title">Ligaments collatéraux</div>
+      </div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">LCU — Ligament collatéral ulnaire</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Épicondyle médial</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>3 faisceaux :</strong> ant. (→ coronoïde), moy. vertical (le plus puissant, renforcé FSD), post. (→ olécrâne)</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);"><strong>Rôle :</strong> Le plus puissant du coude — s'oppose à l'exagération du valgus</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Lig. accessoire :</strong> Ulno-ulnaire (olécrâne → coronoïde), renforce le LCU</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="sub">LCR — Ligament collatéral radial</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Épicondyle latéral</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>3 faisceaux :</strong> ant. (cravate lat. la tête radiale + renforce lig. annulaire ant.), moy. (le plus puissant, renforce lig. annulaire post. + renforcé supinateur), post. (→ olécrâne)</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);"><strong>Terminaison :</strong> Incisure radiale de l'ulna (et non au radius)</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;">
+          <h3 class="sub">Ligament annulaire (fibro-cartilage)</h3>
+          <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+            <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;">Fibres inférieures resserrées → retenue inférieure de la tête radiale.</div>
+            <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;">Fibres supérieures → prolongées aux bords ant. et post. du lig. carré → poche ligamentaire solide.</div>
+          </div>
+          <h3 class="sub" style="margin-top:10px;">Ligament carré</h3>
+          <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+            <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Bord inf. de l'incisure radiale de l'ulna → <strong>Terminaison :</strong> Partie médiale du col radial</div>
+            <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);">Bords ant. et post. alternativement tendus/détendus en prono-supination — renforce la partie inférieure de l'interligne RU supérieure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon amber">🔩</div>
+        <div class="card-title">Ligaments à distance &amp; Éléments stabilisateurs</div>
+      </div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">Ligaments à distance (2)</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--amber-100);border-radius:6px;"><strong>Corde oblique (Weitbrecht) :</strong> oblique en dedans et en haut</div>
+              <div style="padding:7px 10px;background:var(--amber-100);border-radius:6px;"><strong>MIO :</strong> membrane interosseuse — oblique en dedans et en bas</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="sub">Éléments stabilisateurs musculaires</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;"><strong>FSD :</strong> renforce faisceau moyen du LCU</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;"><strong>Supinateur :</strong> renforce faisceau moyen du LCR</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;"><strong>Anconé :</strong> franchit la partie latérale de l'interligne — coaptation</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;"><strong>Brachial :</strong> adhère à la face antérieure de la capsule</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intérêts ostéopathiques -->
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-header">
+        <div class="card-icon amber">⚕️</div>
+        <div class="card-title">Intérêts ostéopathiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> En extension : alignement des 2 épicondyles et de l'olécrâne. En flexion : rapport triangulé (sommet inférieur). Palpation possible sur les côtés, notamment en dehors (contact huméro-radial accessible) — mobiliser la tête radiale par rapport au capitulum.
+          </div>
+          <div class="info-box amber">
+            <strong>Radio-ulnaire supérieure :</strong> Congruente et stable grâce au lig. annulaire (plaquage tête radiale sur l'ulna). Fonctionnellement couplée à la RUI.
+          </div>
+          <div class="info-box teal">
+            <strong>Huméro-radiale :</strong> Contact imparfait (assuré seulement en coaptation musculaire ou valgus). Sphéroïde n'exploitant que 2/3 degrés de liberté (ulna limite le 3e). La tête radiale est plus liée à l'ulna qu'à l'humérus.
+          </div>
+          <div class="info-box amber">
+            <strong>Huméro-ulnaire :</strong> Très stable. Une luxation provoque souvent une fracture de l'olécrâne ou du bec coronoïdien.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre supérieur, Année 1, IEOQ · Chapitre 2 : Articulations du coude · Usage privé</cite></div>
   </section>
 
   <!-- ══ SECTION TECHNIQUES STRUCTURELLES POIGNET ══ -->
@@ -5443,6 +5941,176 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     </div>
 
     <div class="footnote"><cite>Source : P. César, Techniques structurelles poignet 1ère année IEOQ 2021 · Usage privé — Résumé à compléter avec notes de cours</cite></div>
+  </section>
+
+  <!-- ══ SECTION ARTHROLOGIE DU POIGNET ══ -->
+  <section class="section" id="arthro-poignet">
+    <div class="section-title">Arthrologie — Articulations du poignet</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — Radio-ulnaire inférieure (RUI) et Radio-carpienne (RC)</div>
+
+    <!-- Introduction -->
+    <div class="info-box teal" style="margin-bottom:20px;">
+      <strong>Deux articulations associées :</strong> La jonction du poignet associe l'articulation radio-ulnaire inférieure (RUI) et la radio-carpienne (RC). La radio-carpienne est ainsi nommée car la jonction est le fait du radius et non de l'ulna. L'articulation médio-carpienne est fonctionnellement liée au poignet.
+    </div>
+
+    <!-- Éléments en présence -->
+    <div class="test-section-title">🦴 Éléments en présence</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">🦴</div>
+        <div class="card-title">Surfaces articulaires</div>
+      </div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead>
+            <tr><th>Structure</th><th>Surface</th><th>Type</th><th>Caractéristiques</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Radius<small>Incisure ulnaire</small></div></td>
+              <td>Pour la RUI</td>
+              <td><span class="tag tag-amber">Trochoïde NC/NC</span></td>
+              <td>Face médiale de l'extrémité inf. Quadrangulaire à grand axe antéro-post. Concave selon cet axe, plane verticalement. Regarde en dedans.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Radius<small>Glène radiale</small></div></td>
+              <td>Pour la RC</td>
+              <td><span class="tag tag-navy">Ellipsoïde</span></td>
+              <td>Face inférieure de l'extrémité inf. Triangulaire à base médiale. Concave en tous sens. 1 crête sagittale en son milieu. Bord post. descend plus bas que l'ant. Regarde en bas (et légèrement en dd. et en avt.).</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ulna<small>Pourtour de la tête</small></div></td>
+              <td>Pour la RUI</td>
+              <td><span class="tag tag-amber">Trochoïde NC/NC</span></td>
+              <td>Partie antéro-latérale du pourtour. Quadrangulaire à grand axe antéro-post. Convexe selon le grand axe. Aspect en « diadème ». Regarde en dehors et en avant.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ulna<small>Face inf. de la tête</small></div></td>
+              <td>Pour la RUI (inf.)</td>
+              <td><span class="tag tag-gray">Plane</span></td>
+              <td>Croissant à concavité postéro-médiale. Plane. Regarde en bas. Répond au disque articulaire du poignet.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Disque articulaire</div></td>
+              <td>RUI et RC</td>
+              <td><span class="tag tag-teal">Plane (RUI) / Ellipsoïde (RC)</span></td>
+              <td>Fibro-cartilage triangulaire à base latérale, lentille biconcave. Tendu entre radius et ulna. Complète la glène antébrachiale. Forme 2 surfaces articulaires. Parfois perforé (communication RUI-RC).</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Carpe<small>Condyle carpien</small></div></td>
+              <td>Pour la RC</td>
+              <td><span class="tag tag-navy">Ellipsoïde</span></td>
+              <td>Assemblage de 3 os : scaphoïde + lunatum + triquetrum (pisiforme exclu). Étroit ant.-post., étendu transversalement. Convexe en tous sens. Regarde en haut (légèrement en arr. et en dehors).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Moyens d'unions -->
+    <div class="test-section-title">🔗 Moyens d'unions</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon navy">🔗</div>
+        <div class="card-title">Capsule et synoviale</div>
+      </div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">Au niveau RUI</h3>
+            <div style="padding:10px 14px;background:var(--teal-50);border-radius:8px;font-size:13px;">Capsule et synoviale s'insèrent au pourtour des surfaces cartilagineuses, disque articulaire compris. <strong>Capsule lâche.</strong></div>
+          </div>
+          <div>
+            <h3 class="sub">Au niveau RC</h3>
+            <div style="padding:10px 14px;background:var(--navy-100);border-radius:8px;font-size:13px;">Insertions aux bords ant. et post. de l'extrémité inf. du radius + disque articulaire + pourtour du condyle carpien (exclut le pisiforme). <strong>Capsule épaisse et résistante en avant, plus faible en arrière.</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon teal">📋</div>
+        <div class="card-title">Ligaments</div>
+      </div>
+      <div class="card-body">
+        <h3 class="sub">Ligaments collatéraux (2)</h3>
+        <div class="grid-2" style="gap:12px;margin-bottom:14px;">
+          <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+            <strong style="color:var(--teal-700);">LCR du poignet</strong>
+            <div style="padding:6px 10px;background:var(--gray-50);border-radius:5px;"><strong>Origine :</strong> Extrémité inf. du radius (apex styloïde)</div>
+            <div style="padding:6px 10px;background:var(--gray-50);border-radius:5px;"><strong>Trajet :</strong> 2 faisceaux — ant. (oblique en bas et en avant) / post. (vertical). Fond de la tabatière anatomique.</div>
+            <div style="padding:6px 10px;background:var(--gray-50);border-radius:5px;"><strong>Terminaison :</strong> Tubercule du scaphoïde (face ant. et face lat.)</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+            <strong style="color:var(--navy-700);">LCU du poignet</strong>
+            <div style="padding:6px 10px;background:var(--gray-50);border-radius:5px;"><strong>Origine :</strong> Extrémité inf. de l'ulna (apex styloïde)</div>
+            <div style="padding:6px 10px;background:var(--gray-50);border-radius:5px;"><strong>Trajet :</strong> 2 faisceaux — ant. (oblique en bas et en avant) / post. (vertical)</div>
+            <div style="padding:6px 10px;background:var(--gray-50);border-radius:5px;"><strong>Terminaison :</strong> Faisceau ant. → pisiforme (pôle sup.) ; Faisceau post. → triquetrum (tubercule médial face post.)</div>
+          </div>
+        </div>
+
+        <h3 class="sub">Ligaments antérieurs et postérieurs</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;font-size:13px;">
+          <div class="info-box teal">
+            <strong>Ligaments antérieurs (nettement plus forts) :</strong><br>
+            Radio-carpien ant. (origine : face ant. extrémité inf. du radius, entre styloïde et tubercule lunarien) et Ulno-carpien ant. (origine : bord ant. du disque articulaire). Chacun en 3 faisceaux en éventail vers le carpe.
+          </div>
+          <div class="info-box amber">
+            <strong>Ligaments postérieurs (plus faibles) :</strong><br>
+            Radio-carpien post. (solide, origine : face post. extrémité inf. du radius, 3 faisceaux). L'ulno-carpien post. est quasi inexistant (quelques fibres verticales seulement).
+          </div>
+        </div>
+
+        <h3 class="sub">Ligament RUI</h3>
+        <div style="padding:10px 14px;background:var(--gray-50);border-radius:7px;font-size:13px;">En dehors du disque articulaire (maintien essentiel), 2 petits ligaments renforcent la capsule : un ant. et un post. — utiles car articulation non congruente ET non concordante.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">
+        <div class="card-icon amber">🔩</div>
+        <div class="card-title">Éléments stabilisateurs</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+          <div style="padding:9px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);">
+            <strong>Capsule RUI :</strong> renforcée par le corps charnu du carré pronateur (muscle proche).
+          </div>
+          <div style="padding:9px 12px;background:var(--navy-100);border-radius:7px;border-left:2px solid var(--navy-400);">
+            <strong>Reste du poignet :</strong> stabilisé par la résultante coaptatrice de tous les tendons périarticulaires, différemment tendus selon le placement articulaire.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intérêts ostéopathiques -->
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-header">
+        <div class="card-icon amber">⚕️</div>
+        <div class="card-title">Intérêts ostéopathiques</div>
+      </div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Rétrécissement entre avant-bras et main. Repérage des 2 styloïdes (ulnaire plus haut et plus postérieur). Interligne facilement accessible et mobilisable finement — important pour traiter les raideurs articulaires.
+          </div>
+          <div class="info-box amber">
+            <strong>Mécanique — carpe :</strong> Le carpe est au contact du radius et non de l'ulna (c'est au radius que les contraintes sont essentiellement transmises). Contact médial = disque articulaire seulement en inclinaison ulnaire. Liberté osseuse de la partie médiale compensée par la <strong>fronde ligamentaire</strong> (fibres radio-triquetrales ant. et post.).
+          </div>
+          <div class="info-box teal">
+            <strong>RUI :</strong> Non congruente et non concordante (à l'inverse de la RUS) → autorise de petits mouvements de glissements sagittaux.
+          </div>
+          <div class="info-box coral">
+            <strong>Pathologie traumatique :</strong> Poignet souvent victime des chutes sur la main → entorses ligamentaires et fractures. La plus courante : fracture de Pouteau-Colles (modifie les rapports osseux du poignet). Surmenage des tendons périarticulaires → usure et déstabilisation (cercle vicieux d'aggravation).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre supérieur, Année 1, IEOQ · Chapitre 3 : Articulations du poignet · Usage privé</cite></div>
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
@@ -9016,11 +9684,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 <section class="section" id="anatomie-ms-coiffe">
   <div class="section-title">Anatomie — Muscles de la coiffe des rotateurs</div>
   <div class="section-sub">Chapitre 1 · Épaule — Thomas Gautier D.O. · IEOQ Année 1</div>
-  <div style="text-align:center;margin-bottom:20px;">
-    Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-    <div style="font-size:11px;color:var(--gray-500);margin-top:6px;">Vue d'ensemble de l'articulation gléno-humérale et de la coiffe</div>
-    <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
-  </div>
+  
   <div class="info-box teal" style="margin-bottom:20px;">
     Les 4 muscles de la coiffe : <strong>Subscapulaire</strong> · <strong>Supra-épineux</strong> · <strong>Infra-épineux</strong> · <strong>Petit rond</strong>. Tous s'étendent de la scapula à l'humérus.
   </div>
@@ -9048,9 +9712,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   </div>
   <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
     <div style="flex-shrink:0;text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle subscapulaire — vue antérieure (en rouge)</div>
-      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+            <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle subscapulaire — vue antérieure (en rouge)</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Subscapulaire :</strong> Forme le <strong>verrou antérieur</strong> contre les luxations ant. Parfois sectionné + suturé en raccourcissement (<strong>intervention de Bankart</strong>) pour limiter la récidive. Non palpable sauf à son insertion terminale et son bord latéral.</div>
@@ -9079,9 +9741,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   </div>
   <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
     <div style="flex-shrink:0;text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle supra-épineux — vue postérieure (en rouge)</div>
-      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+            <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle supra-épineux — vue postérieure (en rouge)</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Supra-épineux :</strong> Recouvert par le trapèze → acromion → deltoïde moyen — palpable seulement indirectement (deltoïde décontracté + élévation du moignon). Renforce le lig. coraco-huméral sup. Sa paralysie → <strong>subluxation inférieure</strong>. Rôle de <strong>centreur permanent</strong> de la tête. Passage sous la voûte acromiale → <strong>muscle le plus touché de la coiffe</strong> (inflammations, usures, ruptures).</div>
@@ -9109,9 +9769,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   </div>
   <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
     <div style="flex-shrink:0;text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle infra-épineux — vue postérieure (en rouge)</div>
-      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+            <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle infra-épineux — vue postérieure (en rouge)</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Infra-épineux :</strong> Corps charnu partiellement sous-cutané → facile à atteindre. Tendon palpé juste en arrière du supra-épineux. Non soumis à la voûte osseuse → <strong>moins souvent atteint</strong> dans les pathologies de la coiffe. Participe légèrement à la fin de l'abduction, mais pas à l'adduction.</div>
@@ -9140,9 +9798,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   </div>
   <div style="display:flex;align-items:flex-start;gap:16px;margin:0 0 16px 0;flex-wrap:wrap;">
     <div style="flex-shrink:0;text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle petit rond — vue postérieure (en rouge)</div>
-      <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+            <div style="font-size:10px;color:var(--gray-500);margin-top:4px;max-width:170px;">Muscle petit rond — vue postérieure (en rouge)</div>
     </div>
   </div>
   <div class="info-box teal" style="margin-bottom:20px;"><strong>🦴 Petit rond :</strong> Palpable en faisant exécuter une <strong>rotation latérale de l'humérus</strong>. N'a rien à voir avec son homonyme « grand rond » — ni muscle de la coiffe, ni rotateur latéral.</div>
@@ -9207,19 +9863,13 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE IMAGES THORAX -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Grand pectoral</div>
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia · Domaine public</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Grand pectoral</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Petit pectoral</div>
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia · Domaine public</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Petit pectoral</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Dentelé antérieur</div>
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia · Domaine public</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Dentelé antérieur</div>
     </div>
   </div>
 
@@ -9294,9 +9944,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="test-section-title">💪 Groupe antérieur — Fléchisseurs</div>
 
   <div style="text-align:center;margin-bottom:10px;">
-    Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-    <div style="font-size:10px;color:var(--gray-500);margin-top:4px;">Biceps brachial · Vue antérieure</div>
-    <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+        <div style="font-size:10px;color:var(--gray-500);margin-top:4px;">Biceps brachial · Vue antérieure</div>
   </div>
     <!-- BICEPS -->
   <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
@@ -9368,9 +10016,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <div class="test-section-title" style="margin-top:20px;">💪 Groupe postérieur — Extenseur</div>
 
   <div style="text-align:center;margin-bottom:10px;">
-    Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-    <div style="font-size:10px;color:var(--gray-500);margin-top:4px;">Triceps brachial · Vue postérieure</div>
-    <div style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</div>
+        <div style="font-size:10px;color:var(--gray-500);margin-top:4px;">Triceps brachial · Vue postérieure</div>
   </div>
     <!-- TRICEPS -->
   <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
@@ -9412,28 +10058,21 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE IMAGES AVANT-BRAS -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Brachio-radial</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Brachio-radial</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Rond pronateur</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Rond pronateur</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Fléchisseur superficiel</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Fléchisseur superficiel</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Extenseur des doigts</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Extenseur des doigts</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Supinateur</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Supinateur</div>
     </div>
-    <div style="text-align:center;width:100%;margin-top:4px;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
-    </div>
+    
   </div>
 
   <!-- ═══ CHAPITRE 1 : GROUPE LATÉRAL ═══ -->
@@ -10026,14 +10665,12 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       </div>
     </div>
     <div class="info-box teal"><div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Moyen fessier (en rouge) · Vue latérale</span>
-      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+            <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Moyen fessier (en rouge) · Vue latérale</span>
+      
     </div>
     <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Moyen fessier (en rouge) · Vue latérale</span>
-      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+            <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Moyen fessier (en rouge) · Vue latérale</span>
+      
     </div>
     <strong>🦴 Moyen fessier :</strong> <strong>Hauban actif</strong> garant de l'horizontalité du bassin lors de l'appui monopodal. Sa défaillance → <strong>boiterie de Trendelenburg</strong> (bascule controlatérale du bassin). Remplacée par la boiterie de Duchenne. Lors de l'appui hanché, délègue au fascia lata (haubanage passif + économique). Fonctionne surtout en chaîne fermée, modo stato-dynamique. Semble responsable de l'<strong>endurance</strong> dans le mouvement.</div>
   </div></div>
@@ -10070,14 +10707,12 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       </div>
       <div class="info-box amber" style="align-self:start;">
         <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Grand fessier (en rouge) · Vue postérieure</span>
-      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+            <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Grand fessier (en rouge) · Vue postérieure</span>
+      
     </div>
     <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Grand fessier (en rouge) · Vue postérieure</span>
-      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+            <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">Grand fessier (en rouge) · Vue postérieure</span>
+      
     </div>
     <strong>🦴 Grand fessier :</strong> Galbe losangique (rhomboïdal), aspect réniforme à la contraction. On divise la fesse en <strong>4 quadrants</strong> pour localiser le nerf sciatique → piqûres intra-musculaires dans le <strong>quadrant supéro-latéral</strong>.<br>La rectitude de la hanche humaine explique la fréquence du <strong>flexum réactionnel</strong> dans toutes les pathologies affectant cette zone.
       </div>
@@ -10109,14 +10744,12 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       </div>
     </div>
     <div class="info-box teal"><div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">TFL (en rouge) · Vue antéro-latérale</span>
-      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+            <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">TFL (en rouge) · Vue antéro-latérale</span>
+      
     </div>
     <div style="display:inline-flex;flex-direction:column;align-items:center;margin:0 16px 12px 0;float:left;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">TFL (en rouge) · Vue antéro-latérale</span>
-      <span style="font-size:9px;color:var(--gray-400);">Wikimedia Commons · Domaine public</span>
+            <span style="font-size:10px;color:var(--gray-500);margin-top:4px;text-align:center;max-width:160px;">TFL (en rouge) · Vue antéro-latérale</span>
+      
     </div>
     <strong>🦴 TFL :</strong> Forme une saillie antéro-latérale à la hanche, sous-cutané, facilement palpable. Sa mise en tension par l'adduction provoque une dépression longitudinale visible sur toute la cuisse. Le terme <strong>deltoïde fessier de Farabeuf</strong> regroupe TFL + fascia lata + grand fessier superficiel. Le fascia lata assure un <strong>haubanage latéral passif</strong> à la hanche et au genou → économie lors de l'appui monopodal. L'<strong>expansion patellaire du TFL</strong> peut être en cause dans certains <strong>syndromes fémoro-patellaires</strong>.</div>
   </div></div>
@@ -10151,24 +10784,18 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE IMAGES PELVI-TROCHANTÉRIENS -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Piriforme</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Piriforme</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Obturateur interne</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Obturateur interne</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Obturateur externe</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Obturateur externe</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Carré fémoral</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Carré fémoral</div>
     </div>
-    <div style="text-align:center;width:100%;margin-top:4px;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
-    </div>
+    
   </div>
   <div class="test-section-title">🔴 Le piriforme</div>
   <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
@@ -10360,20 +10987,15 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE ISCHIO-JAMBIERS -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Biceps fémoral (longue portion)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Biceps fémoral (longue portion)</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Semi-tendineux</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Semi-tendineux</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Semi-membraneux</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Semi-membraneux</div>
     </div>
-    <div style="text-align:center;width:100%;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
-    </div>
+    
   </div>
   <div class="test-section-title">🔴 Le biceps fémoral</div>
   <div class="tech-card open" style="border-left-color:var(--coral-500);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
@@ -10529,24 +11151,18 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE ADDUCTEURS -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Long adducteur</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Long adducteur</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Grand adducteur</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Grand adducteur</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Gracile</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Gracile</div>
     </div>
     <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Pectiné</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Pectiné</div>
     </div>
-    <div style="text-align:center;width:100%;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
-    </div>
+    
   </div>
   <div class="test-section-title">🔵 Plan superficiel — Le pectiné</div>
   <div class="tech-card open" style="border-left-color:var(--teal-600);"><div class="tech-card-header" onclick="this.closest('.tech-card').classList.toggle('open')">
@@ -10715,107 +11331,6 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 </section>
 
 <!-- ═══════════════════════ ANATOMIE — RACHIS ═══════════════════════ -->
-<section class="section" id="anatomie-rachis">
-  <div class="section-title">Anatomie — Rachis &amp; Muscles paravertébraux</div>
-  <div class="section-sub">Muscles érecteurs du rachis, profonds et accessoires — Thomas Gautier D.O. · IEOQ Année 1</div>
-
-  <!-- GALERIE RACHIS -->
-  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Iliocostal</div>
-    </div>
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Longissimus (longissimus)</div>
-    </div>
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Multifides</div>
-    </div>
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Carré des lombes</div>
-    </div>
-    <div style="text-align:center;width:100%;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
-    </div>
-  </div>
-
-  <div class="info-box teal" style="margin-bottom:16px;">
-    <strong>Érecteurs du rachis (spinal erectors) :</strong> 3 colonnes — Iliocostal (lat.) · Longissimus (interméd.) · Épineux (méd.) — formant la masse commune sacro-lombaire. Rôle : <strong>extension</strong> et <strong>stabilisation axiale</strong>.<br>
-    <strong>Plan profond :</strong> Multifides (stabilisation segmentaire +++) · Semi-épineux · Rotateurs. Ces muscles stabilisateurs segmentaires ont un rôle clé dans les dysfonctions rachidiennes.
-  </div>
-
-  <div class="card"><div class="card-body" style="padding:0;">
-    <table class="muscle-table">
-      <thead><tr><th>Muscle</th><th>Plan</th><th>Actions principales</th><th>Innervation</th></tr></thead>
-      <tbody>
-        <tr><td class="muscle-name">Iliocostal<small>3 segments : cervical, dorsal, lombal</small></td><td>Superficiel (latéral)</td><td>Extension rachis · Inclinaison homolatérale · Stabilisation</td><td>Rameaux post. nerfs spinaux</td></tr>
-        <tr><td class="muscle-name">Longissimus<small>3 segments : capitis, cervicis, thoracis</small></td><td>Superficiel (intermédiaire)</td><td>Extension + inclinaison ipsilatérale · Stabilisation globale</td><td>Rameaux post. nerfs spinaux</td></tr>
-        <tr><td class="muscle-name">Épineux<small>Inconstant / Rudimentaire en lombal</small></td><td>Superficiel (médial)</td><td>Extension rachis cervical + thoracique supérieur</td><td>Rameaux post. nerfs spinaux</td></tr>
-        <tr><td class="muscle-name">Multifides ⭐</td><td>Profond (segmentaire)</td><td>Stabilisation inter-segmentaire +++ · Extension · Rotation controlatérale · Proprioception</td><td>Rameaux post. nerfs spinaux</td></tr>
-        <tr><td class="muscle-name">Carré des lombes</td><td>Profond (latéral)</td><td>Inclinaison homolatérale · Abaissement dernière côte · Stabilise L4–L5</td><td>Rameaux ant. T12–L3</td></tr>
-        <tr><td class="muscle-name">Psoas<small>(partie lombaire)</small></td><td>Ant./Lat. rachis</td><td>Flexion hanche · Stabilisation lombaire · Antéversion</td><td>N. fémoral (L1–L3)</td></tr>
-      </tbody>
-    </table>
-  </div></div>
-</section>
-
-<!-- ═══════════════════════ ANATOMIE — TRONC & VISCÈRES ═══════════════════════ -->
-<section class="section" id="anatomie-tronc">
-  <div class="section-title">Anatomie — Muscles du tronc &amp; Abdominaux</div>
-  <div class="section-sub">Muscles pariétaux de l'abdomen · Diaphragme · Thomas Gautier D.O. · IEOQ Année 1</div>
-
-  <!-- GALERIE TRONC -->
-  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Droit de l'abdomen</div>
-    </div>
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Oblique externe</div>
-    </div>
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Oblique interne</div>
-    </div>
-    <div style="text-align:center;">
-      Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Transverse abdomen</div>
-    </div>
-    <div style="text-align:center;width:100%;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
-    </div>
-  </div>
-
-  <div class="info-box teal" style="margin-bottom:16px;">
-    <strong>4 muscles pariétaux de l'abdomen</strong> (de superficiel à profond) :<br>
-    <strong>1. Droit de l'abdomen</strong> — flexion thorax · Stabilisation · Compression abdominale<br>
-    <strong>2. Oblique externe</strong> — rotation controlatérale · Inclinaison homolatérale · Compression<br>
-    <strong>3. Oblique interne</strong> — rotation homolatérale · Inclinaison homolatérale · Compression<br>
-    <strong>4. Transverse</strong> — ceinture abdominale · Stabilisation lombaire +++ · Presse abdominale
-  </div>
-
-  <div class="card"><div class="card-body" style="padding:0;">
-    <table class="muscle-table">
-      <thead><tr><th>Muscle</th><th>Origine</th><th>Terminaison</strong></th><th>Actions</th><th>Nerf</th></tr></thead>
-      <tbody>
-        <tr><td class="muscle-name">Droit de l'abdomen</td><td>Pubis (crête + symphyse)</td><td>Cartilages costaux 5–7 · Processus xiphoïde</td><td>Flexion tronc · Compression · Expiration forcée</td><td>N. intercostaux T7–T12</td></tr>
-        <tr><td class="muscle-name">Oblique externe</td><td>8 dernières côtes (digitations)</td><td>Ligne blanche · Crête iliaque · Lig. inguinal</td><td>Rotation controlatérale · Inclinaison ipsilat. · Compression</td><td>N. intercostaux T5–T12</td></tr>
-        <tr><td class="muscle-name">Oblique interne</td><td>Fascia thoracolombaire · Crête iliaque · Lig. inguinal</td><td>Ligne blanche · 3 derniers cartilages costaux</td><td>Rotation homolatérale · Inclinaison · Compression</td><td>N. intercostaux T7–L1</td></tr>
-        <tr><td class="muscle-name">Transverse ⭐</td><td>Fascia thoracolombaire · Crête iliaque · 6 dernières côtes</td><td>Ligne blanche · Processus xiphoïde</td><td>Ceinture abdominale · Stabilisation lombaire +++ · Presse</td><td>N. intercostaux T7–L1</td></tr>
-      </tbody>
-    </table>
-  </div></div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════════════════
-     ANATOMIE PALPATOIRE — GROUPE POSTÉRIEUR COMPLÉMENT 1 (Chap. 8A)
-     ═══════════════════════════════════════════════════════════════════ -->
-
 <section class="section" id="neuro-anatomie-ms">
   <div class="section-title">Anatomie — Plexus brachial &amp; Nerfs du membre supérieur</div>
   <div class="section-sub">Trajets, territoires moteurs et sensitifs à retenir pour l'examen · Thomas Gautier D.O. · IEOQ Année 1</div>
@@ -10823,20 +11338,15 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE IMAGES RÉELLES — NEUROLOGIE MS -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Gray808.png/280px-Gray808.png" crossorigin="anonymous" alt="Plexus brachial — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus brachial (Gray808)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus brachial (Gray808)</div>
     </div>
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Gray817.png/280px-Gray817.png" crossorigin="anonymous" alt="Dermatomes MS" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs cutanés du bras (Gray817)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs cutanés du bras (Gray817)</div>
     </div>
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gray816.png/280px-Gray816.png" crossorigin="anonymous" alt="Nerfs de la main" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs de la main (Gray816)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs de la main (Gray816)</div>
     </div>
-    <div style="text-align:center;width:100%;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Gray's Anatomy · Domaine public</div>
-    </div>
+    
   </div>
 
   <!-- ══ PLEXUS BRACHIAL — SCHÉMA AÉRÉ ══ -->
@@ -11277,24 +11787,18 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   <!-- GALERIE IMAGES RÉELLES — NEUROLOGIE MI -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Gray823.png/240px-Gray823.png" crossorigin="anonymous" alt="Plexus lombaire — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus lombaire (Gray823)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus lombaire (Gray823)</div>
     </div>
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Gray826.png/240px-Gray826.png" crossorigin="anonymous" alt="Plexus sacral — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus sacral (Gray826)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus sacral (Gray826)</div>
     </div>
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Gray836.png/240px-Gray836.png" crossorigin="anonymous" alt="Nerfs MI vue antérieure" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue ant. (Gray836)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue ant. (Gray836)</div>
     </div>
     <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Gray837.png/240px-Gray837.png" crossorigin="anonymous" alt="Nerfs MI vue postérieure" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
-      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue post. (Gray837)</div>
+            <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue post. (Gray837)</div>
     </div>
-    <div style="text-align:center;width:100%;">
-      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Gray's Anatomy · Domaine public</div>
-    </div>
+    
   </div>
   <div class="card" style="margin-bottom:24px;">
     <div class="card-header"><div class="card-icon navy">🔢</div><div class="card-title">Plexus lombaire — Constitution &amp; Branches</div></div>
@@ -11815,7 +12319,7 @@ const ART_MAP = {
   hanche:     { subs: ['biomec-hanche','tests-hanche','tech-osteo-hanche'], default: 'biomec-hanche' },
   cheville:   { subs: ['biomec-cheville','tests-cheville','ottawa-cheville','tech-osteo-cheville'], default: 'biomec-cheville' },
   transversal:{ subs: ['ottawa'], default: 'ottawa' },
-  anatomie:   { subs: ['anatomie-ms-coiffe','anatomie-ms-fascias','anatomie-ms-thorax','anatomie-ms-bras','anatomie-ms-avbras','anatomie-mi-ceinture','anatomie-mi-pelvitroch','anatomie-mi-posterieurs','anatomie-mi-adducteurs','anatomie-rachis','anatomie-tronc','neuro-anatomie-ms','neuro-anatomie-mi'], default: 'anatomie-ms-coiffe' },
+  anatomie:   { subs: ['anatomie-ms-coiffe','anatomie-ms-fascias','anatomie-ms-thorax','anatomie-ms-bras','anatomie-ms-avbras','anatomie-mi-ceinture','anatomie-mi-pelvitroch','anatomie-mi-posterieurs','anatomie-mi-adducteurs','neuro-anatomie-ms','neuro-anatomie-mi'], default: 'anatomie-ms-coiffe' },
 };
 
 /* Sub-IDs that alias to a real section ID + optional scroll anchor */
@@ -11837,10 +12341,10 @@ const SUB_LABELS = {
   fondements: 'Fondements', 'rom-ms': 'ROM Membre supérieur',
   'rom-mi': 'ROM Membre inférieur', pathologies: 'Physiopathologie',
   epaule1: 'Biomécanique (P.1)', 'epaule-rythme': 'Rythme scapulo-huméral',
-  coiffe: 'Coiffe des rotateurs', 'tests-epaule': 'Tests orthopédiques',
+  coiffe: 'Coiffe des rotateurs', 'arthro-ceinture': 'Arthrologie ceinture', 'tests-epaule': 'Tests orthopédiques',
   'tech-epaule': 'Techniques structurelles', coude: 'Biomécanique',
-  'tests-coude': 'Tests orthopédiques', 'tech-coude': 'Techniques structurelles',
-  poignet: 'Biomécanique', 'tests-poignet': 'Tests orthopédiques',
+  'arthro-coude': 'Arthrologie coude', 'tests-coude': 'Tests orthopédiques', 'tech-coude': 'Techniques structurelles',
+  poignet: 'Biomécanique', 'arthro-poignet': 'Arthrologie poignet', 'tests-poignet': 'Tests orthopédiques',
   'tech-poignet': 'Techniques structurelles', 'tests-genou': 'Tests orthopédiques',
   'tech-genou': 'Techniques structurelles', 'biomec-genou': 'Biomécanique',
   'biomec-hanche': 'Biomécanique', 'tests-hanche': 'Tests orthopédiques',
@@ -11866,7 +12370,6 @@ const SUB_LABELS = {
   'anatomie-mi-pelvitroch': 'MI · Pelvi-trochantériens (Ch.2)',
   'anatomie-mi-posterieurs': 'MI · Muscles postérieurs — Ischio-jambiers (Ch.4)',
   'anatomie-mi-adducteurs': 'MI · Muscles adducteurs (Ch.5)',
-  'anatomie-rachis': 'Rachis', 'anatomie-tronc': 'Tronc & viscères',
   'neuro-anatomie-ms': 'Plexus Brachial',
   'neuro-anatomie-mi': 'Plexus Lombaire/Sacral',
   'palp-post-1': 'Groupe post. · Chap. 8A', 'palp-post-2': 'Groupe post. · Chap. 8B',
