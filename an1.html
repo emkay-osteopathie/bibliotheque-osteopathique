@@ -1508,6 +1508,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <button type="button" class="art-tab" data-art="genou" onclick="switchArt('genou')"><span class="art-icon">🦵</span><span class="art-label">Genou</span><span class="art-chevron">›</span></button>
     <div class="sub-tabs-group hidden" data-art="genou">
       <button type="button" class="sub-tab" data-sub="biomec-genou" onclick="switchSub('biomec-genou')">📖 Biomécanique</button>
+      <button type="button" class="sub-tab" data-sub="arthro-genou" onclick="switchSub('arthro-genou')">🦴 Arthrologie genou</button>
       <button type="button" class="sub-tab" data-sub="tests-genou" onclick="switchSub('tests-genou')">🩺 Tests orthopédiques</button>
       <button type="button" class="sub-tab" data-sub="tech-genou" onclick="switchSub('tech-genou')">🔧 Techniques structurelles</button>
       <button type="button" class="sub-tab" data-sub="ottawa-genou" onclick="switchSub('ottawa-genou')">🏥 Critères d'Ottawa</button>
@@ -1519,6 +1520,7 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <button type="button" class="art-tab" data-art="hanche" onclick="switchArt('hanche')"><span class="art-icon">🦴</span><span class="art-label">Hanche</span><span class="art-chevron">›</span></button>
     <div class="sub-tabs-group hidden" data-art="hanche">
       <button type="button" class="sub-tab" data-sub="biomec-hanche" onclick="switchSub('biomec-hanche')">📖 Biomécanique</button>
+      <button type="button" class="sub-tab" data-sub="arthro-hanche" onclick="switchSub('arthro-hanche')">🦴 Arthrologie coxo-fémorale</button>
       <button type="button" class="sub-tab" data-sub="tests-hanche" onclick="switchSub('tests-hanche')">🩺 Tests orthopédiques</button>
       <button type="button" class="sub-tab" data-sub="tech-osteo-hanche" onclick="switchSub('tech-osteo-hanche')">🖐️ Techniques ostéopathiques</button>
     </div>
@@ -1529,6 +1531,9 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     <button type="button" class="art-tab" data-art="cheville" onclick="switchArt('cheville')"><span class="art-icon">🦶</span><span class="art-label">Cheville</span><span class="art-chevron">›</span></button>
     <div class="sub-tabs-group hidden" data-art="cheville">
       <button type="button" class="sub-tab" data-sub="biomec-cheville" onclick="switchSub('biomec-cheville')">📖 Biomécanique</button>
+      <button type="button" class="sub-tab" data-sub="arthro-talocheville" onclick="switchSub('arthro-talocheville')">🦴 Arthrologie talo-crurale</button>
+      <button type="button" class="sub-tab" data-sub="arthro-tibfib" onclick="switchSub('arthro-tibfib')">🦴 Arthrologie tibio-fibulaires</button>
+      <button type="button" class="sub-tab" data-sub="arthro-subtal" onclick="switchSub('arthro-subtal')">🦴 Arthrologie subtalaire</button>
       <button type="button" class="sub-tab" data-sub="tests-cheville" onclick="switchSub('tests-cheville')">🩺 Tests orthopédiques</button>
       <button type="button" class="sub-tab" data-sub="ottawa-cheville" onclick="switchSub('ottawa-cheville')">🏥 Critères d'Ottawa</button>
       <button type="button" class="sub-tab" data-sub="tech-osteo-cheville" onclick="switchSub('tech-osteo-cheville')">🖐️ Techniques ostéopathiques</button>
@@ -7633,6 +7638,410 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     </div>
   </section>
 
+  <!-- ══ SECTION ARTHROLOGIE DU GENOU ══ -->
+  <section class="section" id="arthro-genou">
+    <div class="section-title">Arthrologie — Articulation du genou</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — Fémoro-patellaire, fémoro-tibiale, ménisques &amp; système ligamentaire</div>
+
+    <div class="info-box teal" style="margin-bottom:20px;">
+      Le genou est composé de <strong>2 articulations au sein d'une même poche articulaire</strong> : la fémoro-patellaire et la fémoro-tibiale. Elles sont indissociables anatomiquement et fonctionnellement. L'articulation tibio-fibulaire supérieure, bien que située à la région du genou, est fonctionnellement liée à la cheville (un blocage retentit sur la cheville, non sur le genou).
+    </div>
+
+    <!-- ÉLÉMENTS EN PRÉSENCE -->
+    <div class="test-section-title">🦴 1 — Éléments en présence (4)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Surfaces articulaires — Fémur</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Surface</th><th>Situation</th><th>Répond à</th><th>Type</th><th>Forme / Caractéristiques</th><th>Regarde</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Trochlée fémorale<small>(surface patellaire)</small></div></td>
+              <td>Face ant. extrémité inf. du fémur</td>
+              <td>Face post. de la patella</td>
+              <td><span class="tag tag-teal">Ginglyme</span></td>
+              <td>Poulie pleine transversale — 1 gorge sagittale + 2 joues. Joue latérale = plus haute, plus large, plus saillante.</td>
+              <td>En avant</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Condyles fémoraux<small>(×2)</small></div></td>
+              <td>Faces inf. et post. des condyles</td>
+              <td>Ménisque + condyle tibial correspondants</td>
+              <td><span class="tag tag-teal">Bicondylaire</span></td>
+              <td>Portion de tore à grand axe antéro-post. Condyle médial : oblique en avt et en dh., plus étroit et plus long. Condyle latéral : sagittal, plus large et moins long.</td>
+              <td>En bas et en arrière</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">🦴</div><div class="card-title">Surfaces articulaires — Tibia, Patella &amp; Ménisques</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Structure</th><th>Situation</th><th>Répond à</th><th>Type</th><th>Forme / Caractéristiques</th><th>Regarde</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Condyles tibiaux<small>(×2 surfaces)</small></div></td>
+              <td>Face sup. des 2 condyles tibiaux (plateau tibial)</td>
+              <td>Ménisque correspondant (périphérie) ; condyle fémoral correspondant (reste)</td>
+              <td><span class="tag tag-teal">Bicondylaire</span></td>
+              <td>Ovalaire, relevée bord axial. Médiale : oblique en avt/dh., concave en tous sens, plus étroite et plus longue. Latérale : sagittale, convexe sagittalement et plane/légèrement concave transversalement, plus large et moins longue.</td>
+              <td>En haut</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Patella</div></td>
+              <td>Face postérieure de la patella</td>
+              <td>Trochlée fémorale</td>
+              <td><span class="tag tag-teal">Ginglyme</span></td>
+              <td>Grossièrement quadrangulaire, concave verticalement. Séparée en 2 joues par une crête verticale. Joue latérale : plus large, légèrement concave de dh. en dh. Joue médiale : plus étroite, légèrement convexe.</td>
+              <td>En arrière</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ménisques<small>(fibro-cartilages ×2)</small></div></td>
+              <td>Bords périphériques des condyles tibiaux</td>
+              <td>Condyle fémoral correspondant (face sup.) ; condyle tibial (face inf.)</td>
+              <td>—</td>
+              <td>En croissant, triangulaires à la coupe. Face périphérique adhérente à la capsule. Face axiale encroûtée de cartilage hyalin. <strong>Médial (C) :</strong> plus étroit et plus long. <strong>Latéral (O) :</strong> plus large et moins long.</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info-box teal" style="margin-top:12px;">
+          <strong>Attaches méniscales :</strong> Au tibia (freins des cornes), à la patella (lig. ménisco-patellaires), au fémur (lig. ménisco-fémoral post.), entre eux (lig. jugal ou interméniscal ant.), à la capsule (face périphérique) et aux muscles proches (poplité + biceps pour le latéral ; semimembraneux pour le médial).
+        </div>
+      </div>
+    </div>
+
+    <!-- MOYENS D'UNIONS -->
+    <div class="test-section-title">🔗 2 — Moyens d'unions (6 types)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🛡️</div><div class="card-title">Capsule — Caractéristiques</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+          <div style="padding:8px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);">Indépendante de celle de l'articulation tibio-fibulaire supérieure.</div>
+          <div style="padding:8px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);"><strong>Lâche sagittalement</strong>, tendue sur les côtés.</div>
+          <div style="padding:8px 12px;background:var(--navy-100);border-radius:7px;border-left:2px solid var(--navy-400);">Important <strong>cul-de-sac sous-quadricipital</strong> en rectitude. Fibres musculaires tenseurs des culs-de-sac : muscle articulaire du genou en avant, poplité + biceps en arrière/dehors, semimembraneux en dedans.</div>
+          <div style="padding:8px 12px;background:var(--amber-100);border-radius:7px;border-left:2px solid var(--amber-500);">Renforcée en postérieur par les <strong>coques condyliennes</strong> (fibres tendineuses du gastrocnémien). La coque latérale renferme la fabella (sésamoïde inconstant) et laisse passer le tendon du poplité (TOF). La coque médiale peut communiquer avec la bourse du semimembraneux. L'espace entre les 2 coques laisse passer le LCP.</div>
+          <div style="padding:8px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);">Petit repli supra-méniscal latéral = <strong>rampe capsulaire</strong>.</div>
+        </div>
+        <p style="font-size:13px;color:var(--text2);margin-top:10px;"><strong>Insertions :</strong> Sur le fémur : au contact de la surface patellaire (sauf bord sup.), bords latéraux des condyles (lèvre sup. du sillon condylaire), englobe la fosse intercondylaire. Sur la patella : au pourtour du cartilage, laissant libre l'apex. Sur le tibia : au pourtour des condyles + ligne antérieure et postérieure. Sur les ménisques : face périphérique.</p>
+      </div>
+    </div>
+
+    <!-- LIGAMENTS -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">📋</div><div class="card-title">Système collatéral — LCT &amp; LCF</div></div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">LCT — Ligament collatéral tibial</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Épicondyle fémoral médial (partie postéro-inférieure)</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Trajet :</strong> En bas, en avt, légèrement en dh. — long (8 à 12 cm), épiphyso-diaphysaire. <strong>2 plans :</strong> superficiel (fémoro-tibial) + profond (3 types de fibres : fémoro-méniscales, tibio-méniscales, tibio-tibiales)</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Terminaison :</strong> Tibia — face médiale du corps, au ¼ sup., en arrière de la patte d'oie</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);"><strong>Rôle :</strong> Ligament de l'entorse. Placé au sommet du valgus, très étendu et confondu avec la capsule en son milieu.</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="sub">LCF — Ligament collatéral fibulaire</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Épicondyle fémoral latéral (partie postéro-inférieure)</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Trajet :</strong> Oblique en bas, en arr., légèrement en dh.</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Terminaison :</strong> Tête de la fibula — versant postéro-latéral dans la concavité du biceps</div>
+              <div style="padding:7px 10px;background:var(--amber-100);border-radius:6px;border-left:2px solid var(--amber-500);">Partagé avec l'articulation tibio-fibulaire supérieure. Rapports variables avec le biceps selon flexion/extension.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon coral">⚙️</div><div class="card-title">Système de pivot central — LCA &amp; LCP</div></div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">LCA — Ligament croisé antérieur</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Tibia — aire intercondylaire antérieure, contre le frein du ménisque médial</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Trajet :</strong> Oblique en ht, en arr., en dh. (~4 cm) — torsadé en 2 fascicules : antéro-médial et postéro-latéral. Moins bien vascularisé que le LCP.</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Terminaison :</strong> Condyle latéral du fémur — partie postéro-supérieure de la face médiale (ou axiale)</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);">Situé en plein centre de l'articulation, il reste <strong>extra-articulaire</strong> (isolé par un repli synovial propre). Forme des croisés dans les plans sagittal et frontal.</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="sub">LCP — Ligament croisé postérieur</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Origine :</strong> Tibia — aire intercondylaire postérieure, débordant à la face postérieure de l'os</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Trajet :</strong> Oblique en ht, en avt, en dd. (~3 cm) — torsadé en 2 faisceaux : antéro-médial et postéro-latéral. Bien vascularisé.</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Terminaison :</strong> Condyle médial du fémur — partie antéro-supérieure de la face latérale (ou axiale)</div>
+              <div style="padding:7px 10px;background:var(--amber-100);border-radius:6px;border-left:2px solid var(--amber-500);">Le ligament ménisco-fémoral (de la corne post. du ménisque latéral vers la fosse intercondylaire) est rattaché au LCP.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon amber">📐</div><div class="card-title">Système sagittal — Ligaments patellaire, poplités &amp; rétinaculums</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Ligament</th><th>Origine</th><th>Trajet</th><th>Terminaison</th><th>Remarque</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Ligament patellaire</div></td>
+              <td>Apex patellaire</td>
+              <td>Oblique en bas et en dehors</td>
+              <td>Tubérosité tibiale</td>
+              <td>Indissociable du tendon patellaire — forme la partie profonde et mono-articulaire</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. poplité oblique</div></td>
+              <td>Bord latéral du tendon du semimembraneux</td>
+              <td>En ht et en dh., en éventail</td>
+              <td>Coque condylienne latérale + fabella</td>
+              <td>À la fois ligament et terminaison récurrente du semimembraneux</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. poplité arqué</div></td>
+              <td>Apex fibulaire</td>
+              <td>En éventail (faisceau sup. vertical, inf. s'incurve en dd./bas, moyen intermédiaire)</td>
+              <td>Coque condylienne + fabella (sup.) ; tibia sillon poplité (inf.)</td>
+              <td>Ligament de Kaplan : peu différencié, parfois assimilé au faisceau vertical</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Rétinaculums patellaires (×2)</div></td>
+              <td>Épicondyle fémoral (partie tout à postérieure)</td>
+              <td>En avant, en éventail</td>
+              <td>Bord de la patella du même côté</td>
+              <td>Médial = seul important en taille et en fonction ; latéral quasi inexistant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Ligaments à distance &amp; éléments stabilisateurs</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+          <div style="padding:8px 12px;background:var(--teal-50);border-radius:7px;border-left:2px solid var(--teal-400);">
+            <strong>Fascia lata / Tractus ilio-tibial :</strong> Du tubercule glutéal et crête iliaque → tubercule infra-condylaire du tibia. Hauban latéral passif plaqué contre le grand trochanter → poussée coaptatrice.
+          </div>
+          <div style="padding:8px 12px;background:var(--navy-100);border-radius:7px;border-left:2px solid var(--navy-400);">
+            <strong>Muscles stabilisateurs clés :</strong> Poplité (trajet intime dans la capsule latérale) · Semimembraneux (triple tendon stabilisateur) · Ailerons patellaires (fibres obliques du vaste médial = VMO → contrôle déplacement latéral de la patella) · Patte d'oie (3 tendons) · Gastrocnémien (renforce coques condyliennes) · Tendon patellaire (renforce le lig. du même nom).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTÉRÊTS OSTÉOPATHIQUES -->
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header"><div class="card-icon coral">⚕️</div><div class="card-title">Intérêts ostéopathiques</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Le genou est une grosse articulation sous-cutanée, ce qui en souligne l'importance palpatoire — accentuée en cas d'atrophie musculaire et de cul-de-sac capsulaire gonflé (hydarthrose).
+          </div>
+          <div class="info-box amber">
+            <strong>Mécanique et pathologique :</strong> Articulation portante intermédiaire entre le tronc et le sol (Dolto : « un valet soumis à 2 maîtres »). Tout problème sus- ou sous-jacent retentit sur le genou. Son valgus physiologique répond à l'exigence de transfert économique du centre de gravité. La patella = bouclier osseux antérieur (résistance + bras de levier pour le quadriceps). La mécanique du genou est faite pour travailler en flexion-rotation : le verrouillage en extension « nie le genou ». Portance + déviations orthopédiques → arthrose. Importance des glissements → retentissement des adhérences des parties molles.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- À RETENIR -->
+    <div style="border-left:4px solid var(--teal-400);background:var(--teal-50);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:24px;">
+      <div style="font-size:14px;font-weight:700;color:var(--teal-700);margin-bottom:10px;">⭐ À retenir absolument — Arthrologie du genou</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px;">
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Trochlée :</strong> joue latérale = plus haute, large, saillante → empêche la déhanchée latérale de la patella</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Ménisque médial (C) :</strong> plus étroit et plus long ; <strong>ménisque latéral (O) :</strong> plus large et moins long</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>LCA :</strong> tibial → fémoral latéral (antéro-médial → postéro-latéral) · extra-articulaire (repli synovial propre)</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>LCP :</strong> tibial post. → fémoral médial · mieux vascularisé que le LCA · lig. ménisco-fémoral lui est rattaché</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Capsule :</strong> lâche sagittalement (culs-de-sac), tendue sur les côtés · coques condyliennes postérieures renforcées par le gastrocnémien</li>
+        <li style="padding:5px 0 5px 16px;position:relative;"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Rétinaculum patellaire médial :</strong> seul fonctionnellement important · VMO = contrôle du déplacement latéral de la patella</li>
+      </ul>
+      <div style="background:#fff3cd;border-left:3px solid var(--amber-500);border-radius:0 6px 6px 0;padding:10px 14px;margin-top:12px;font-size:13px;color:#4a2e00;">
+        <strong>🧠 Mnémotechnique :</strong> « <strong>C</strong>oude = <strong>L</strong>CA–<strong>L</strong>CF · <strong>G</strong>enou = <strong>L</strong>CT–<strong>L</strong>CF » · LCA = A comme Antérieur tibial → part en AVANT de l'aire intercondylaire · LCP = C comme Croisé Postérieur tibial → part en ARRIÈRE
+      </div>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre inférieur, Chapitre 2 — Articulation du genou, Année 1, IEOQ · Usage privé</cite></div>
+  </section>
+
+  <!-- ══ SECTION ARTHROLOGIE COXO-FÉMORALE ══ -->
+  <section class="section" id="arthro-hanche">
+    <div class="section-title">Arthrologie — Articulation coxo-fémorale</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — La plus grosse articulation du corps, sphéroïde (énarthrose), stabilité &amp; congruence</div>
+
+    <div class="info-box teal" style="margin-bottom:20px;">
+      L'articulation de la hanche, ou coxo-fémorale, est la <strong>plus grosse articulation du corps</strong>. Portante, elle nécessite une excellente stabilité (concordance et congruence de ses surfaces). Sphéroïde à 3 degrés de liberté, elle règle l'orientation du membre dans l'espace.
+    </div>
+
+    <!-- ÉLÉMENTS EN PRÉSENCE -->
+    <div class="test-section-title">🦴 1 — Éléments en présence (4)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Surfaces articulaires</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Structure</th><th>Situation</th><th>Répond à</th><th>Type</th><th>Forme / Caractéristiques</th><th>Regarde</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Surface semi-lunaire<small>(partie articulaire de l'acétabulum)</small></div></td>
+              <td>Face externe partie moyenne de l'os coxal — occupe la partie sup. et périphérique de l'acétabulum</td>
+              <td>Tête fémorale</td>
+              <td><span class="tag tag-teal">Sphéroïde congruente</span></td>
+              <td>Hémisphère creux taillé en croissant à concavité inférieure. Corne postérieure plus large et plus saillante.</td>
+              <td>En dh., en bas et en avt</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Tête fémorale</div></td>
+              <td>Partie supéro-médiale de l'extrémité supérieure du fémur (séparée par le col anatomique)</td>
+              <td>Surface semi-lunaire de l'acétabulum et labrum</td>
+              <td><span class="tag tag-teal">Sphéroïde congruente</span></td>
+              <td>2/3 de sphère pleine d'environ 4 à 5 cm de Ø</td>
+              <td>En dd., en ht et en avt</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Labrum<small>(ancien bourrelet articulaire)</small></div></td>
+              <td>Inséré sur le limbus (pourtour de l'acétabulum) et bord inférieur du lig. transverse</td>
+              <td>Tête fémorale (face axiale)</td>
+              <td>Fibro-cartilage annulaire</td>
+              <td>Triangulaire à la coupe. Face axiale encroûtée de cartilage hyalin. Face périphérique accolée à la capsule. Face profonde insérée sur le limbus.</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ligament transverse de l'acétabulum</div></td>
+              <td>Unit les 2 cornes de la surface semi-lunaire (en pont sur l'incisure ischio-pubienne)</td>
+              <td>—</td>
+              <td>Fibro-cartilage</td>
+              <td>Encroûté de cartilage hyalin à sa face superficielle. Donne insertion à 1 des 3 racines du ligament de la tête.</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MOYENS D'UNIONS -->
+    <div class="test-section-title">🔗 2 — Moyens d'unions (6 types)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🛡️</div><div class="card-title">Capsule</div></div>
+      <div class="card-body">
+        <p style="font-size:13.5px;margin-bottom:10px;">Manchon fibreux cylindrique, rétréci à sa partie moyenne. Insertions :</p>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;">
+          <div style="padding:8px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);">Sur l'os coxal (limbus) et sur la lèvre supérieure du sillon supra-acétabulaire · Sur le ligament transverse (bord inférieur) · Sur le labrum (face périphérique)</div>
+          <div style="padding:8px 10px;background:var(--navy-100);border-radius:6px;border-left:2px solid var(--navy-400);">Sur le fémur : partie latérale du col — ligne intertrochantérique en avant, bord sup. sillon de l'obturateur externe en arrière</div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;">
+          <strong>3 types de fibres :</strong>
+          <ul style="margin:6px 0 0 16px;">
+            <li><strong>Longitudinales :</strong> tendues de l'os coxal au fémur</li>
+            <li><strong>Circulaires (orbiculaires) :</strong> resserrent la capsule dans sa portion sous-capitale</li>
+            <li><strong>Arciformes :</strong> partent de l'os coxal, y retournent en arc de cercle → accentuent la rétention de la tête. Replis inférieurs renforcés = <strong>freins de la capsule</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">📋</div><div class="card-title">Ligaments</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Ligament</th><th>Origine</th><th>Trajet / Terminaison</th><th>Remarque</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Ilio-fémoral<small>Faisceau supérieur</small></div></td>
+              <td>Os coxal — partie inf. de l'EIAI</td>
+              <td>Oblique en dh. et en bas → tubercule sup. de la ligne intertrochantérique ant.</td>
+              <td rowspan="2">Ligament composé de 2 faisceaux s'élargissant en éventail, passant en avant de la tête. Fibres éparses entre les 2 faisceaux. Anciennement ligament de Bertin.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ilio-fémoral<small>Faisceau inférieur</small></div></td>
+              <td>Os coxal — partie inf. de l'EIAI</td>
+              <td>Oblique en bas et légèrement en dh. → tubercule inférieur de la ligne intertrochantérique</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Pubo-fémoral</div></td>
+              <td>Os coxal — branche sup. du pubis au contact de l'acétabulum + crête pectiné</td>
+              <td>Oblique en dh. et en bas (large, se rétrécit en bas) → face ant. extrémité sup. du fémur, en arrière du tubercule inf. ligne intertrochantérique</td>
+              <td>S'ajoute à l'ilio-fémoral pour former un « Z » barrant la coxo-fémorale → interdit les luxations antérieures</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ischio-fémoral</div></td>
+              <td>Os coxal — ischion au contact de l'acétabulum, le long de la corne postérieure</td>
+              <td>Dirigé en dh., avt, légèrement en ht. Divisé en 3 faisceaux (sup., moy., inf.) → face méd. grand trochanter (sup.) ; partie post. capsule portion latérale (moy.) ; partie inf. capsule (inf.)</td>
+              <td>Seul ligament postérieur</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Ligament de la tête</div></td>
+              <td>Os coxal — par 3 racines : ant. (arrière de la corne ant.), moy. (bord sup. du lig. transverse), post. (arrière de la corne post.)</td>
+              <td>Racines se réunissent dans la fosse acétabulaire → se portent en ht et en dh. enroulant la tête → fovéa de la tête fémorale (cadran postéro-inférieur)</td>
+              <td>Ligament original : intra-capsulaire mais extra-articulaire. Creux, renferme une artère.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info-box amber" style="margin-top:12px;">
+          <strong>Ligament à distance :</strong> Fascia lata / Tractus ilio-tibial — du tubercule glutéal et crête iliaque → tubercule infra-condylaire du tibia. Hauban latéral passif plaqué contre le grand trochanter → poussée coaptatrice.
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon amber">💪</div><div class="card-title">Éléments stabilisateurs musculaires (4)</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Muscle</th><th>Mécanisme stabilisateur</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Droit fémoral</strong></td><td>3 tendons « chapeautent » la tête en la plaquant dans l'acétabulum. Tendon récurrent = renfort direct du faisceau supérieur du lig. ilio-fémoral.</td></tr>
+            <tr><td><strong>Petit fessier</strong></td><td>Profond, donne des fibres au ligament ilio-fémoral.</td></tr>
+            <tr><td><strong>Psoas-iliaque</strong></td><td>Puissant tendon se réfléchissant contre la tête fémorale → plaque fortement la tête dans l'acétabulum.</td></tr>
+            <tr><td><strong>Obturateur externe</strong></td><td>Passe dans le sillon infra-acétabulaire (force ascensionnelle sur la corne post.) + enroule le col fémoral par l'arrière au contact de la capsule → intime de l'articulation.</td></tr>
+            <tr><td><strong>Pectiné</strong></td><td>Renforce le ligament pubo-fémoral.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- INTÉRÊTS OSTÉOPATHIQUES -->
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header"><div class="card-icon coral">⚕️</div><div class="card-title">Intérêts ostéopathiques</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Accès limité — l'articulation est entièrement enfouie sous un épais revêtement musculaire (corps charnus particulièrement puissants + muscles profonds + revêtement cellulo-graisseux). Le relief est celui de l'enveloppe des muscles larges.
+          </div>
+          <div class="info-box amber">
+            <strong>Mécanique et pathologique :</strong> La coxo-fémorale fait partie du complexe lombo-pelvi-fémoral (LPF) — jonction fonctionnelle tronc/membre inférieur. La stabilité prend le pas sur la mobilité (arthrodèse de hanche = bons résultats à court terme, mais lombalgies à terme). Fréquence des coxarthroses (primitives ou secondaires) du fait de la notion d'appui. Les dysplasies (coxa-valga, coxa-vara, coxa-retrorsa) → mauvaise répartition des contraintes → interventions correctrices fréquentes.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- À RETENIR -->
+    <div style="border-left:4px solid var(--teal-400);background:var(--teal-50);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:24px;">
+      <div style="font-size:14px;font-weight:700;color:var(--teal-700);margin-bottom:10px;">⭐ À retenir absolument — Arthrologie coxo-fémorale</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px;">
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>4 éléments :</strong> surface semi-lunaire + tête fémorale + labrum + ligament transverse de l'acétabulum</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Ligament ilio-fémoral :</strong> 2 faisceaux en éventail (EIAI → ligne intertrochantérique) — anciennement de Bertin</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Formation en Z :</strong> ilio-fémoral + pubo-fémoral → barre la face antérieure = anti-luxation antérieure</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Ischio-fémoral :</strong> seul ligament postérieur (3 faisceaux) — résiste à la rotation médiale forcée</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Ligament de la tête :</strong> 3 racines coxales → fovéa fémorale · intra-capsulaire mais extra-articulaire · renferme l'artère de la tête</li>
+        <li style="padding:5px 0 5px 16px;position:relative;"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Fibres capsulaires arciformes :</strong> partent et reviennent sur l'os coxal → replis inférieurs = freins de la capsule · sécurisent la tête en all positions</li>
+      </ul>
+      <div style="background:#fff3cd;border-left:3px solid var(--amber-500);border-radius:0 6px 6px 0;padding:10px 14px;margin-top:12px;font-size:13px;color:#4a2e00;">
+        <strong>🧠 Mnémotechnique :</strong> Les ligaments sont <strong>IPI</strong> (Ilio-fémoral + Pubo-fémoral + Ischio-fémoral) — de l'avant vers l'arrière, comme les os de l'os coxal (ilium → pubis → ischion). Le Z anti-luxation = les 2 premiers (I + P).
+      </div>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre inférieur, Chapitre 1 — Articulation coxo-fémorale, Année 1, IEOQ · Usage privé</cite></div>
+  </section>
+
   <!-- ══════════════════════════════════════════════════════════
        SECTION — TESTS ORTHOPÉDIQUES COUDE
        ══════════════════════════════════════════════════════════ -->
@@ -8390,6 +8799,378 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 <div class="footnote"><cite>Source : P. César D.O — Techniques structurelles ostéopathiques de la Hanche, 1ère année ostéopathie IEOQ 2021. Usage privé.</cite></div>
 
 </section>
+
+  <!-- ══ SECTION ARTHROLOGIE TALO-CRURALE ══ -->
+  <section class="section" id="arthro-talocheville">
+    <div class="section-title">Arthrologie — Articulation talo-crurale</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — Ginglyme à 3 os : tibia, fibula, talus · Liée à la mobilité de la malléole latérale</div>
+
+    <div class="info-box teal" style="margin-bottom:20px;">
+      L'articulation de la cheville est liée à la <strong>mobilité de la malléole latérale</strong>, autrement dit à celle des articulations tibio-fibulaires. C'est un <strong>ginglyme</strong> impliquant 3 os (tibia, fibula, talus) formant la pince malléolaire.
+    </div>
+
+    <!-- ÉLÉMENTS EN PRÉSENCE -->
+    <div class="test-section-title">🦴 1 — Éléments en présence (3 os)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Surfaces articulaires</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Os / Surface</th><th>Situation</th><th>Répond à</th><th>Type</th><th>Forme / Caractéristiques</th><th>Regarde</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Tibia<small>Surface inférieure (pilon)</small></div></td>
+              <td>Face inférieure du pilon tibial</td>
+              <td>Face sup. du corps du talus (trochlée)</td>
+              <td><span class="tag tag-teal">Ginglyme</span></td>
+              <td>Quadrangulaire à grand axe oblique en dh. et en arr. Présente une crête postéro-antérieure oblique. Bord ant. plus large que post. Bord latéral plus large que médial. Bord post. descend plus bas que l'ant.</td>
+              <td>En bas (et très légèrement en avt)</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Tibia<small>Surface malléolaire (malléole médiale)</small></div></td>
+              <td>Face latérale de la malléole médiale</td>
+              <td>Surface en virgule du talus</td>
+              <td><span class="tag tag-teal">Plane, associée à la ginglyme</span></td>
+              <td>Triangulaire à base antérieure</td>
+              <td>En dehors</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Fibula<small>Malléole latérale</small></div></td>
+              <td>½ inf. de la face médiale de la malléole fibulaire</td>
+              <td>Face latérale du corps du talus</td>
+              <td><span class="tag tag-teal">Associée à la ginglyme</span></td>
+              <td>Triangulaire à sommet inférieur. Légèrement convexe verticalement (surtout en bas) et d'avt en arr.</td>
+              <td>En dedans et légèrement en avant</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Talus<small>Surface trochléaire (trochlée)</small></div></td>
+              <td>Face sup. du corps</td>
+              <td>Face inf. du pilon tibial</td>
+              <td><span class="tag tag-teal">Ginglyme</span></td>
+              <td>Quadrangulaire à grand axe oblique en avt et légèrement en dh. <strong>Plus large en avt qu'en arr.</strong></td>
+              <td>En haut</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Talus<small>Surface médiale, en virgule</small></div></td>
+              <td>Partie sup. de la face médiale du corps</td>
+              <td>Face latérale de la malléole médiale</td>
+              <td><span class="tag tag-teal">Plane, associée à la ginglyme</span></td>
+              <td>Virgule à grosse extrémité antérieure et concavité inférieure</td>
+              <td>En dedans</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Talus<small>Surface latérale</small></div></td>
+              <td>Face latérale du corps</td>
+              <td>½ inf. face médiale de la malléole latérale</td>
+              <td><span class="tag tag-teal">Associée à la ginglyme</span></td>
+              <td>Triangulaire à base sup. et sommet déjeté en dh. Verticalement plane mais concave à la partie inf. D'avt en arr. légèrement convexe.</td>
+              <td>En dh. et légèrement en arrière</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MOYENS D'UNIONS -->
+    <div class="test-section-title">🔗 2 — Moyens d'unions (5 types)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🛡️</div><div class="card-title">Capsule</div></div>
+      <div class="card-body">
+        <p style="font-size:13.5px;margin-bottom:10px;">S'insère au pourtour du cartilage, sauf en avant (en retrait du bord antérieur du tibia et sur la crête transversale du col du talus).</p>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;">
+          <div style="padding:8px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);"><strong>Lâche sagittalement</strong>, tendue sur les côtés. Récessus au niveau tibio-fibulaire inférieur.</div>
+          <div style="padding:8px 10px;background:var(--navy-100);border-radius:6px;border-left:2px solid var(--navy-400);">2 culs-de-sac : ant. (en flexion dorsale) et post. (en flexion plantaire) — tractés par fibres profondes musculaires (releveurs en avant, long fléchisseur de l'hallux en arrière).</div>
+          <div style="padding:8px 10px;background:var(--amber-100);border-radius:6px;border-left:2px solid var(--amber-500);">Innervation : classique sur 3 faces ; latéralement dans 20% des cas : nerf sural (purement sensitif) plutôt que nerf fibulaire superficiel.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">📋</div><div class="card-title">Ligaments collatéraux — LCF (latéral) &amp; LCT (médial)</div></div>
+      <div class="card-body">
+        <h3 class="sub">LCF — Ligament collatéral fibulaire (3 faisceaux)</h3>
+        <table class="muscle-table" style="margin-bottom:14px;">
+          <thead><tr><th></th><th>Faisceau antérieur</th><th>Faisceau moyen</th><th>Faisceau postérieur</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Origine</strong></td><td>Bord ant. malléole lat. (partie moyenne)</td><td>Bord ant. malléole lat. (partie inf.)</td><td>Face méd. malléole lat. (en arr. de la surface articulaire = fosse malléolaire)</td></tr>
+            <tr><td><strong>Trajet</strong></td><td>Oblique en avt, bas et dd.</td><td>Oblique en bas et arr.</td><td>Oblique en arr. et dd.</td></tr>
+            <tr><td><strong>Terminaison</strong></td><td>Talus — col, partie latérale de la crête transversale</td><td>Calcanéus — face latérale, en arr. et au-dessus de la trochlée fibulaire</td><td>Talus — sillon limitant en bas et arr. la surface lat. du corps</td></tr>
+          </tbody>
+        </table>
+        <h3 class="sub">LCT — Ligament collatéral tibial (plan profond + plan superficiel)</h3>
+        <table class="muscle-table">
+          <thead><tr><th></th><th>Faisceau ant. (plan profond)</th><th>Faisceau post. (plan profond)</th><th>Faisceau deltoïdien (plan superficiel)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Origine</strong></td><td>Tibia, face médiale, le long du bord ant.</td><td>Tibia, apex malléolaire, dans son échancrure</td><td>Tibia, face médiale, en arrière du faisceau ant. du plan profond</td></tr>
+            <tr><td><strong>Trajet</strong></td><td>Oblique en avt, bas et dh. — large</td><td>Oblique en arr., bas — épais</td><td>Oblique en avt, bas et dh. — très large, en éventail</td></tr>
+            <tr><td><strong>Terminaison</strong></td><td>Talus — col, partie médiale de la crête transversale</td><td>Talus — face méd. du corps, dans la concavité de la surface en virgule</td><td>1. Naviculaire · 2. Ligament calcanéo-naviculaire plant. · 3. Sustentaculum tali (bord sup.)</td></tr>
+          </tbody>
+        </table>
+        <div class="info-box teal" style="margin-top:12px;">
+          <strong>Ligament accessoire — Fibulo-talo-calcanéen :</strong> Fibula (lèvre médiale du bord post. malléole lat.) → se sépare en 2 branches → 1. Talus : processus latéral de la face post. 2. Calcanéus : partie postéro-latérale de la face supérieure (entre thalamus et tubérosité). Forme d'un Y à pointe postérieure.
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon amber">🔗</div><div class="card-title">Ligaments à distance &amp; éléments stabilisateurs</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+          <div style="padding:8px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);">
+            <strong>Ligaments à distance :</strong> Ligaments tibio-fibulaires inférieurs (ant. et post.) · Membrane interosseuse (MIO) · Ligament calcanéo-naviculaire plantaire (insertion au faisceau deltoïdien) · Rétinaculums : latéral (RMFi) et médial (RMF).
+          </div>
+          <div style="padding:8px 10px;background:var(--navy-100);border-radius:6px;border-left:2px solid var(--navy-400);">
+            <strong>Éléments stabilisateurs :</strong> Essentiellement les tendons rétromalléolaires médiaux et latéraux.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- À RETENIR -->
+    <div style="border-left:4px solid var(--teal-400);background:var(--teal-50);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:24px;">
+      <div style="font-size:14px;font-weight:700;color:var(--teal-700);margin-bottom:10px;">⭐ À retenir absolument — Arthrologie talo-crurale</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px;">
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Trochlée talienne :</strong> plus large en avant qu'en arrière → en flexion dorsale, la partie large s'engage dans la pince = écartement fibulaire → importance clinique (diastasis)</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>LCF :</strong> 3 faisceaux (ant.= lig. talo-fibulaire ant., moy.= lig. calcanéo-fibulaire, post.= lig. talo-fibulaire post.) — faisceau ant. = le plus souvent lésé en entorse</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>LCT (deltoïde) :</strong> plan profond (2 faisceaux taliens) + plan superficiel (faisceau deltoïdien → naviculaire, lig. calcanéo-naviculaire, sustentaculum)</li>
+        <li style="padding:5px 0 5px 16px;position:relative;"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Capsule :</strong> lâche sagittalement (2 culs-de-sac ant./post.), tendue sur les côtés · innervation latérale variable (nerf sural dans 20% des cas)</li>
+      </ul>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre inférieur, Chapitre 3 — Articulation talo-crurale, Année 1, IEOQ · Usage privé</cite></div>
+  </section>
+
+  <!-- ══ SECTION ARTHROLOGIE TIBIO-FIBULAIRES ══ -->
+  <section class="section" id="arthro-tibfib">
+    <div class="section-title">Arthrologie — Articulations tibio-fibulaires</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — Supérieure (plane) + Inférieure (syndesmose) · Fonctionnellement liées à la cheville</div>
+
+    <div class="info-box teal" style="margin-bottom:20px;">
+      L'articulation de la cheville est liée à la mobilité de la malléole latérale, autrement dit à celle des articulations tibio-fibulaires. La <strong>supérieure</strong> est une arthrodie (glissements-bâillements) ; l'<strong>inférieure</strong> est une syndesmose (écartements-rapprochements).
+    </div>
+
+    <!-- TYPES ARTICULAIRES -->
+    <div class="test-section-title">🦴 1 — Types articulaires &amp; surfaces</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Types articulaires</div></div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">Tibio-fibulaire supérieure (TFS)</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;"><strong>Type :</strong> Surface plane encroûtée de cartilage hyalin → glissements-bâillements</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;"><strong>Capsule propre.</strong> Partage le LCF du genou et le tendon du biceps fémoral avec le genou.</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Tibia :</strong> face postéro-latérale du condyle latéral — regarde en bas, en dehors et en arrière.</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Fibula :</strong> versant antéro-médial de la tête fibulaire.</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="sub">Tibio-fibulaire inférieure (TFI)</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--amber-100);border-radius:6px;border-left:2px solid var(--amber-500);"><strong>Type : Syndesmose</strong> — pas de cartilage. Surfaces recouvertes de tissu fibreux interosseux. Permet des écartements-rapprochements (bien plus nets qu'une symphyse).</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;">Ni capsule ni synoviale. Un coussinet fibreux + récessus de la capsule talo-crurale s'invagine entre les 2 os (comme un soufflet).</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Tibia :</strong> face latérale extrémité distale, limitée par 2 tubercules (insertions des lig. tibio-fibulaires inf. ant. et post.).</div>
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;"><strong>Fibula :</strong> moitié supérieure de la face médiale de la malléole latérale (sans cartilage).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOYENS D'UNIONS -->
+    <div class="test-section-title">🔗 2 — Moyens d'unions</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">📋</div><div class="card-title">Moyens d'unions par articulation</div></div>
+      <div class="card-body">
+        <div class="grid-2" style="gap:14px;">
+          <div>
+            <h3 class="sub">TFS — Tibio-fibulaire supérieure</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--gray-50);border-radius:6px;">Capsule + synoviale + ligaments indifférenciés</div>
+              <div style="padding:7px 10px;background:var(--teal-50);border-radius:6px;border-left:2px solid var(--teal-400);"><strong>LCF du genou</strong> (ligament collatéral fibulaire) — gros ligament partagé avec le genou, franchit l'articulation</div>
+              <div style="padding:7px 10px;background:var(--navy-100);border-radius:6px;">À distance : corde oblique (2B) + membrane interosseuse (MIO)</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="sub">TFI — Tibio-fibulaire inférieure</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;">
+              <div style="padding:7px 10px;background:var(--amber-100);border-radius:6px;border-left:2px solid var(--amber-500);">2 forts ligaments : <strong>ant.</strong> (lig. tibio-fibulaire inf. ant.) + <strong>post.</strong> (lig. tibio-fibulaire inf. post. — s'étend jusqu'à la malléole médiale)</div>
+              <div style="padding:7px 10px;background:var(--navy-100);border-radius:6px;">À distance : rétinaculum des muscles fibulaires (RMFi) + MIO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTÉRÊTS OSTÉOPATHIQUES -->
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header"><div class="card-icon coral">⚕️</div><div class="card-title">Intérêts ostéopathiques</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Les malléoles sont sous-cutanées et saillantes (parfaitement visibles). La latérale est plus fine, plus postérieure et plus basse que la médiale. Elles délimitent le cou-de-pied. La région antérieure montre les tendons releveurs. La postérieure est occupée par les 2 gouttières rétromalléolaires (séparées par le tendon calcanéen, oblique en bas et légèrement en dehors).
+          </div>
+          <div class="info-box amber">
+            <strong>Pince malléolaire :</strong> En flexion dorsale, la partie large de la trochlée talienne s'engage → écartement de la TFI. La fibula s'écarte tout en remontant légèrement et pivotant en rotation médiale. En flexion plantaire, la partie étroite se loge dans la pince → risque de ballottement si diastasis ou défaut de serrage → instabilité (risque entorse, notamment aux talons hauts).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- À RETENIR -->
+    <div style="border-left:4px solid var(--teal-400);background:var(--teal-50);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:24px;">
+      <div style="font-size:14px;font-weight:700;color:var(--teal-700);margin-bottom:10px;">⭐ À retenir absolument — Arthrologie tibio-fibulaires</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px;">
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>TFS :</strong> arthrodie plane + capsule propre + partage LCF du genou (→ blocage TFS retentit sur la cheville, pas sur le genou)</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>TFI :</strong> syndesmose = pas de cartilage, pas de capsule, pas de synoviale · récessus de la capsule talo-crurale fait soufflet</li>
+        <li style="padding:5px 0 5px 16px;position:relative;"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Flexion dorsale → écartement TFI</strong> (partie large du talus) · Fibula remonte + rotation médiale · Diastasis → instabilité → entorse</li>
+      </ul>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre inférieur, Chapitre 4 — Articulations tibio-fibulaires, Année 1, IEOQ · Usage privé</cite></div>
+  </section>
+
+  <!-- ══ SECTION ARTHROLOGIE SUBTALAIRE ══ -->
+  <section class="section" id="arthro-subtal">
+    <div class="section-title">Arthrologie — Articulation subtalaire</div>
+    <div class="section-sub">Thomas Gautier D.O. · IEOQ Année 1 — 2 surfaces anatomiquement indépendantes · Transition arrière-pied</div>
+
+    <div class="info-box teal" style="margin-bottom:20px;">
+      L'articulation subtalaire est particulière car composée de <strong>2 surfaces anatomiquement indépendantes</strong>, dont l'antérieure partage sa capsule avec l'articulation transverse du tarse (TT) médiale. Elle fait la transition entre les empilements des interlignes proximaux et la juxtaposition verticale des interlignes distaux.
+    </div>
+
+    <!-- ÉLÉMENTS EN PRÉSENCE -->
+    <div class="test-section-title">🦴 1 — Éléments en présence (2 os)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Surfaces articulaires — Talus &amp; Calcanéus</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Os / Surface</th><th>Situation</th><th>Répond à</th><th>Type</th><th>Forme</th><th>Regarde</th><th>Capsule</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Talus<small>Surface postérieure</small></div></td>
+              <td>Face inférieure du corps du talus</td>
+              <td>Thalamus (partie moy. face sup. du calcanéus)</td>
+              <td><span class="tag tag-teal">Trochoïde</span></td>
+              <td>Ovalaire à grand axe oblique en avt et en dh. Concave selon son grand axe, plane transversalement.</td>
+              <td>En bas et légèrement en arrière</td>
+              <td>Capsule propre</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Talus<small>Surface antérieure</small></div></td>
+              <td>Face inférieure de la tête du talus</td>
+              <td>Surface en semelle du calcanéus (partie ant. face sup.)</td>
+              <td><span class="tag tag-teal">Trochoïde</span></td>
+              <td>Ovalaire à grand axe oblique en avt et en dh. Convexe selon son grand axe, plane transversalement.</td>
+              <td>En bas</td>
+              <td>Capsule commune avec la TT médiale</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Calcanéus<small>Thalamus (surface post.)</small></div></td>
+              <td>Partie moyenne de la face sup. du calcanéus</td>
+              <td>Surface post. du talus</td>
+              <td><span class="tag tag-teal">Trochoïde</span></td>
+              <td>Inversement conformée à celle du talus</td>
+              <td>En haut</td>
+              <td>Capsule propre</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Calcanéus<small>Surface en semelle (ant.)</small></div></td>
+              <td>Partie antéro-latérale de la face sup. du calcanéus</td>
+              <td>Surface ant. du talus</td>
+              <td><span class="tag tag-teal">Trochoïde</span></td>
+              <td>Inversement conformée. Sa partie moyenne est rétrécie et lui donne un aspect en « semelle ».</td>
+              <td>En haut</td>
+              <td>Capsule commune avec la TT médiale</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MOYENS D'UNIONS -->
+    <div class="test-section-title">🔗 2 — Moyens d'unions (5 types)</div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header"><div class="card-icon navy">📋</div><div class="card-title">Ligaments propres de la subtalaire</div></div>
+      <div class="card-body">
+        <table class="muscle-table">
+          <thead><tr><th>Ligament</th><th>Origine</th><th>Trajet</th><th>Terminaison</th><th>Remarque</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="muscle-name">Lig. talo-calcanéen interosseux<small>(= lig. en haie)</small></div></td>
+              <td>Talus — face inf. du col, dans le sinus tarsi</td>
+              <td>Court, vertical — étendu sur toute la longueur du sinus tarsi</td>
+              <td>Calcanéus — face sup., dans le sinus, le long de la surface ant.</td>
+              <td>Ligament très important. 2 faisceaux (ant. + post.) ; parfois un 3e faisceau latéral = partie latérale du faisceau ant. Appelé aussi ligament en haie pour sa forme verticale, étendue et peu haute.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. talo-calcanéen latéral</div></td>
+              <td>Talus — apex de la face latérale du corps</td>
+              <td>Vertical, court</td>
+              <td>Calcanéus — bord latéral du thalamus</td>
+              <td>Très court, doublé par le faisceau moyen du LCF de la cheville.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. talo-calcanéen médial</div></td>
+              <td>Talus — bord médial de la surface art. post.</td>
+              <td>Vertical, court</td>
+              <td>Calcanéus — bord médial du thalamus</td>
+              <td>Très peu développé — symétrique du latéral.</td>
+            </tr>
+            <tr>
+              <td><div class="muscle-name">Lig. talo-calcanéen postérieur</div></td>
+              <td>Talus — processus latéral de la face post., débordant à la face latérale</td>
+              <td>Court, aplati — oblique en bas, arr. et dh.</td>
+              <td>Calcanéus — face sup., partie postéro-médiale (~1 cm du thalamus)</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info-box amber" style="margin-top:12px;">
+          <strong>Ligaments à distance (3) :</strong> Ligament fibulo-talo-calcanéen (cf. talo-crurale) · Ligament collatéral tibial (plan superficiel dit deltoïdien) · Ligament collatéral fibulaire (faisceau moyen) — vont de la jambe au calcanéus.
+        </div>
+      </div>
+    </div>
+
+    <!-- INTÉRÊTS OSTÉOPATHIQUES -->
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header"><div class="card-icon coral">⚕️</div><div class="card-title">Intérêts ostéopathiques</div></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="info-box teal">
+            <strong>Morpho-palpatoire :</strong> Non accessible directement — située entre 2 os empilés dont les côtés sont surplombés par les malléoles. On ne peut qu'approcher l'interligne.
+          </div>
+          <div class="info-box amber">
+            <strong>Mécanique et pathologique :</strong> Responsable de la stabilité de l'arrière-pied. Classiquement : elle « tangue, vire et roule » (mouvement réduit induisant des déplacements tridimensionnels). Sa récupération est indispensable pour un bon aplomb du pied. L'interligne vu sous 4 faces = toujours une ligne brisée → propension à la stabilité. La communauté capsulaire avec la TT médiale indique que subtalaire et TT médiale fonctionnent ensemble : c'est le <strong>complexe d'arrière-pied</strong>.
+          </div>
+          <div class="info-box teal">
+            <strong>Éléments stabilisateurs :</strong> Muscles rétromalléolaires à action coaptatrice — mention particulière pour le <strong>long flécheur de l'hallux</strong> qui sangle le talus par l'arrière avant de se plaquer sous le sustentaculum.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- À RETENIR -->
+    <div style="border-left:4px solid var(--teal-400);background:var(--teal-50);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:24px;">
+      <div style="font-size:14px;font-weight:700;color:var(--teal-700);margin-bottom:10px;">⭐ À retenir absolument — Arthrologie subtalaire</div>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px;">
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>2 surfaces indépendantes :</strong> postérieure (capsule propre, type trochoïde) + antérieure (capsule commune avec TT médiale, type trochoïde)</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Lig. talo-calcanéen interosseux :</strong> LE ligament principal — dans le sinus tarsi, 2 faisceaux (ant./post.) — dit « en haie » pour sa forme</li>
+        <li style="padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--teal-200);"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Surface post. du talus :</strong> concave selon le grand axe · <strong>Surface ant. du talus :</strong> convexe selon le grand axe</li>
+        <li style="padding:5px 0 5px 16px;position:relative;"><span style="position:absolute;left:4px;color:var(--teal-500);font-weight:700;">→</span><strong>Complexe d'arrière-pied :</strong> Subtalaire + TT médiale fonctionnent ensemble (capsule commune) → toujours traiter les deux</li>
+      </ul>
+      <div style="background:#fff3cd;border-left:3px solid var(--amber-500);border-radius:0 6px 6px 0;padding:10px 14px;margin-top:12px;font-size:13px;color:#4a2e00;">
+        <strong>🧠 Mnémotechnique :</strong> Subtalaire = « <strong>tangue, vire, roule</strong> » (comparaison marine) · Sinus tarsi = logement du ligament interosseux = <strong>croix</strong> de l'articulation (symbolise position + fonction de la surface, comme la croix symbolise la partie centrale) · Surface ant. talus = convexe (tête = bombée) · Surface post. talus = concave (corps = creusé)
+      </div>
+    </div>
+
+    <div class="footnote"><cite>Source : Thomas Gautier D.O. — Arthrologie membre inférieur, Chapitre 5 — Articulation subtalaire, Année 1, IEOQ · Usage privé</cite></div>
+  </section>
 
   <!-- ══ SECTION BIOMÉCANIQUE CHEVILLE & PIED ══ -->
   <section class="section" id="biomec-cheville">
@@ -12725,9 +13506,9 @@ const ART_MAP = {
   epaule:     { subs: ['epaule1','epaule-rythme','coiffe','tests-epaule','tech-epaule'], default: 'epaule1' },
   coude:      { subs: ['coude','tests-coude','tech-coude'], default: 'coude' },
   poignet:    { subs: ['poignet','arthro-poignet','tests-poignet','tech-poignet'], default: 'poignet' },
-  genou:      { subs: ['biomec-genou','tests-genou','tech-genou','ottawa-genou'], default: 'biomec-genou' },
-  hanche:     { subs: ['biomec-hanche','tests-hanche','tech-osteo-hanche'], default: 'biomec-hanche' },
-  cheville:   { subs: ['biomec-cheville','tests-cheville','ottawa-cheville','tech-osteo-cheville'], default: 'biomec-cheville' },
+  genou:      { subs: ['biomec-genou','arthro-genou','tests-genou','tech-genou','ottawa-genou'], default: 'biomec-genou' },
+  hanche:     { subs: ['biomec-hanche','arthro-hanche','tests-hanche','tech-osteo-hanche'], default: 'biomec-hanche' },
+  cheville:   { subs: ['biomec-cheville','arthro-talocheville','arthro-tibfib','arthro-subtal','tests-cheville','ottawa-cheville','tech-osteo-cheville'], default: 'biomec-cheville' },
   transversal:{ subs: ['ottawa'], default: 'ottawa' },
   anatomie:   { subs: ['anatomie-ms-coiffe','anatomie-ms-fascias','anatomie-ms-thorax','anatomie-ms-bras','anatomie-ms-avbras','anatomie-mi-ceinture','anatomie-mi-pelvitroch','anatomie-mi-posterieurs','anatomie-mi-adducteurs','neuro-anatomie-ms','neuro-anatomie-mi'], default: 'anatomie-ms-coiffe' },
 };
@@ -12757,11 +13538,17 @@ const SUB_LABELS = {
   poignet: 'Biomécanique', 'arthro-poignet': 'Arthrologie poignet', 'tests-poignet': 'Tests orthopédiques',
   'tech-poignet': 'Techniques structurelles', 'tests-genou': 'Tests orthopédiques',
   'tech-genou': 'Techniques structurelles', 'biomec-genou': 'Biomécanique',
+  'arthro-genou': 'Arthrologie genou',
   'biomec-hanche': 'Biomécanique', 'tests-hanche': 'Tests orthopédiques',
+  'arthro-hanche': 'Arthrologie coxo-fémorale',
   'tech-osteo-hanche': 'Techniques ostéopathiques',
   'ottawa-genou': "Critères d'Ottawa", 'tests-cheville': 'Tests orthopédiques',
   'ottawa-cheville': "Critères d'Ottawa", ottawa: "Critères d'Ottawa complets",
   'tech-osteo-cheville': 'Techniques ostéopathiques',
+  'arthro-talocheville': 'Arthrologie talo-crurale',
+  'arthro-tibfib': 'Arthrologie tibio-fibulaires',
+  'arthro-subtal': 'Arthrologie subtalaire',
+  'biomec-cheville': 'Biomécanique',
   'neuro-terminologie': 'Terminologie', 'neuro-triage': 'Triage clinique',
   'neuro-routine-ms': 'Routine neurologique MS', 'neuro-routine-mi': 'Routine neurologique MI',
   'neuro-anatomie-ms': 'Anatomie Plexus Brachial', 'neuro-anatomie-mi': 'Anatomie Plexus Lombaire/Sacral',
