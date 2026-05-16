@@ -331,51 +331,6 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   .progress-label { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--text2); margin-bottom: 3px; }
   .progress-bar { height: 7px; border-radius: 4px; background: var(--gray-200); overflow: hidden; }
   .progress-fill { height: 100%; border-radius: 4px; transition: width .4s ease; }
-
-  /* ── IMAGE GALLERIES ── */
-  .img-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    margin-bottom: 24px;
-    padding: 20px;
-    background: #f7f9fc;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-  }
-  .img-gallery-item {
-    text-align: center;
-    max-width: 220px;
-  }
-  .img-gallery-item img {
-    height: 200px;
-    width: auto;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: #fff;
-    padding: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: transform .2s, box-shadow .2s;
-    cursor: zoom-in;
-    display: block;
-    margin: 0 auto;
-  }
-  .img-gallery-item img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
-  }
-  .img-gallery-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--navy-700);
-    margin-top: 8px;
-  }
-  .img-gallery-credit {
-    font-size: 10px;
-    color: var(--gray-400);
-    margin-top: 3px;
-  }
   /* ── FOOTNOTES ── */
   .footnote { font-size: 12px; color: var(--gray-500); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gray-100); }
   .footnote cite { font-style: italic; }
@@ -1492,6 +1447,18 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
     </div>
   </div>
 
+  <!-- Arthrologie -->
+  <div class="art-item" id="art-item-arthrologie">
+    <button type="button" class="art-tab" data-art="arthrologie" onclick="switchArt('arthrologie')"><span class="art-icon">🦴</span><span class="art-label">Arthrologie</span><span class="art-chevron">›</span></button>
+    <div class="sub-tabs-group hidden" data-art="arthrologie">
+      <button type="button" class="sub-tab" data-sub="arthro-rachis" onclick="switchSub('arthro-rachis')">🔵 Art. du Rachis</button>
+      <button type="button" class="sub-tab" data-sub="arthro-pelvis" onclick="switchSub('arthro-pelvis')">🟢 Art. Pelviennes</button>
+      <button type="button" class="sub-tab" data-sub="arthro-costales" onclick="switchSub('arthro-costales')">🟡 Art. Costales</button>
+      <button type="button" class="sub-tab" data-sub="arthro-cranio" onclick="switchSub('arthro-cranio')">🟠 Art. Cranio-cervicales</button>
+      <button type="button" class="sub-tab" data-sub="arthro-atm" onclick="switchSub('arthro-atm')">🔴 ATM</button>
+    </div>
+  </div>
+
   <!-- Anatomie Palpatoire -->
   <div class="art-item" id="art-item-palpatoire">
     <button type="button" class="art-tab" data-art="palpatoire" onclick="switchArt('palpatoire')"><span class="art-icon">🖐️</span><span class="art-label">Anat. Palpatoire</span><span class="art-chevron">›</span></button>
@@ -1503,6 +1470,15 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
       <button type="button" class="sub-tab" data-sub="palp-rachis" onclick="switchSub('palp-rachis')">🟣 Rachis lombaire · Chap. 8</button>
       <button type="button" class="sub-tab" data-sub="palp-sacrum" onclick="switchSub('palp-sacrum')">⚫ Sacrum · Chap. 7</button>
       <button type="button" class="sub-tab" data-sub="palp-rachis-cervical" onclick="switchSub('palp-rachis-cervical')">🔷 Rachis cervical · Chap. 2</button>
+    </div>
+  </div>
+
+  <!-- Anatomie -->
+  <div class="art-item" id="art-item-anatomie-an2">
+    <button type="button" class="art-tab" data-art="anatomie-an2" onclick="switchArt('anatomie-an2')"><span class="art-icon">🫀</span><span class="art-label">Anatomie</span><span class="art-chevron">›</span></button>
+    <div class="sub-tabs-group hidden" data-art="anatomie-an2">
+      <button type="button" class="sub-tab" data-sub="anatomie-rachis" onclick="switchSub('anatomie-rachis')">🦷 Rachis</button>
+      <button type="button" class="sub-tab" data-sub="anatomie-tronc" onclick="switchSub('anatomie-tronc')">🫀 Tronc &amp; viscères</button>
     </div>
   </div>
 
@@ -2084,16 +2060,13 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 
   <!-- GALERIE IMAGES RÉELLES — NEUROLOGIE MS -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Gray808.png/280px-Gray808.png" crossorigin="anonymous" alt="Plexus brachial — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus brachial (Gray808)</div>
     </div>
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Gray817.png/280px-Gray817.png" crossorigin="anonymous" alt="Dermatomes MS" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs cutanés du bras (Gray817)</div>
     </div>
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gray816.png/280px-Gray816.png" crossorigin="anonymous" alt="Nerfs de la main" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs de la main (Gray816)</div>
     </div>
     <div style="text-align:center;width:100%;">
@@ -2538,20 +2511,16 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
 
   <!-- GALERIE IMAGES RÉELLES — NEUROLOGIE MI -->
   <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Gray823.png/240px-Gray823.png" crossorigin="anonymous" alt="Plexus lombaire — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus lombaire (Gray823)</div>
     </div>
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Gray826.png/240px-Gray826.png" crossorigin="anonymous" alt="Plexus sacral — Gray" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Plexus sacral (Gray826)</div>
     </div>
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Gray836.png/240px-Gray836.png" crossorigin="anonymous" alt="Nerfs MI vue antérieure" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue ant. (Gray836)</div>
     </div>
-    <div style="text-align:center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Gray837.png/240px-Gray837.png" crossorigin="anonymous" alt="Nerfs MI vue postérieure" style="height:200px;width:auto;border-radius:8px;border:1px solid var(--border);background:#fff;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" loading="lazy" onerror="this.style.display='none';var p=document.createElement('div');p.style.cssText='height:200px;width:140px;display:flex;align-items:center;justify-content:center;background:#edf0f4;border-radius:8px;border:1px dashed #b8bec7;font-size:11px;color:#777d85;text-align:center;padding:8px;';p.innerHTML='🖼️<br>Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
       <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Nerfs MI — vue post. (Gray837)</div>
     </div>
     <div style="text-align:center;width:100%;">
@@ -5303,6 +5272,100 @@ function togglePhase(id){var el=document.getElementById(id);if(el)el.classList.t
   </div>
 </section>
 
+<section class="section" id="anatomie-rachis">
+  <div class="section-title">Anatomie — Rachis &amp; Muscles paravertébraux</div>
+  <div class="section-sub">Muscles érecteurs du rachis, profonds et accessoires — Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <!-- GALERIE RACHIS -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Iliocostal</div>
+    </div>
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Longissimus (longissimus)</div>
+    </div>
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Multifides</div>
+    </div>
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Carré des lombes</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    <strong>Érecteurs du rachis (spinal erectors) :</strong> 3 colonnes — Iliocostal (lat.) · Longissimus (interméd.) · Épineux (méd.) — formant la masse commune sacro-lombaire. Rôle : <strong>extension</strong> et <strong>stabilisation axiale</strong>.<br>
+    <strong>Plan profond :</strong> Multifides (stabilisation segmentaire +++) · Semi-épineux · Rotateurs. Ces muscles stabilisateurs segmentaires ont un rôle clé dans les dysfonctions rachidiennes.
+  </div>
+
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Plan</th><th>Actions principales</th><th>Innervation</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Iliocostal<small>3 segments : cervical, dorsal, lombal</small></td><td>Superficiel (latéral)</td><td>Extension rachis · Inclinaison homolatérale · Stabilisation</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Longissimus<small>3 segments : capitis, cervicis, thoracis</small></td><td>Superficiel (intermédiaire)</td><td>Extension + inclinaison ipsilatérale · Stabilisation globale</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Épineux<small>Inconstant / Rudimentaire en lombal</small></td><td>Superficiel (médial)</td><td>Extension rachis cervical + thoracique supérieur</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Multifides ⭐</td><td>Profond (segmentaire)</td><td>Stabilisation inter-segmentaire +++ · Extension · Rotation controlatérale · Proprioception</td><td>Rameaux post. nerfs spinaux</td></tr>
+        <tr><td class="muscle-name">Carré des lombes</td><td>Profond (latéral)</td><td>Inclinaison homolatérale · Abaissement dernière côte · Stabilise L4–L5</td><td>Rameaux ant. T12–L3</td></tr>
+        <tr><td class="muscle-name">Psoas<small>(partie lombaire)</small></td><td>Ant./Lat. rachis</td><td>Flexion hanche · Stabilisation lombaire · Antéversion</td><td>N. fémoral (L1–L3)</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ═══════════════════════ ANATOMIE — TRONC & VISCÈRES ═══════════════════════ -->
+<section class="section" id="anatomie-tronc">
+  <div class="section-title">Anatomie — Muscles du tronc &amp; Abdominaux</div>
+  <div class="section-sub">Muscles pariétaux de l'abdomen · Diaphragme · Thomas Gautier D.O. · IEOQ Année 1</div>
+
+  <!-- GALERIE TRONC -->
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:24px;padding:16px;background:#f7f9fc;border-radius:10px;border:1px solid var(--border);">
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Droit de l'abdomen</div>
+    </div>
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Oblique externe</div>
+    </div>
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Oblique interne</div>
+    </div>
+    <div style="text-align:center;">Image<br>non disponible<br><small>Wikimedia</small>';this.parentNode.insertBefore(p,this);"">
+      <div style="font-size:11.5px;font-weight:600;color:var(--navy-700);margin-top:6px;">Transverse abdomen</div>
+    </div>
+    <div style="text-align:center;width:100%;">
+      <div style="font-size:10px;color:var(--gray-400);">Wikimedia Commons · Domaine public (Gray's Anatomy)</div>
+    </div>
+  </div>
+
+  <div class="info-box teal" style="margin-bottom:16px;">
+    <strong>4 muscles pariétaux de l'abdomen</strong> (de superficiel à profond) :<br>
+    <strong>1. Droit de l'abdomen</strong> — flexion thorax · Stabilisation · Compression abdominale<br>
+    <strong>2. Oblique externe</strong> — rotation controlatérale · Inclinaison homolatérale · Compression<br>
+    <strong>3. Oblique interne</strong> — rotation homolatérale · Inclinaison homolatérale · Compression<br>
+    <strong>4. Transverse</strong> — ceinture abdominale · Stabilisation lombaire +++ · Presse abdominale
+  </div>
+
+  <div class="card"><div class="card-body" style="padding:0;">
+    <table class="muscle-table">
+      <thead><tr><th>Muscle</th><th>Origine</th><th>Terminaison</strong></th><th>Actions</th><th>Nerf</th></tr></thead>
+      <tbody>
+        <tr><td class="muscle-name">Droit de l'abdomen</td><td>Pubis (crête + symphyse)</td><td>Cartilages costaux 5–7 · Processus xiphoïde</td><td>Flexion tronc · Compression · Expiration forcée</td><td>N. intercostaux T7–T12</td></tr>
+        <tr><td class="muscle-name">Oblique externe</td><td>8 dernières côtes (digitations)</td><td>Ligne blanche · Crête iliaque · Lig. inguinal</td><td>Rotation controlatérale · Inclinaison ipsilat. · Compression</td><td>N. intercostaux T5–T12</td></tr>
+        <tr><td class="muscle-name">Oblique interne</td><td>Fascia thoracolombaire · Crête iliaque · Lig. inguinal</td><td>Ligne blanche · 3 derniers cartilages costaux</td><td>Rotation homolatérale · Inclinaison · Compression</td><td>N. intercostaux T7–L1</td></tr>
+        <tr><td class="muscle-name">Transverse ⭐</td><td>Fascia thoracolombaire · Crête iliaque · 6 dernières côtes</td><td>Ligne blanche · Processus xiphoïde</td><td>Ceinture abdominale · Stabilisation lombaire +++ · Presse</td><td>N. intercostaux T7–L1</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ANATOMIE PALPATOIRE — GROUPE POSTÉRIEUR COMPLÉMENT 1 (Chap. 8A)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="palp-post-1">
+
 </main>
 
 </div><!-- /main-wrapper -->
@@ -5333,6 +5396,7 @@ const ART_MAP = {
   neurologie: { subs: ['neuro-terminologie','neuro-triage','neuro-routine-ms','neuro-routine-mi','neuro-anatomie-ms','neuro-anatomie-mi','neuro-raisonnement'], default: 'neuro-terminologie' },
   'formation-clinique': { subs: ['fc-epaule','fc-coude','fc-genou','fc-hanche','fc-pied'], default: 'fc-epaule' },
   rachis:     { subs: ['rachis-cervical','rachis-thoracique','rachis-lombaire','rachis-sacrum'], default: 'rachis-cervical' },
+  arthrologie: { subs: ['arthro-rachis','arthro-pelvis','arthro-costales','arthro-cranio','arthro-atm'], default: 'arthro-rachis' },
   anatomie:   { subs: ['anatomie-ms-coiffe','anatomie-ms-fascias','anatomie-ms-thorax','anatomie-ms-bras','anatomie-ms-avbras','anatomie-mi-ceinture','anatomie-mi-pelvitroch','anatomie-mi-posterieurs','anatomie-mi-adducteurs','anatomie-rachis','anatomie-tronc'], default: 'anatomie-ms-coiffe' },
   palpatoire: { subs: ['palp-post-1','palp-post-2','palp-lateral','palp-cou','palp-rachis','palp-sacrum','palp-rachis-cervical'], default: 'palp-post-1' },
 };
@@ -5351,7 +5415,7 @@ const ART_LABELS = {
   poignet: 'Poignet', genou: 'Genou', hanche: 'Hanche',
   cheville: 'Cheville', transversal: 'Transversal', neurologie: 'Neurologie',
   'formation-clinique': 'Formation Clinique',
-  rachis: 'Rachis', anatomie: 'Anatomie', palpatoire: 'Anat. Palpatoire'
+  rachis: 'Rachis', arthrologie: 'Arthrologie', anatomie: 'Anatomie', palpatoire: 'Anat. Palpatoire'
 };
 const SUB_LABELS = {
   fondements: 'Fondements', 'rom-ms': 'ROM Membre supérieur',
@@ -5379,6 +5443,11 @@ const SUB_LABELS = {
   'fc-pied': 'Raisonnement clinique — Pied & Cheville',
   'rachis-cervical': 'Cervicales', 'rachis-thoracique': 'Thoraciques',
   'rachis-lombaire': 'Lombaires', 'rachis-sacrum': 'Sacrum & Iliaque',
+  'arthro-rachis': 'Art. du Rachis · Chap. 1',
+  'arthro-pelvis': 'Art. Pelviennes · Chap. 2',
+  'arthro-costales': 'Art. Costales · Chap. 3',
+  'arthro-cranio': 'Art. Cranio-cervicales · Chap. 4',
+  'arthro-atm': 'ATM · Chap. 5',
   'anatomie-ms-coiffe': 'MS · Coiffe des rotateurs', 'anatomie-ms-fascias': 'MS · Fascias',
   'anatomie-ms-thorax': 'MS · Thorax antérieur', 'anatomie-ms-bras': 'MS · Muscles du bras',
   'anatomie-ms-avbras': 'MS · Avant-bras (Ch.5)',
@@ -5464,7 +5533,7 @@ function switchSub(sub) {
     }
     var artIcon = { general:'🔬', epaule:'🦴', coude:'🦾', poignet:'✋',
       genou:'🦵', hanche:'🦴', cheville:'🦶', transversal:'📚', neurologie:'🧠',
-      'formation-clinique':'🩺', rachis:'🦷', anatomie:'🫀', palpatoire:'🖐️' };
+      'formation-clinique':'🩺', rachis:'🦷', arthrologie:'🦴', anatomie:'🫀', palpatoire:'🖐️' };
     indicator.innerHTML =
       '<span class="si-icon">' + (artIcon[currentArt] || '📄') + '</span>' +
       '<span class="si-art">' + (ART_LABELS[currentArt] || currentArt) + '</span>' +
@@ -5809,69 +5878,801 @@ setTimeout(initApp, 400);
   </div>
 </nav>
 
-<script>
-// Smart Wikimedia image loader — handles hotlink restrictions gracefully
-(function() {
-  // Wikimedia allows browser requests but blocks hotlinks from some hosts.
-  // This script retries failed images and shows informative placeholders.
-  
-  function createPlaceholder(img, label) {
-    var alt = img.alt || label || 'Image anatomique';
-    var ph = document.createElement('div');
-    ph.style.cssText = [
-      'display:inline-flex', 'flex-direction:column', 'align-items:center',
-      'justify-content:center', 'width:140px', 'height:200px',
-      'background:#edf0f4', 'border-radius:8px', 'border:1px dashed #b8bec7',
-      'font-size:11px', 'color:#5a5f66', 'text-align:center', 'padding:8px',
-      'gap:6px'
-    ].join(';');
-    ph.innerHTML = '<span style="font-size:28px">🔬</span>' +
-      '<strong style="font-size:12px;color:#1c3861">' + alt + '</strong>' +
-      '<span style="font-size:10px;color:#a0a6b0">Ouvrir en mode<br>local pour voir<br>les images</span>';
-    if (img.parentNode) img.parentNode.replaceChild(ph, img);
-  }
 
-  // Handle all wikimedia images
-  document.addEventListener('DOMContentLoaded', function() {
-    var imgs = document.querySelectorAll('img[src*="wikimedia.org"]');
-    imgs.forEach(function(img) {
-      // If already loaded, skip
-      if (img.complete && img.naturalHeight !== 0) return;
-      
-      var label = img.alt;
-      var tried = false;
-      
-      img.addEventListener('error', function() {
-        if (!tried) {
-          tried = true;
-          // Try without crossorigin first
-          img.removeAttribute('crossorigin');
-          var newSrc = img.src;
-          img.src = '';
-          setTimeout(function() { img.src = newSrc; }, 100);
-        } else {
-          createPlaceholder(img, label);
-        }
-      });
-      
-      // Force reload for lazy images
-      if (img.loading === 'lazy') {
-        img.loading = 'eager';
-      }
-    });
-  });
+<!-- ═══════════════════════════════════════════════════════════════════
+     ARTHROLOGIE — ARTICULATIONS DU RACHIS (Chap. 1)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="arthro-rachis">
+  <div class="section-title">Arthrologie — Les Articulations du Rachis · Chap. 1</div>
+  <div class="section-sub">Articulations intercorporéales · Facettaires postérieures · Lombo-sacrée — IEOQ 2e année</div>
 
-  // Also handle images that fail after DOM is ready
-  window.addEventListener('load', function() {
-    var imgs = document.querySelectorAll('img[src*="wikimedia.org"]');
-    imgs.forEach(function(img) {
-      if (!img.complete || img.naturalHeight === 0) {
-        createPlaceholder(img, img.alt);
-      }
-    });
-  });
-})();
-</script>
+  <div class="info-box teal" style="margin-bottom:22px;">
+    <strong>Généralités :</strong> Les articulations unissant les vertèbres entre elles sont toutes similaires, à l'exception des articulations atlanto-axoïdienne et sacro-coccygienne. Elles participent à toutes les postures et tous les mouvements du corps. Les vertèbres s'articulent entre elles par leur corps (articulations intercorporéales) et par leurs processus articulaires (articulations inter-facettaires postérieures).
+  </div>
+
+  <!-- 1. INTER-CORPORÉALES -->
+  <div class="test-section-title">🔵 1. Les Articulations Inter-corporéales</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence — Le Disque Intervertébral</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;">
+        <strong>Type articulaire :</strong> Symphyse (articulation fibro-cartilagineuse). Intercalée entre 2 corps vertébraux consécutifs. Chaque plateau vertébral est grossièrement circulaire, formé d'une partie centrale spongieuse et d'une périphérique corticale, encroûtée de cartilage hyalin.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Nucleus pulposus</h4>
+          <ul>
+            <li>Noyau central gélatineux, particulièrement dur et déformable mais incompressible</li>
+            <li>Joue un rôle de <strong>pivot mobile</strong> sur lequel les vertèbres basculent en tous sens</li>
+            <li>Situé médialement, plus proche de la face postérieure qu'antérieure</li>
+            <li>Occupe <strong>30 à 60 %</strong> du volume du disque</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Annulus fibrosus</h4>
+          <ul>
+            <li>Anneau périphérique composé de lames fibreuses concentriques</li>
+            <li>Fibres à obliquité inverse entre 2 couches</li>
+            <li>Au niveau cervical, le disque est limité latéralement par les <strong>articulations unco-vertébrales</strong> (planes, apparaissant à l'adolescence)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tech-note" style="margin-top:12px;"><div class="label">Remarque cervicale</div>
+        En raison des uncus bordant le plateau vertébral supérieur et du biseau correspondant sur la vertèbre sus-jacente, le disque est limité latéralement par 2 petites articulations unco-vertébrales planes.
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Moyens d'unions — Les Ligaments Longitudinaux</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:12px;"><strong>Au nombre de 3 :</strong> le disque (déjà mentionné) + 2 ligaments s'étendant sur toute la hauteur du rachis.</div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Ligament Longitudinal Antérieur (LLA)</h4>
+          <ul>
+            <li>S'insère sur la face <strong>antérieure</strong> des corps vertébraux et des disques</li>
+            <li>Laisse libre la partie moyenne de l'os pour le passage des vaisseaux</li>
+            <li>S'étend depuis la partie antérieure du foramen magnum (occipital) jusqu'à la <strong>face antérieure du sacrum</strong></li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Ligament Longitudinal Postérieur (LLP)</h4>
+          <ul>
+            <li>S'insère sur la face <strong>postérieure</strong> des corps vertébraux et des disques</li>
+            <li>S'étend du bord antérieur du foramen magnum (occipital) jusqu'au sacrum</li>
+            <li>À partir de <strong>L2</strong>, où la moelle s'arrête, il devient moins large</li>
+            <li>Formé de 2 couches : une verticale superficielle et une profonde avec trousseaux obliques s'insérant sur le disque</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. INTER-FACETTAIRES POSTÉRIEURES -->
+  <div class="test-section-title">🟢 2. Les Articulations Inter-facettaires Postérieures</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;">
+        <strong>Au nombre de 2 par étage.</strong> Elles articulent les processus articulaires postérieurs (PAP) inférieurs de la vertèbre sus-jacente avec les supérieurs de la sous-jacente. Type : surface plane, sauf au niveau lombaire (trochoïdes).
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Orientation des facettes selon le niveau</h4>
+          <ul>
+            <li><strong>Cervical :</strong> facettes supérieures regardent en haut et en arrière</li>
+            <li><strong>Thoracique :</strong> même orientation, légèrement en dehors</li>
+            <li><strong>Lombaire :</strong> regardent en dedans et en arrière (trochoïdes)</li>
+            <li>Facettes inférieures : inversement orientées</li>
+            <li>Toutes encroûtées de <strong>cartilage hyalin</strong></li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Forme générale</h4>
+          <ul>
+            <li>Grossièrement ovalaires</li>
+            <li>Les facettes supérieures regardent en haut et en arrière au niveau cervical</li>
+            <li>Au niveau lombaire : les surfaces regardent en dedans et en arrière → elles créent un verrou mécanique s'opposant aux glissements vers l'avant</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Moyens d'unions — Ligaments Périphériques</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:12px;"><strong>Moyens d'union :</strong> 2 capsules, leur synoviale, des petits épaississements ligamentaires + ligaments périphériques.</div>
+      <table class="muscle-table">
+        <thead><tr><th>Ligament</th><th>Trajet / Description</th><th>Niveau</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="muscle-name">Ligaments intertransversaires</div></td>
+            <td>Tendus entre 2 processus transverses successifs</td>
+            <td>Absent en cervical · T2 à T10 · processus accessoires en lombaire</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligaments jaunes</div></td>
+            <td>Tendus entre 2 lames consécutives. Coloration due aux fibres élastiques. Plus épais et importants en lombaire</td>
+            <td>Toute la hauteur du rachis</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligament interépineux</div></td>
+            <td>Impair, au fond de l'espace interépineux, tendu entre les bords des épineux. Fibres obliques. Plus épais et résistant vers le bas</td>
+            <td>Toute la hauteur du rachis</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligament supra-épineux</div></td>
+            <td>Court sur l'ensemble des processus épineux d'un bout à l'autre du rachis</td>
+            <td>Remplacé par le <strong>ligament nucal</strong> en cervical (cloison résistante)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 3. LOMBO-SACRÉE -->
+  <div class="test-section-title">🟡 3. L'Articulation Lombo-sacrée (L5-S1)</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">⚡</div><div class="card-title">Particularités de la jonction L5-S1</div></div>
+    <div class="card-body">
+      <div class="info-box amber" style="margin-bottom:14px;">
+        <strong>4 particularités essentielles</strong> distinguent cette jonction des autres étages intervertébraux.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>1 — Obliquité importante</h4>
+          <ul>
+            <li>La face supérieure de S1 est fortement oblique en bas et en avant : <strong>± 40°</strong> par rapport à l'horizontale</li>
+            <li>La face inférieure de L5 est oblique de <strong>± 30°</strong> (angle d'inscription du disque : 10 à 15°)</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>2 — Disque cunéiforme</h4>
+          <ul>
+            <li>Le disque L5-S1 est <strong>2 fois moins haut en arrière qu'en avant</strong></li>
+            <li>Cette forme cunéiforme participe à la lordose lombaire</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>3 — PAP écartés et frontalés</h4>
+          <ul>
+            <li>Écartement important des processus articulaires postérieurs entre L5 et S1</li>
+            <li>Plus forte <strong>frontalisation</strong> que pour les autres vertèbres</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>4 — Ligaments ilio-lombaires</h4>
+          <ul>
+            <li>Intègrent L4 et L5 dans la charnière lombo-sacrée</li>
+            <li>Origine sur la face interne de l'os coxal, au-dessus de la tubérosité iliaque</li>
+            <li><strong>Faisceau supérieur (L4) :</strong> oblique en dedans, en haut et en avant → apex transverse L4</li>
+            <li><strong>Faisceau inférieur (L5) :</strong> oblique en dedans, en bas et en avant → apex transverse L5 → expansions à la capsule sacro-iliaque</li>
+            <li>Quasi-absence de ligament supra-épineux entre L5 et S1</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Source : Arthrologie — Chapitre 1 : Les articulations du rachis · IEOQ 2e année</cite></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ARTHROLOGIE — ARTICULATIONS PELVIENNES (Chap. 2)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="arthro-pelvis">
+  <div class="section-title">Arthrologie — Les Articulations Pelviennes · Chap. 2</div>
+  <div class="section-sub">Sacro-iliaques · Sacro-coccygienne · Symphyse pubienne — IEOQ 2e année</div>
+
+  <!-- 1. SACRO-ILIAQUES -->
+  <div class="test-section-title">🔵 1. Les Articulations Sacro-iliaques</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;">
+        <strong>Type articulaire hybride :</strong> Bilatérale, appartenant plus au bassin qu'au rachis. Articulation mi-synoviale mi-symphyse. Surface tourmentée, irrégulière, pénétration partielle de la surface postérieure par du tissu fibreux, absence de muscles moteurs.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Surface sacrale</h4>
+          <ul>
+            <li>Répond à la surface <strong>auriculaire</strong> de l'os coxal</li>
+            <li>Irrégulière, plutôt concave en son milieu</li>
+            <li>Regarde en dehors, légèrement en bas et très peu en arrière</li>
+            <li>Encroûtée de cartilage hyalin, envahie postérieurement par le tissu fibreux</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Surface coxale</h4>
+          <ul>
+            <li>Inversement conformée par rapport à la surface sacrale</li>
+            <li>Interligne irrégulier (surface tourmentée)</li>
+            <li>La détermination de son type articulaire est sujette à discussion</li>
+            <li>Possède une capsule et une synoviale comme une art. à synoviale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Moyens d'unions — Au nombre de 4</div></div>
+    <div class="card-body">
+      <table class="muscle-table">
+        <thead><tr><th>Moyen d'union</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="muscle-name">Capsule et synoviale</div></td>
+            <td>S'insèrent au pourtour du cartilage. La capsule, plus forte en arrière, est plus ou moins envahie par le plan fibreux postérieur.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligament interosseux</div></td>
+            <td>Épais et résistant (le plus puissant moyen d'union). Contours mal définis, tendu entre la concavité de la surface auriculaire de l'os coxal et la fosse criblée du sacrum.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligaments sacro-iliaques postérieurs</div></td>
+            <td>Divisés en 4 faisceaux correspondant à chaque vertèbre sacrale. Tendus de la tubérosité coxale à la crête latérale du sacrum. Presque horizontaux pour les fibres supérieures, presque verticaux pour les inférieures.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligament ilio-articulaire</div></td>
+            <td>Plan variable en importance (Rouvière). Tendu de la partie postérieure de la tubérosité coxale à la crête intermédiaire du sacrum.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Éléments à distance</div></td>
+            <td>Ligaments ilio-lombaires (expansions capsulaires) + ligaments sacro-tubéral et sacro-épineux.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Éléments actifs</div></td>
+            <td>Fibres aponévrotiques entrecroisées du grand dorsal et du grand fessier. Piriforme (inséré sur le sacrum, fibres parfois sur la berge de l'os coxal).</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligaments antérieurs</div></td>
+            <td>Au nombre de 2 (un supérieur, un inférieur) — faibles.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. SACRO-COCCYGIENNE -->
+  <div class="test-section-title">🟢 2. L'Articulation Sacro-coccygienne</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Caractéristiques</div></div>
+    <div class="card-body">
+      <div class="info-box teal">
+        <strong>Type articulaire :</strong> Synchondrose. Met en présence l'apex sacral et la face supérieure de la 1re vertèbre coccygienne, ainsi qu'un petit disque atrophié (sans noyau).
+      </div>
+      <div class="grid-2" style="gap:16px; margin-top:12px;">
+        <div class="path-card">
+          <h4>Moyens d'unions</h4>
+          <ul>
+            <li>Ligaments essentiellement <strong>postérieurs</strong> (des cornes coccygiennes aux bords du hiatus sacral)</li>
+            <li>Ligaments <strong>latéraux</strong> (entre processus transverses réciproques)</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Mobilité</h4>
+          <ul>
+            <li>Peu ou pas mobile</li>
+            <li>Parfois soudée (notamment avec l'avancée en âge)</li>
+            <li>Parfois dédoublée (un second interligne entre les 2 premières pièces coccygiennes)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. SYMPHYSE PUBIENNE -->
+  <div class="test-section-title">🟡 3. Les Articulations Inter-pubiennes (Symphyse pubienne)</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">🦴</div><div class="card-title">Caractéristiques</div></div>
+    <div class="card-body">
+      <div class="info-box amber" style="margin-bottom:14px;">
+        <strong>Type articulaire :</strong> Symphyse (modèle même de l'articulation symphysaire). Située entre les corps des 2 pubis. De forme ovalaire à grand axe oblique en avant et en haut, plane et encroûtée de cartilage hyalin.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Renforcements</h4>
+          <ul>
+            <li>Renforcée par des ligaments périphériques, surtout <strong>postérieurs et inférieurs</strong></li>
+            <li><strong>Ligament arqué du pubis :</strong> arc fibreux concave en bas, limitant la fente urogénitale</li>
+            <li>Renforcés par les droits de l'abdomen (fibres entrecroisées), longs adducteurs, piliers des obliques externes</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Ligaments périphériques</h4>
+          <ul>
+            <li>Ligament inférieur (arqué du pubis) : le plus solide</li>
+            <li>Ligament postérieur</li>
+            <li>Insertions musculaires multiples chevauchant la jonction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Source : Arthrologie — Chapitre 2 : Les articulations pelviennes · IEOQ 2e année</cite></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ARTHROLOGIE — ARTICULATIONS COSTALES (Chap. 3)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="arthro-costales">
+  <div class="section-title">Arthrologie — Les Articulations Costales · Chap. 3</div>
+  <div class="section-sub">Costo-corporéales · Costo-transversaires · Costo-chondro-sternales · Sternales — IEOQ 2e année</div>
+
+  <!-- 1. COSTO-CORPORÉALES -->
+  <div class="test-section-title">🔵 1. Les Articulations Costo-corporéales</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;">
+        <strong>Type articulaire :</strong> Ensemble de type surface plane formant un angle dièdre (4 éléments en présence). Chaque articulation est un <strong>dièdre</strong> ouvert en dehors.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Éléments osseux</h4>
+          <ul>
+            <li><strong>Vertèbre correspondante :</strong> demi-facette supérieure à la jonction des faces latérale et postérieure, ovalaire, regardant en dehors, en haut et légèrement en arrière → répond à la facette inférieure de la tête costale</li>
+            <li><strong>Vertèbre sus-jacente :</strong> demi-facette inférieure répondant à la facette supérieure de la tête costale</li>
+            <li><strong>Disque intervertébral :</strong> en rapport avec la crête de la tête costale, rattaché par le ligament intra-articulaire</li>
+            <li><strong>Tête costale :</strong> dièdre ouvert en dehors — facette supérieure (plane) → vertèbre sus-jacente ; facette inférieure → vertèbre de même numéro ; arête intermédiaire → disque</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Moyens d'unions</h4>
+          <ul>
+            <li>Capsule + synoviale</li>
+            <li><strong>Ligament intra-articulaire de la tête :</strong> très court, tendu de la crête de la tête au disque intervertébral</li>
+            <li><strong>Ligament radié de la tête :</strong> s'étale à la partie antérieure de l'articulation. Tendu de la face antérieure de la tête, en éventail par 3 faisceaux : supérieur (vertèbre sus-jacente), moyen (disque), inférieur (vertèbre correspondante)</li>
+            <li><strong>Ligament postérieur :</strong> épaissit la partie postérieure de la capsule</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. COSTO-TRANSVERSAIRES -->
+  <div class="test-section-title">🟢 2. Les Articulations Costo-transversaires</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence et Moyens d'unions</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;">
+        <strong>Éléments :</strong> Tubercule costal d'une côte + processus transverse de la vertèbre correspondante (même numéro). Type plane, plutôt trochoïde à la partie supérieure du thorax.
+      </div>
+      <table class="muscle-table">
+        <thead><tr><th>Ligament</th><th>Trajet</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="muscle-name">Lig. costo-transversaire supérieur</div></td>
+            <td>Tendu du col de la côte (face post. partie sup.) au processus transverse de la vertèbre sus-jacente</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Lig. costo-lamellaire</div></td>
+            <td>Tendu du col de la côte (face post. partie moy.) à la lame de la vertèbre sus-jacente</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Lig. costo-transversaire (interosseux)</div></td>
+            <td>Tendu du col de la côte (face post. partie inf.) au processus transverse de la vertèbre de même numéro</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Lig. costo-transversaire latéral</div></td>
+            <td>Tendu du tubercule costal (partie sup.) à l'apex du transverse correspondant</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Lig. costo-transversaire inférieur</div></td>
+            <td>Tendu du tubercule costal (partie inf.) au bord inf. de la facette du transverse correspondant</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 3. COSTO-CHONDRO-STERNALES -->
+  <div class="test-section-title">🟡 3. Les Articulations Costo-chondro-sternales</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">🦴</div><div class="card-title">Éléments en présence et Moyens d'unions</div></div>
+    <div class="card-body">
+      <div class="info-box amber" style="margin-bottom:14px;">
+        <strong>Au nombre de 3 éléments :</strong> la côte, le cartilage et le sternum. On distingue 2 jonctions distinctes.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Articulations costo-chondrales</h4>
+          <ul>
+            <li>Forment la partie <strong>latérale</strong> de cette jonction</li>
+            <li>Type <strong>synchondrose</strong> (articulations à cartilage)</li>
+            <li>Associent la cupule spongieuse de l'extrémité antérieure de la côte au cône du cartilage costal</li>
+            <li>Moyens d'union : l'os et le cartilage sont solidement soudés, le périoste se continuant directement par le périchondre. Insertions musculaires chevauchant la jonction (grand pectoral, abdominaux)</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Articulations chondro-sternales</h4>
+          <ul>
+            <li>Forment la partie <strong>médiale</strong> de cette jonction</li>
+            <li>Type <strong>surfaces planes</strong></li>
+            <li>Mettent en présence le dièdre encroûté de cartilage hyalin du sternum et l'extrémité médiale du cartilage, taillée en double biseau</li>
+            <li>Moyens d'union : capsule fibreuse renforcée par des fibres ligamentaires antérieures, postérieures et même intra-articulaires</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. ARTICULATIONS STERNALES -->
+  <div class="test-section-title">🔴 4. Les Articulations Sternales</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon coral">🦴</div><div class="card-title">Jonctions manubrio-sternale et sterno-xiphoïdienne</div></div>
+    <div class="card-body">
+      <div class="info-box coral" style="margin-bottom:12px;">À mentionner, bien que de faible importance et souvent ossifiées.</div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Jonction manubrio-sternale</h4>
+          <ul>
+            <li>Située entre le manubrium et le corps du sternum</li>
+            <li>Type : <strong>synchondrose</strong> aux bords réguliers</li>
+            <li>L'interligne transversal forme l'arête d'un dièdre : l'<strong>angle manubrio-sternal</strong> (≈ 170° ouvert vers l'arrière)</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Jonction sterno-xiphoïdienne</h4>
+          <ul>
+            <li>De même type synchondrosique</li>
+            <li>Le processus xiphoïde peut être parfois purement cartilagineux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Source : Arthrologie — Chapitre 3 : Les articulations costales · IEOQ 2e année</cite></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ARTHROLOGIE — ARTICULATIONS CRANIO-CERVICALES (Chap. 4)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="arthro-cranio">
+  <div class="section-title">Arthrologie — Les Articulations Cranio-cervicales · Chap. 4</div>
+  <div class="section-sub">Occipito-atloïdiennes (C0-C1) · Atlanto-axoïdiennes (C1-C2) · Mouvements cranio-rachidiens — IEOQ 2e année</div>
+
+  <!-- 1. OCCIPITO-ATLOÏDIENNES -->
+  <div class="test-section-title">🔵 1. Les Articulations Occipito-atloïdiennes (C0-C1)</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence</div></div>
+    <div class="card-body">
+      <div class="info-box teal">
+        <strong>Type articulaire :</strong> Bicondylaire (condylienne). Éléments : les condyles occipitaux + la face supérieure des 2 masses latérales de l'atlas. Il existe 2 capsules et 2 synoviales (articulation bilatérale).
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Moyens d'unions — Ligaments</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;"><strong>2 groupes de ligaments</strong> interviennent à cet étage :</div>
+      <table class="muscle-table">
+        <thead><tr><th>Ligament</th><th>Trajet</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="muscle-name">Membrane atlanto-occipitale antérieure</div></td>
+            <td>Relie l'arc antérieur de l'atlas au bord antérieur du foramen magnum</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Membrane atlanto-occipitale postérieure</div></td>
+            <td>Relie l'arc postérieur de l'atlas au bord postérieur du foramen magnum</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Faisceau longitudinal du lig. cruciforme</div></td>
+            <td>Partie supérieure (occipito-transversaire) : participe indirectement à la stabilité C0-C1</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Membrana tectoria</div></td>
+            <td>Puissante membrane tendue du bord antérieur du foramen magnum à la face postérieure du corps de C2, passe en arrière du ligament cruciforme</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligaments occipito-odontoïdiens</div></td>
+            <td>Lig. de l'apex de la dent (suspenseur de l'odontoïde) + ligaments alaires (encadrent le précédent, freinent les rotations). 2 faisceaux croisés → chaque ligament a des fibres tendues en fin de mouvement quelle que soit la direction</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">LLA + LLP + Lig. nucal</div></td>
+            <td>Communs à l'ensemble rachidien. Lig. nucal : tendu de la crête occipitale externe à C7, cloison sagittale avec fibres verticales le long des épineuses cervicales</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. ATLANTO-AXOÏDIENNES -->
+  <div class="test-section-title">🟢 2. Les Articulations Atlanto-axoïdiennes (C1-C2)</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Éléments en présence</div></div>
+    <div class="card-body">
+      <div class="info-box teal" style="margin-bottom:14px;">
+        Cette jonction comprend <strong>2 articulations latérales</strong> + 2 articulations sagittales (entre l'odontoïde et l'atlas).
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Articulations latérales (C1-C2)</h4>
+          <ul>
+            <li>Formées des faces inférieures des masses de C1 et des facettes supérieures de C2</li>
+            <li>Type surfaces planes (non concordantes) : les surfaces supérieures de C2 sont convexes, la surface de C1 est plane</li>
+            <li>Encroûtées de cartilage hyalin</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Articulations sagittales (odontoïde)</h4>
+          <ul>
+            <li><strong>Surface antérieure :</strong> ovalaire, entre la face postérieure de l'arc de C1 et la face antérieure de l'odontoïde</li>
+            <li><strong>Surface postérieure :</strong> entre l'odontoïde et le ligament transverse</li>
+            <li>3 ou 4 capsules s'insérant au pourtour des cartilages avec synoviale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Moyens d'unions — Ligament cruciforme et autres</div></div>
+    <div class="card-body">
+      <table class="muscle-table">
+        <thead><tr><th>Ligament</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="muscle-name">Ligament transverse de l'atlas (faisceau transversal du cruciforme)</div></td>
+            <td>Maintient l'odontoïde. Le faisceau vertical (cruciforme — partie inférieure) forme un barrage vertical derrière l'odontoïde, tendu sur les côtés par le ligament transverse</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Membrana tectoria</div></td>
+            <td>Déjà évoquée pour C0-C1</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Membrane atlanto-axoïdienne antérieure (C1-C2)</div></td>
+            <td>Tendue de l'arc antérieur de C1 à la face antérieure de C2</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Membrane atlanto-axoïdienne postérieure</div></td>
+            <td>Équivalent des ligaments jaunes des autres vertèbres, ferme le foramen vertébral par l'arrière</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">LLP + LLA + Lig. nucal</div></td>
+            <td>Communs à l'ensemble cervical</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 3. MOUVEMENTS -->
+  <div class="test-section-title">🟡 3. Les Mouvements Cranio-rachidiens</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">📐</div><div class="card-title">Amplitudes et mécanismes — 3 degrés de liberté</div></div>
+    <div class="card-body">
+      <table class="muscle-table">
+        <thead><tr><th>Mouvement</th><th>Siège principal</th><th>Amplitude</th><th>Muscles moteurs principaux</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Flexion-extension</strong></td>
+            <td>Essentiellement art. atlanto-occipitales (C0-C1)</td>
+            <td><span class="tag tag-teal">≈ 15° en atlanto-occipital</span> <span class="tag tag-navy">&lt; 10° en atlanto-axoïdien</span></td>
+            <td>Fléchisseurs : longs et droits antérieurs de la tête. Extenseurs : grand et petit droits post., oblique sup., semi-épineux, splénius, trapèze sup.</td>
+          </tr>
+          <tr>
+            <td><strong>Inclinaisons latérales</strong></td>
+            <td>Essentiellement art. atlanto-occipitales</td>
+            <td><span class="tag tag-teal">≈ 8°</span></td>
+            <td>Droit latéral, semi-épineux de la tête, splénius de la tête, SCOM, trapèze sup.</td>
+          </tr>
+          <tr>
+            <td><strong>Rotations</strong></td>
+            <td>Uniquement art. atlanto-axoïdiennes (C1-C2)</td>
+            <td><span class="tag tag-coral">≈ 20° de chaque côté</span></td>
+            <td>Oblique inférieur de la tête, SCOM contralatéral, splénius homolatéral</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="info-box teal" style="margin-top:12px;">
+        <strong>Mécanisme de la rotation — «pas de vis» :</strong> En partant de la position zéro anatomique, les surfaces articulaires latérales de C1 sont au contact au niveau de l'apogée de leur convexité. Lors de la rotation droite, la surface articulaire inférieure de l'atlas droit se déplace en inféro-médial (descente de 2 à 3 mm). Retour en position zéro = déplacement inverse supéro-latéral avec ascension de 2 à 3 mm. L'axe de rotation est vertical, passant par la dent de l'axis ; stabilisé par les ligaments alaires.
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Source : Arthrologie — Chapitre 4 : Les articulations cranio-cervicales · IEOQ 2e année</cite></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     ARTHROLOGIE — ARTICULATION TEMPORO-MANDIBULAIRE (Chap. 5)
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="arthro-atm">
+  <div class="section-title">Arthrologie — L'Articulation Temporo-mandibulaire · Chap. 5</div>
+  <div class="section-sub">ATM — Éléments en présence · Disque articulaire · Dents · Moyens d'unions — IEOQ 2e année</div>
+
+  <div class="info-box teal" style="margin-bottom:22px;">
+    <strong>Généralités :</strong> L'ATM est une articulation <strong>paire à fonctionnement synchrone</strong>. Elle est au nombre de 3 pour l'articulation proprement dite (qui assure les mouvements), auxquels il faut ajouter les dents qui complètent et finalisent ce complexe. Les surfaces sont recouvertes de <strong>fibro-cartilage</strong> et non de cartilage hyalin.
+  </div>
+
+  <!-- ÉLÉMENTS EN PRÉSENCE -->
+  <div class="test-section-title">🔵 Éléments en présence</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🦴</div><div class="card-title">Les Surfaces Articulaires</div></div>
+    <div class="card-body">
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Os temporal</h4>
+          <ul>
+            <li>Surface à la partie <strong>infra-zygomatique</strong> de l'os temporal</li>
+            <li>Composée de 2 versants en continuité :</li>
+            <li><strong>Fosse mandibulaire :</strong> en arrière — concave, seule la moitié antérieure est articulaire</li>
+            <li><strong>Tubercule articulaire :</strong> en avant — convexe</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Mandibule — Condyle mandibulaire</h4>
+          <ul>
+            <li>La tête du condyle mandibulaire est une <strong>saillie ovoïde</strong> à grand axe oblique en dedans et en arrière</li>
+            <li>Seule la partie <strong>antérieure</strong> du condyle est articulaire</li>
+            <li>Encroûtée de fibro-cartilage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon teal">🫧</div><div class="card-title">Le Disque Articulaire</div></div>
+    <div class="card-body">
+      <div class="info-box teal">
+        <strong>Description :</strong> Fibro-cartilage qui sépare la cavité articulaire en 2 parties distinctes. Épais et mobile. Retenu en arrière par des freins ligamentaires empêchant un déplacement antérieur excessif. Tiré vers l'avant par un faisceau du muscle ptérygoïdien latéral (indispensable lors de l'ouverture de la bouche).
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon amber">🦷</div><div class="card-title">Les Dents — Finalité fonctionnelle</div></div>
+    <div class="card-body">
+      <div class="info-box amber" style="margin-bottom:14px;">
+        <strong>32 dents chez l'adulte</strong>, réparties en 4 hémi-arcades. L'articulé dentaire est la finalité fonctionnelle de la mastication. Les dents reçoivent l'essentiel des contraintes compressives engendrées par l'élévation de la mandibule.
+      </div>
+      <div class="grid-2" style="gap:16px;">
+        <div class="path-card">
+          <h4>Nomenclature OMS</h4>
+          <ul>
+            <li>Numérotation de dedans en dehors : 1 à 8</li>
+            <li><strong>Hémi-arcade 1 :</strong> maxillaire droit</li>
+            <li><strong>Hémi-arcade 2 :</strong> maxillaire gauche</li>
+            <li><strong>Hémi-arcade 3 :</strong> mandibulaire gauche</li>
+            <li><strong>Hémi-arcade 4 :</strong> mandibulaire droit</li>
+          </ul>
+        </div>
+        <div class="path-card">
+          <h4>Types de dents</h4>
+          <ul>
+            <li><strong>Incisives (a) :</strong> 1-2</li>
+            <li><strong>Canines (b) :</strong> 3</li>
+            <li><strong>Prémolaires (c) :</strong> 4-5</li>
+            <li><strong>Molaires (d) :</strong> 6-7-8</li>
+            <li>Les dents n'entrent en contact qu'en fermeture complète ou par interposition d'un élément (aliment)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOYENS D'UNIONS -->
+  <div class="test-section-title">🟢 Moyens d'unions</div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><div class="card-icon navy">🔗</div><div class="card-title">Capsule, Synoviale, Disque et Ligaments collatéraux</div></div>
+    <div class="card-body">
+      <table class="muscle-table">
+        <thead><tr><th>Moyen d'union</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="muscle-name">Capsule et synoviale</div></td>
+            <td>Doubles (articulation paire). S'insèrent en-dessous du condyle, au niveau du col. La capsule est lâche, la synoviale est fibreuse et non graisseuse.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Disque articulaire</div></td>
+            <td>Aussi un moyen d'union : solidaire de la capsule à sa périphérie, de l'os temporal en arrière, et du tendon du ptérygoïdien latéral en avant.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligament collatéral latéral (LCL)</div></td>
+            <td>De chaque côté, renforce la capsule latéralement. Tendu du condyle temporal à la face latérale du condyle mandibulaire.</td>
+          </tr>
+          <tr>
+            <td><div class="muscle-name">Ligament collatéral médial (LCM)</div></td>
+            <td>De chaque côté, renforce la capsule médialement. Tendu du condyle temporal à la face médiale du condyle mandibulaire.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="info-box teal" style="margin-top:14px;">
+        <strong>À retenir :</strong> L'articulation temporo-mandibulaire est une articulation bicondylaire paire à fonctionnement synchrone, avec un disque articulaire mobile qui divise la cavité articulaire en deux compartiments. Le disque est tiré en avant lors de l'ouverture par le ptérygoïdien latéral, ce qui est indispensable au glissement du condyle sous le tubercule articulaire.
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;">
+    <div class="card-header"><div class="card-icon amber">📊</div><div class="card-title">Tableau récapitulatif — Les 5 chapitres d'Arthrologie</div></div>
+    <div class="card-body" style="padding:0;">
+      <table class="grille-eval-table">
+        <thead><tr><th>Chapitre</th><th>Articulation</th><th>Type articulaire</th><th>Ligaments clés</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="tag tag-teal">Chap. 1</span></td>
+            <td><strong>Art. intercorporéales</strong><br><small>Colonne vertébrale</small></td>
+            <td>Symphyse</td>
+            <td>Disque IV · LLA · LLP · Lig. jaunes · Interépineux · Supra-épineux</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-teal">Chap. 1</span></td>
+            <td><strong>Art. facettaires post.</strong><br><small>Colonne vertébrale</small></td>
+            <td>Surface plane / Trochoïde (lombaire)</td>
+            <td>Capsule · Lig. jaunes · Intertransversaires</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-navy">Chap. 2</span></td>
+            <td><strong>Art. sacro-iliaque</strong><br><small>Pelvis</small></td>
+            <td>Hybride (mi-synoviale mi-symphyse)</td>
+            <td>Lig. interosseux · Lig. SI postérieurs · Lig. ilio-articulaire · Lig. ilio-lombaires</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-navy">Chap. 2</span></td>
+            <td><strong>Symphyse pubienne</strong><br><small>Pelvis</small></td>
+            <td>Symphyse</td>
+            <td>Lig. arqué du pubis · Lig. postérieur</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-amber">Chap. 3</span></td>
+            <td><strong>Art. costo-corporéales</strong><br><small>Thorax</small></td>
+            <td>Surface plane (angle dièdre)</td>
+            <td>Lig. intra-articulaire · Lig. radié · Lig. postérieur</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-amber">Chap. 3</span></td>
+            <td><strong>Art. costo-transversaires</strong><br><small>Thorax</small></td>
+            <td>Plane / Trochoïde (thorax haut)</td>
+            <td>5 ligaments costo-transversaires</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-coral">Chap. 4</span></td>
+            <td><strong>Art. occipito-atloïdiennes</strong><br><small>C0-C1</small></td>
+            <td>Bicondylaire</td>
+            <td>Membranes AO ant. et post. · Membrana tectoria · Lig. alaires</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-coral">Chap. 4</span></td>
+            <td><strong>Art. atlanto-axoïdiennes</strong><br><small>C1-C2</small></td>
+            <td>Surfaces planes (latérales) + Trochoïdes (sagittales)</td>
+            <td>Lig. transverse · Lig. cruciforme · Membrana tectoria · Lig. alaires</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-gray">Chap. 5</span></td>
+            <td><strong>ATM</strong><br><small>Tête</small></td>
+            <td>Bicondylaire paire synchrone</td>
+            <td>Capsule · Disque · Lig. LCL · Lig. LCM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="footnote"><cite>Source : Arthrologie — Chapitre 5 : L'articulation temporo-mandibulaire · IEOQ 2e année</cite></div>
+</section>
 </body>
 </html>
 
@@ -5944,6 +6745,7 @@ const ART_MAP = {
   'formation-clinique': { subs: ['fc-epaule','fc-coude','fc-genou','fc-hanche','fc-pied'], default: 'fc-epaule' },
   rachis:     { subs: ['rachis-cervical','rachis-thoracique','rachis-lombaire','rachis-sacrum'], default: 'rachis-cervical' },
   palpatoire: { subs: ['palp-post-1','palp-post-2','palp-lateral','palp-cou','palp-rachis','palp-sacrum','palp-rachis-cervical'], default: 'palp-post-1' },
+  'anatomie-an2': { subs: ['anatomie-rachis','anatomie-tronc'], default: 'anatomie-rachis' },
   'anatomie-viscerale': { subs: ['anat-visc-intro'], default: 'anat-visc-intro' },
   'anatomie-cranienne': { subs: ['anat-cran-intro'], default: 'anat-cran-intro' },
   semiologie: { subs: ['semio-intro'], default: 'semio-intro' },
@@ -5962,6 +6764,7 @@ const ART_LABELS = {
   neurologie: 'Neurologie',
   'formation-clinique': 'Formation Clinique',
   rachis: 'Rachis', palpatoire: 'Anat. Palpatoire',
+  'anatomie-an2': 'Anatomie',
   'anatomie-viscerale': 'Anat. Viscérale',
   'anatomie-cranienne': 'Anat. Crânienne',
   semiologie: 'Sémiologie',
@@ -5992,6 +6795,11 @@ const SUB_LABELS = {
   'fc-pied': 'Raisonnement clinique — Pied & Cheville',
   'rachis-cervical': 'Cervicales', 'rachis-thoracique': 'Thoraciques',
   'rachis-lombaire': 'Lombaires', 'rachis-sacrum': 'Sacrum & Iliaque',
+  'arthro-rachis': 'Art. du Rachis · Chap. 1',
+  'arthro-pelvis': 'Art. Pelviennes · Chap. 2',
+  'arthro-costales': 'Art. Costales · Chap. 3',
+  'arthro-cranio': 'Art. Cranio-cervicales · Chap. 4',
+  'arthro-atm': 'ATM · Chap. 5',
   'anatomie-ms-coiffe': 'MS · Coiffe des rotateurs', 'anatomie-ms-fascias': 'MS · Fascias',
   'anatomie-ms-thorax': 'MS · Thorax antérieur', 'anatomie-ms-bras': 'MS · Muscles du bras',
   'anatomie-ms-avbras': 'MS · Avant-bras (Ch.5)',
@@ -6077,7 +6885,7 @@ function switchSub(sub) {
     }
     var artIcon = { general:'🔬', epaule:'🦴', coude:'🦾', poignet:'✋',
       genou:'🦵', hanche:'🦴', cheville:'🦶', transversal:'📚', neurologie:'🧠',
-      'formation-clinique':'🩺', rachis:'🦷', anatomie:'🫀', palpatoire:'🖐️' };
+      'formation-clinique':'🩺', rachis:'🦷', arthrologie:'🦴', anatomie:'🫀', palpatoire:'🖐️' };
     indicator.innerHTML =
       '<span class="si-icon">' + (artIcon[currentArt] || '📄') + '</span>' +
       '<span class="si-art">' + (ART_LABELS[currentArt] || currentArt) + '</span>' +
@@ -6422,70 +7230,6 @@ setTimeout(initApp, 400);
     </button>
   </div>
 </nav>
-
-<script>
-// Smart Wikimedia image loader — handles hotlink restrictions gracefully
-(function() {
-  // Wikimedia allows browser requests but blocks hotlinks from some hosts.
-  // This script retries failed images and shows informative placeholders.
-  
-  function createPlaceholder(img, label) {
-    var alt = img.alt || label || 'Image anatomique';
-    var ph = document.createElement('div');
-    ph.style.cssText = [
-      'display:inline-flex', 'flex-direction:column', 'align-items:center',
-      'justify-content:center', 'width:140px', 'height:200px',
-      'background:#edf0f4', 'border-radius:8px', 'border:1px dashed #b8bec7',
-      'font-size:11px', 'color:#5a5f66', 'text-align:center', 'padding:8px',
-      'gap:6px'
-    ].join(';');
-    ph.innerHTML = '<span style="font-size:28px">🔬</span>' +
-      '<strong style="font-size:12px;color:#1c3861">' + alt + '</strong>' +
-      '<span style="font-size:10px;color:#a0a6b0">Ouvrir en mode<br>local pour voir<br>les images</span>';
-    if (img.parentNode) img.parentNode.replaceChild(ph, img);
-  }
-
-  // Handle all wikimedia images
-  document.addEventListener('DOMContentLoaded', function() {
-    var imgs = document.querySelectorAll('img[src*="wikimedia.org"]');
-    imgs.forEach(function(img) {
-      // If already loaded, skip
-      if (img.complete && img.naturalHeight !== 0) return;
-      
-      var label = img.alt;
-      var tried = false;
-      
-      img.addEventListener('error', function() {
-        if (!tried) {
-          tried = true;
-          // Try without crossorigin first
-          img.removeAttribute('crossorigin');
-          var newSrc = img.src;
-          img.src = '';
-          setTimeout(function() { img.src = newSrc; }, 100);
-        } else {
-          createPlaceholder(img, label);
-        }
-      });
-      
-      // Force reload for lazy images
-      if (img.loading === 'lazy') {
-        img.loading = 'eager';
-      }
-    });
-  });
-
-  // Also handle images that fail after DOM is ready
-  window.addEventListener('load', function() {
-    var imgs = document.querySelectorAll('img[src*="wikimedia.org"]');
-    imgs.forEach(function(img) {
-      if (!img.complete || img.naturalHeight === 0) {
-        createPlaceholder(img, img.alt);
-      }
-    });
-  });
-})();
-</script>
 </body>
 
 </body>
